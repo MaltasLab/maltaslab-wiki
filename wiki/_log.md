@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] ingest | Levy2015_LineageTracking
+
+Ingested Levy, Blundell, Venkataram, Petrov, Fisher & Sherlock 2015 (Nature), a canonical non-lab foundational paper constructing a 500,000-barcode Cre-loxP lineage tracking system in *S. cerevisiae* monitoring ~25,000 adaptive lineages across ~168 generations of serial batch evolution. Key findings: the beneficial mutation rate spectrum $\mu(s)$ is non-exponential and structured — concentrated at moderate effects (2–5%) with an approximately flat tail at higher effects — directly challenging extreme value theory predictions; this structure produces two-phase evolutionary dynamics (deterministic early phase driven by the abundant moderate-effect class, stochastic late phase governed by rare high-effect mutations); ~6,000 "preexisting" mutations shared between replicates quantify standing variation in large populations as a general expectation. Fully populated the dna-barcoding-lineage-tracking hub (first paper for this hub); updated distribution-of-fitness-effects hub and lab/overview.md.
+
 ## [2026-04-05] lint | concept pages and open question annotations
 
 Created 4 concept pages: geometric-rescaling, price-equation, sswm, adaptive-therapy. Annotated 3 open questions as partially addressed: (1) MDP policy robustness to misspecification → partially addressed by Weaver2024 RL approach (evolutionary-control hub); (2) shared maxima reconciliation with MDP success → addressed by Maltas2020 population-level argument (fitness-landscapes hub); (3) long-term maintenance of collateral sensitivity under cycling → partially addressed by Maltas2020 theoretical warning (collateral-sensitivity hub). Added wikilinks for new concept pages in evolution-in-multidrug-environments, fitness-landscapes, and evolutionary-control hubs.
