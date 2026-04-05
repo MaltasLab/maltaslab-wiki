@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] ingest | Farrokhian2022_CompetitiveExclusionNSCLC
+
+Ingested Farrokhian, Maltas et al. 2022 (Science Advances), a canonical lab paper (equal-contribution first authorship with Jeff Maltas) measuring frequency-dependent ecological interactions between gefitinib-resistant and sensitive PC9 NSCLC cells via the evolutionary game assay. Established that monoculture fitness cost cannot predict competitive exclusion, that drug treatment flips competitive exclusion from resistant-to-sensitive to sensitive-to-resistant, and that lower drug doses may better control long-term tumor burden by maintaining competitive suppression. Note: source PDF filename misspelled as Farrhokian.pdf; wiki page and cite key use correct spelling Farrokhian2022. Updated frequency-dependent-selection and evolutionary-control topic hubs; updated lab/overview.md.
+
 ## [2026-04-05] ingest | Maltas2023_DrugDependence
 
 Ingested Maltas et al. 2023 (Nat Ecol Evol), a canonical lab paper characterizing drug dependence in BRAF V600E melanoma, establishing that melanocytic differentiation state predicts drug dependence, identifying the MITF-loss/ERK-JunB-p21 mechanism, and deriving an analytically optimal drug holiday schedule validated experimentally and via ABM. Updated evolutionary-control and evolution-in-fluctuating-environments topic hubs with specific cited contributions and conceptual advances. Updated lab/overview.md to reflect BRAF melanoma as a model system, drug dependence as a research theme, and adaptive therapy as an experimental and theoretical approach.

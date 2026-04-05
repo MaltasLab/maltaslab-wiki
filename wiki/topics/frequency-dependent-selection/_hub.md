@@ -10,7 +10,13 @@ In the context of this lab, frequency-dependent selection arises most naturally 
 
 A core challenge is connecting theory to experiment: frequency-dependent fitness is often measured indirectly, and the lab has developed a fluorescence-based evolutionary game assay (coculture with nuclear-localized GFP and mCherry labels, time-lapse microscopy) to directly measure ecological interaction curves as a function of ancestor fraction.
 
+A direct empirical application of this framework to a clinically derived resistance system is provided by [[papers/Farrokhian2022_CompetitiveExclusionNSCLC|Farrokhian2022]], which measured payoff matrices for a gefitinib-resistant PC9 NSCLC population and its sensitive ancestor. This work reveals a conceptually important asymmetry: **the condition for competitive exclusion is that the gain function must maintain the same sign across all population frequencies**, and monoculture fitness measurements cannot verify this condition. Even with a significant fitness cost (resistant clone grows at ~76% of sensitive monoculture rate), ecological interactions at high-sensitive fractions nearly fully compensate for the cost — implying a potential stable coexistence fixed point near $p_R \approx 0$ that could maintain resistant cells as a "safe harbor" population even in the absence of drug. Drug treatment flips the game entirely: at every tested gefitinib concentration, the gain function inverts sign and the sensitive ancestor is competitively excluded.
+
 ## Key papers
+
+- Farrokhian2022 demonstrated experimentally that the fitness cost of gefitinib resistance in PC9 NSCLC is nearly completely ameliorated by ecological interactions at high-sensitive-population fractions, showing that monoculture fitness measurements are insufficient to predict competitive exclusion — the mathematical condition (gain function maintaining constant sign) requires frequency-resolved measurements [[papers/Farrokhian2022_CompetitiveExclusionNSCLC|Farrokhian2022]]
+
+- Farrokhian2022 showed that drug application (gefitinib at any tested concentration) completely inverts the game dynamics: while the resistant clone is competitively excluded in the absence of drug, the sensitive ancestor is competitively excluded under drug, with ecological interaction strength increasing monotonically with drug concentration [[papers/Farrokhian2022_CompetitiveExclusionNSCLC|Farrokhian2022]]
 
 - Maltas2024 showed that frequency-dependent ecological interactions between drug-resistant mutants and their ancestor can increase mean extinction times by up to ~5 orders of magnitude, with a closed-form approximation $\tau(f_e) \approx \frac{3\ln(1-f_e)}{f_e^2-3}$ that depends only on ecological fitness and is independent of $N$, $\mu$, and $f_c$ [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
 
@@ -34,6 +40,8 @@ A core challenge is connecting theory to experiment: frequency-dependent fitness
 
 ## Open questions
 
+- Does the putative near-$p_R = 0$ coexistence fixed point in gefitinib-resistant PC9 cells actually maintain a resistant subpopulation at low frequency in drug-free conditions? If so, ecological mechanisms — not just mutation supply — could sustain preexisting resistance even in the absence of drug [[papers/Farrokhian2022_CompetitiveExclusionNSCLC|Farrokhian2022]]
+- Do the ecological interactions between drug-resistant and sensitive NSCLC cells generalize across resistance mechanisms and drugs, or is the near-zero-frequency rescue specific to KRAS G12D–EGFR dependence dynamics? [[papers/Farrokhian2022_CompetitiveExclusionNSCLC|Farrokhian2022]]
 - What does the DEE actually look like in real biological systems? This is the key unmeasured quantity motivating future work [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]].
 - Do positive ecological interactions between resistant mutants and their ancestors generalize across organisms (bacteria, viruses, other cancers)? [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
 - What molecular mechanisms produce positive ecological interactions? Paracrine signaling, resource modification, public goods production? [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
@@ -49,9 +57,10 @@ A core challenge is connecting theory to experiment: frequency-dependent fitness
 | Extinction time distributions and analytical approximations | strong | Maltas2024 derives closed-form results with wide parameter validation |
 | Three regimes of preexisting resistance | developing | Maltas2024 establishes the framework; empirical tests across systems needed |
 | Stationary distribution of ecological fitnesses and the DEE | developing | Maltas2024 introduces the DEE; no empirical DEE measurements exist yet |
-| Evolutionary game theory and stable coexistence | developing | Maltas2024 treats the $f_e > 1$ regime; deeper game-theoretic connections thin |
-| Experimental measurement: evolutionary game assay | developing | Maltas2024 demonstrates in NSCLC; method not yet applied to bacteria in this lab |
-| Implications for treatment design | thin | Paper motivates but does not develop treatment strategies |
+| Evolutionary game theory and stable coexistence | developing | Maltas2024 treats the $f_e > 1$ regime; Farrokhian2022 provides empirical near-zero-frequency rescue example |
+| Experimental measurement: evolutionary game assay | developing | Farrokhian2022 characterizes gefitinib resistance context; Maltas2024 characterizes engineered resistance mutations |
+| Competitive exclusion criteria and game inversion under drug | developing | Farrokhian2022 establishes the gain-function condition and documents drug-induced game flip |
+| Implications for treatment design | developing | Farrokhian2022 shows lower doses can improve long-term tumor burden by maintaining heterogeneity |
 
 ## Cross-topic connections
 
