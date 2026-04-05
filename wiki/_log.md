@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] ingest | Ardell2024_GlobalEpistasis
+
+Ingested Ardell, Martsul, Johnson & Kryazhimskiy 2024 (Science 386:87–92), a canonical non-lab paper measuring fitness effects of ~100 barcoded insertion mutations across 42 *S. cerevisiae* strains in 6 environments. Key finding: global epistasis slopes are nearly environment-invariant (87% of pairwise comparisons statistically indistinguishable); the environment tunes only one effective parameter, the pivot growth rate $\bar{\lambda}_e$, yielding the generalized global epistasis equation $\Delta\lambda_{mge} = b_m(\lambda_{ge} - \bar{\lambda}_e) + \eta_{me} + \xi_{mge}$; DFE moments collapse onto universal environment-independent curves when adjusted for the pivot. No mutation was unconditionally beneficial or deleterious across 42 backgrounds and 6 environments. Note: source PDF named SergeyEpistasis.pdf (corresponding author Kryazhimskiy); cite key Ardell2024 follows first-author convention. Updated genetic-epistasis, distribution-of-fitness-effects, and fitness-landscapes topic hubs; updated lab/overview.md.
+
 ## [2026-04-05] ingest | Michel2008_MultidrugsResistance
 
 Ingested Michel, Yeh, Chait, Moellering & Kishony 2008 (PNAS), a canonical non-lab paper extending the mutant selection window (MSW) concept to two-drug combinations in *S. aureus* via high-throughput scanner-based colony imaging and a mathematical model decomposing $F_{XY}(C_X, C_Y)$ into single-drug resistance frequencies, drug epistasis $\eta_{XY}$, and cross-resistance $\xi$ (one free parameter). Key theoretical result: MSW decreases monotonically from synergy to antagonism when cross-resistance is absent. The model's growth function $\eta(C_X/x, C_Y/y)$ is the exact geometric rescaling assumption later formalized by Dean2020 and Gjini2021. Note: source PDF named kishony2008combo.pdf (last author); cite key Michel2008 follows first-author convention; equal-contribution co-first-author Yeh listed second. Updated evolution-in-multidrug-environments, evolutionary-control, and genetic-epistasis topic hubs; updated lab/overview.md.

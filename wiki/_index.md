@@ -22,11 +22,12 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 | [[papers/Levy2015_LineageTracking\|Levy2015]] | Quantitative evolutionary dynamics using high-resolution lineage tracking | 2015 | dna-barcoding-lineage-tracking, distribution-of-fitness-effects | high |
 | [[papers/Hegreness2008_AcceleratedResistance\|Hegreness2008]] | Accelerated evolution of resistance in multidrug environments | 2008 | evolution-in-multidrug-environments, fitness-landscapes, evolutionary-control | high |
 | [[papers/Michel2008_MultidrugsResistance\|Michel2008]] | Drug interactions modulate the potential for evolution of resistance | 2008 | evolution-in-multidrug-environments, evolutionary-control, genetic-epistasis | high |
+| [[papers/Ardell2024_GlobalEpistasis\|Ardell2024]] | Environment-independent distribution of mutational effects emerges from microscopic epistasis | 2024 | genetic-epistasis, distribution-of-fitness-effects, fitness-landscapes | high |
 
 ---
 
 ## Stats
 
-- **Total papers:** 14
+- **Total papers:** 15
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0
