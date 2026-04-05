@@ -1,6 +1,6 @@
-# Geometric Rescaling
+# Geometric Drug Concentration Rescaling
 
-**Geometric rescaling** is a modeling assumption — and empirical observation — that drug-resistant mutants behave identically to ancestral (drug-sensitive) cells but at a rescaled effective drug concentration. A mutant characterized by resistance parameters $(\alpha, \beta)$ growing in external drug concentrations $(x, y)$ experiences the same growth rate as an ancestral cell at concentrations $(\alpha x, \beta y)$:
+**Geometric drug concentration rescaling** is a modeling assumption — and empirical observation — that drug-resistant mutants behave identically to ancestral (drug-sensitive) cells but at a rescaled effective drug concentration. A mutant characterized by resistance parameters $(\alpha, \beta)$ growing in external drug concentrations $(x, y)$ experiences the same growth rate as an ancestral cell at concentrations $(\alpha x, \beta y)$:
 
 $$g_i = G(\alpha_i x, \beta_i y)$$
 

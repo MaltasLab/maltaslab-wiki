@@ -20,7 +20,7 @@ The covariance subscript can be decorated with the external conditions $\mathbf{
 
 ## Application to multidrug resistance evolution
 
-[[papers/Gjini2021_PriceEquationMultidrug|Gjini2021]] applied the Price equation to resistance evolution in two-drug environments using the [[concepts/geometric-rescaling|geometric rescaling]] assumption. With each mutant's growth given by $g_i = G(\alpha_i x, \beta_i y)$, the joint dynamics of mean resistance traits to both drugs become:
+[[papers/Gjini2021_PriceEquationMultidrug|Gjini2021]] applied the Price equation to resistance evolution in two-drug environments using the [[concepts/geometric-drug-concentration-rescaling|geometric drug concentration rescaling]] assumption. With each mutant's growth given by $g_i = G(\alpha_i x, \beta_i y)$, the joint dynamics of mean resistance traits to both drugs become:
 
 $$\frac{d\bar{\alpha}}{dt} = \text{Cov}_\mathbf{x}(\alpha, g), \quad \frac{d\bar{\beta}}{dt} = \text{Cov}_\mathbf{x}(\beta, g)$$
 

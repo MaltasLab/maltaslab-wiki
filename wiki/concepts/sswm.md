@@ -31,7 +31,7 @@ The population's state is tracked as a probability distribution $\bar{p}$ over g
 
 - **Clonal interference neglected**: In large populations ($N\mu > 1$), multiple beneficial mutations compete simultaneously, and the adaptive walk is faster but less predictable than SSWM predicts.
 - **Equal fixation probability**: The basic SSWM Markov chain treats all uphill moves equally; a more realistic version would weight transitions by fixation probability $\propto s$ (or $\propto s^x$ for varying population sizes, as in the clonal interference model of [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]).
-- **Clonal population**: Real populations may maintain standing variation, which can accelerate adaptation and is incorporated differently in the [[concepts/geometric-rescaling|geometric rescaling]] framework of [[papers/Gjini2021_PriceEquationMultidrug|Gjini2021]].
+- **Clonal population**: Real populations may maintain standing variation, which can accelerate adaptation and is incorporated differently in the [[concepts/geometric-drug-concentration-rescaling|geometric drug concentration rescaling]] framework of [[papers/Gjini2021_PriceEquationMultidrug|Gjini2021]].
 
 ## Related concepts and pages
 
