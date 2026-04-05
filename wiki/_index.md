@@ -8,6 +8,7 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 | Cite key | Title | Year | Topics | Relevance |
 |---|---|---|---|---|
+| [[papers/Kryazhimskiy2014_GlobalEpistasis\|Kryazhimskiy2014]] | Global epistasis makes adaptation predictable despite sequence-level stochasticity | 2014 | genetic-epistasis, distribution-of-fitness-effects, fitness-landscapes | high |
 | [[papers/Good2017_MolecularEvolutionLTEE\|Good2017]] | The dynamics of molecular evolution over 60,000 generations | 2017 | distribution-of-fitness-effects, genetic-epistasis, fitness-landscapes | high |
 | [[papers/Kaznatcheev2019_GameAssay\|Kaznatcheev2019]] | Fibroblasts and Alectinib switch the evolutionary games played by non-small cell lung cancer | 2019 | frequency-dependent-selection, evolutionary-control | high |
 | [[papers/Wood2012_MaximumEntropy\|Wood2012]] | Mechanism-independent method for predicting response to multidrug combinations in bacteria | 2012 | evolution-in-multidrug-environments, fitness-landscapes | high |
@@ -33,6 +34,6 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 ## Stats
 
-- **Total papers:** 20
+- **Total papers:** 21
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0
