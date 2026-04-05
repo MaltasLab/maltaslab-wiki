@@ -10,6 +10,7 @@ The Maltas Lab uses tools from statistical physics, population genetics, evoluti
 
 - ***Enterococcus faecalis*** — primary bacterial system for antibiotic resistance evolution experiments; rapidly evolves resistance in the laboratory; fully sequenced reference genomes available [[papers/Maltas2019_CollateralSensitivity|Maltas2019]]
 - ***Saccharomyces cerevisiae*** — experimental evolution
+- ***BRAF*V600E mutant melanoma** — used to study drug dependence (acquired resistance that requires the drug for survival) in targeted MAPK inhibitor therapy; panel includes A375, COLO679, UACC62, WM793, HS294T, SKMEL5, SKMEL28 cell lines representing the full spectrum from melanocytic to dedifferentiated transcriptional states; collaboration with Kris C. Wood lab (Duke) [[papers/Maltas2023_DrugDependence|Maltas2023]]
 - **Non-small cell lung cancer (NSCLC)** — validated experimental system for evolutionary dynamics in cancer; PC-9 cells (EGFR-mutant adenocarcinoma) used to study preexisting resistance to EGFR tyrosine kinase inhibitors (TKIs); engineered clinical resistance mutations (BRAF-V600E, KRAS-G12V, PIK3CA-E545K) characterized [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
 
 ## Experimental approach
@@ -23,17 +24,25 @@ The lab combines **parallel experimental evolution** with **high-throughput phen
 
 ## Theoretical approach
 
-The lab builds mathematical models that are directly parameterized by experimental data and tested against new experiments. A central modeling tool is the **Markov decision process (MDP)** framework, used to design optimal drug-cycling policies from empirically measured collateral sensitivity profiles [[papers/Maltas2019_CollateralSensitivity|Maltas2019]]. See [[concepts/markov-decision-process|Markov decision process]] for the formal framework.
+The lab builds mathematical models that are directly parameterized by experimental data and tested against new experiments. Modeling tools include:
+
+- **Markov decision process (MDP) framework** — used to design optimal drug-cycling policies from empirically measured collateral sensitivity profiles; extended to a dynamic MDP (d-MDP) for time-varying collateral landscapes [[papers/Maltas2019_CollateralSensitivity|Maltas2019]], [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]]. See [[concepts/markov-decision-process|Markov decision process]].
+- **Optimal drug holiday scheduling** — analytical derivation of $f_\text{on} = 1/(1+\gamma)$ from subpopulation growth rates for drug-dependent cancer; extended to finite-time regimes with initial-composition corrections [[papers/Maltas2023_DrugDependence|Maltas2023]]
+- **2D on-lattice agent-based models (ABMs)** — spatial validation of well-mixed predictions; can be updated in real time from observed growth rates to track time-varying spatial optima [[papers/Maltas2023_DrugDependence|Maltas2023]]
 
 The lab's theoretical perspective emphasizes **population-level statistical structure** over individual-level mechanistic description. Even when individual evolutionary outcomes are highly stochastic and variable, tractable structure often exists at the population level — and that structure can be sufficient to enable rational control strategies.
 
 ## Experimental methods
 
-Beyond bacterial serial-passage evolution, the lab employs:
+Beyond bacterial serial-passage evolution, the lab employs cancer cell line evolution and drug-scheduling experiments:
 
 - **Evolutionary game assay:** fluorescence-based coculture of GFP-labeled ancestor and mCherry-labeled mutant NSCLC cells at varying initial ancestor fractions; time-lapse microscopy every 4 h over 96 h using a BioSpa automated incubator; CellProfiler image analysis to extract cell counts and compute frequency-dependent growth curves [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
 - **Lentiviral engineering:** stable expression of resistance-conferring oncogenes (BRAF-V600E, KRAS-G12V, PIK3CA-E545K) in PC-9 cells [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
 - **Whole-exome sequencing and RNA-Seq:** GATK/BWA-MEM pipeline for variant calling; STAR/SALMON for transcriptomics; GSVA for pathway analysis [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
+- **Cancer cell drug resistance derivation:** escalating dose or high-dose shock protocols for MAPKi (BRAFi PLX4720, MEKi AZD6244, combination) resistant cancer cell lines; STR profiling for identity confirmation [[papers/Maltas2023_DrugDependence|Maltas2023]]
+- **Clonogenic growth and drug scheduling assays:** crystal violet quantification; mixed-population experiments to measure subpopulation dynamics; cell counting via Coulter counter; growth rate estimation from 6-day exponential growth assays [[papers/Maltas2023_DrugDependence|Maltas2023]]
+- **DepMap transcriptomic analysis:** two-class comparison, GSEA, ssGSEA for cell-line classification and dependency scoring across large panels of cancer cell lines [[papers/Maltas2023_DrugDependence|Maltas2023]]
+- **Lentiviral perturbations and CRISPR/Cas9 in cancer models:** ectopic expression of transcription factors (MITF, SOX10, JunB) and receptor tyrosine kinases (EGFR); gene knockout with TKOv3-derived sgRNAs [[papers/Maltas2023_DrugDependence|Maltas2023]]
 
 ## Core research themes
 
@@ -47,10 +56,14 @@ A subsequent study revealed that collateral sensitivity profiles are not static 
 
 The lab has developed a mathematical framework showing that negative frequency-dependent selection (positive ecological interaction) between resistant mutants and their sensitive ancestors can extend mutant extinction times by orders of magnitude, dramatically expanding the parameter regime under which preexisting resistance is expected. This reframes preexisting resistance as an eco-evolutionary phenomenon rather than a purely mutational one, and introduces the distribution of ecological effects (DEE) as a new object of study [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]].
 
+### Drug dependence and optimal holiday scheduling
+
+In *BRAF*V600E mutant melanoma, a subset of drug-resistant cells becomes *dependent* on the drug — growing faster with it than without it. This dependence is predictable from the pre-treatment differentiation state: melanocytic (MITFhigh) tumors are primed for drug addiction because adaptive MITF loss during resistance acquisition retains sensitivity to ERK hyperactivation via the ERK2–JunB–p21 axis. This predictability enables patient stratification. The lab derived the analytically optimal "drug holiday" schedule — $f_\text{on} = 1/(1+\gamma)$ — from measurable subpopulation growth rates and showed that a feedback-based adaptive therapy algorithm achieves near-optimal outcomes using only total population size measurements [[papers/Maltas2023_DrugDependence|Maltas2023]]. The framework extends to finite-time treatments and is robust to spatial effects validated by agent-based modeling.
+
 ### Multi-drug environments
 
 Work spans both **simultaneous** drug combinations (evolution-in-multidrug-environments) and **sequential** drug protocols (evolution-in-fluctuating-environments), with explicit attention to the distinction between these regimes.
 
 ---
 
-*Last updated: 2026-04-05. Updated from canonical ingests: [[papers/Maltas2019_CollateralSensitivity|Maltas2019]], [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]], [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]].*
+*Last updated: 2026-04-05. Updated from canonical ingests: [[papers/Maltas2019_CollateralSensitivity|Maltas2019]], [[papers/Maltas2023_DrugDependence|Maltas2023]], [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]], [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]].*

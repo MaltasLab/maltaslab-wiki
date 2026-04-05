@@ -24,11 +24,17 @@ A further complication — and opportunity — is that the collateral landscape 
 
 - Maltas2025 showed using the d-MDP framework that time-varying collateral profiles require time-aware policies: static MDPs derived from individual time-point collateral data diverge substantially from the temporally optimal policy (TD-opt) and achieve roughly twice the cumulative resistance — with the divergence increasing at later stages as collateral landscapes shift most dramatically [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]]
 
+- Maltas2023 established an analytically optimal drug holiday schedule for cancer: the optimal fraction of time on drug $f_\text{on} = 1/(1+\gamma)$ maintains population heterogeneity and achieves lower total growth than static treatments in drug-dependent BRAF V600E melanoma; on finite time horizons, the optimum depends on treatment duration and initial population composition before converging to the long-time asymptote [[papers/Maltas2023_DrugDependence|Maltas2023]]
+
+- Maltas2023 showed that a "blind" adaptive therapy protocol — switching between drug-on and drug-off epochs based solely on observed population growth rates — approximates the optimal schedule without detailed subpopulation measurements, maintaining near-50:50 sensitive/resistant heterogeneity over 48 days [[papers/Maltas2023_DrugDependence|Maltas2023]]
+
 ## Key concepts and methods
 
 - [[concepts/markov-decision-process|Markov decision process (MDP)]] — the formal framework used to design optimal sequential drug policies
 - **Serial-passage laboratory evolution** — 8-day (collateral sensitivity mapping) and 20-day (protocol comparison) experiments; daily dilutions with escalating drug concentrations
 - **Cumulative growth and adaptation rate** — outcome measures for comparing cycling protocols; cumulative growth sums daily OD; adaptation rate is the slope of the OD-vs-time regression
+- **Drug holiday optimal fraction** $f_\text{on} = 1/(1+\gamma)$ — analytically derived schedule for drug-dependent populations; depends only on four measurable growth rates [[papers/Maltas2023_DrugDependence|Maltas2023]]
+- **Blind adaptive therapy algorithm** — feedback-based switching using population-level growth rate measurements [[papers/Maltas2023_DrugDependence|Maltas2023]]
 
 ## Open questions
 
@@ -47,7 +53,7 @@ A further complication — and opportunity — is that the collateral landscape 
 | Temporal dynamics of collateral sensitivity | developing | Maltas2025 establishes global temporal trends and transient windows in *E. faecalis*; generality needed |
 | Collateral sensitivity as a basis for cycling design | developing | Maltas2019 and Maltas2025 are the key entries; generality across organisms thin |
 | Optimal cycling: MDP and d-MDP control-theoretic approaches | developing | Maltas2019 (static) and Maltas2025 (dynamic) establish the framework; extensions to realistic clinical settings thin |
-| Clinical implementation and adaptive therapy | thin | Not yet represented in wiki |
+| Clinical implementation and adaptive therapy | developing | Maltas2023 provides experimental validation and ABM; clinical trial context analyzed |
 
 ## Cross-topic connections
 

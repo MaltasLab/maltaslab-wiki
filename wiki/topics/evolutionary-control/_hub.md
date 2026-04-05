@@ -10,6 +10,8 @@ Formal frameworks for evolutionary control include Markov decision processes (MD
 
 A critical limitation of the static MDP is that collateral profiles are not fixed — they evolve as resistance accumulates. [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]] showed that this limitation is not merely theoretical: static MDP policies can fail even when they transiently create collateral sensitivity states, because without knowledge of when those states occur in evolutionary time, the policy cannot exploit them forward. The dynamic MDP (d-MDP) framework addresses this by solving a sequence of MDPs in reverse chronological order, incorporating the value of future collateral states into current decisions via backward induction. This achieves 50% lower cumulative resistance than the best static policy in simulation. The framework establishes a deeper principle: **the control problem is not just "what is the optimal sequence of drugs?" but "what is the optimal sequence given that the relationship between drugs is itself changing?"** — making evolutionary control an intrinsically time-varying optimization problem.
 
+A complementary mechanism for evolutionary control — distinct from collateral sensitivity but structurally analogous — is **drug dependence**: the phenomenon where a drug-resistant cell population grows faster *in the presence* of the drug it is resistant to than without it. [[papers/Maltas2023_DrugDependence|Maltas2023]] demonstrated that this property can be analytically optimized: given measurable per-capita growth rates for sensitive and dependent-resistant subpopulations under drug-on and drug-off conditions, the optimal fraction of time on drug is $f_\text{on} = 1/(1+\gamma)$, where $\gamma$ depends only on those four growth rates. This schedule uniquely maintains population heterogeneity and achieves lower total growth than either static treatment. Crucially, a "blind" adaptive therapy algorithm — requiring only population-level size measurements — converges to near-optimal outcomes, making the framework clinically actionable. The underlying principle is the same as collateral sensitivity-based control: both exploit a *cost of resistance* — a state where the resistance mechanism itself creates vulnerability — to design strategies that prevent any single resistance strategy from prevailing.
+
 Adaptive therapy — a clinical approach that modulates treatment intensity in response to observed tumor or pathogen burden — is a related strategy that exploits competitive suppression between sensitive and resistant sub-populations, and connects this topic to frequency-dependent selection.
 
 ## Key papers
@@ -26,11 +28,20 @@ Adaptive therapy — a clinical approach that modulates treatment intensity in r
 
 - Maltas2025 showed that static MDP policies fail not by failing to create collateral sensitivity states but by failing to exploit them: without knowledge of when in evolutionary time those states occur, the policy cannot guide the population through them, and the evolving collateral landscape leaves it stranded in high-resistance configurations [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]]
 
+- Maltas2023 derived the analytically optimal drug holiday schedule for drug-dependent cancer: $f_\text{on} = 1/(1+\gamma)$ where $\gamma = (k_{1,\text{on}} - k_{2,\text{on}})/(k_{2,\text{off}} - k_{1,\text{off}})$; this schedule uniquely maintains population heterogeneity and achieves lower total growth than static drug or drug-free treatment in BRAF V600E melanoma; validated experimentally in 9-day and 48-day mixed-population experiments [[papers/Maltas2023_DrugDependence|Maltas2023]]
+
+- Maltas2023 demonstrated that a "blind" adaptive therapy algorithm — using only total population size measurements, without knowledge of individual subpopulation growth rates — approximates the optimal drug holiday schedule and maintains near-50:50 heterogeneity over 48 days in mixed sensitive/dependent-resistant populations [[papers/Maltas2023_DrugDependence|Maltas2023]]
+
+- Maltas2023 showed that melanocytic differentiation state (MITFhigh, SOX10high) predicts drug dependence in BRAF V600E melanoma — MITF loss during resistance acquisition causes cells to retain sensitivity to ERK hyperactivation, trapping them in drug dependence — enabling patient stratification for holiday-based therapy [[papers/Maltas2023_DrugDependence|Maltas2023]]
+
 ## Key concepts and methods
 
 - [[concepts/markov-decision-process|Markov decision process (MDP)]] — primary formal framework for policy optimization in this lab's work; introduced for antibiotic resistance by Maltas2019
 - **Value iteration** — dynamic programming algorithm used to solve the MDP and find optimal policies
 - **Discount factor $\gamma$** — tunes the MDP between short-term and long-term objectives; central to characterizing the trade-off between instantaneous drug efficacy and evolutionary steering
+- **Drug holiday optimal fraction** $f_\text{on} = 1/(1+\gamma)$ — analytically optimal fraction of time on drug for drug-dependent populations; derived from four measurable growth rates [[papers/Maltas2023_DrugDependence|Maltas2023]]
+- **Blind adaptive therapy algorithm** — feedback-based schedule that switches between drug and drug-free based on observed population growth rates; approximates optimal outcome without subpopulation measurements [[papers/Maltas2023_DrugDependence|Maltas2023]]
+- **2D on-lattice agent-based model (ABM)** — spatial simulation tool validating well-mixed model predictions; implemented via Hybrid Automata Library [[papers/Maltas2023_DrugDependence|Maltas2023]]
 
 ## Open questions
 
@@ -39,6 +50,9 @@ Adaptive therapy — a clinical approach that modulates treatment intensity in r
 - Can the MDP framework be extended to account for fitness costs and drug-free "holidays" as control levers? [[papers/Maltas2019_CollateralSensitivity|Maltas2019]]
 - What is the relative importance of collateral sensitivity versus competitive suppression (adaptive therapy) as mechanisms for evolutionary control?
 - Can adaptive therapy protocols be designed that are robust to patient-to-patient variation in evolutionary dynamics?
+- Does drug dependence arise in other targeted therapy systems (e.g., EGFR inhibition in NSCLC) and is melanocytic differentiation state logic generalizable to other lineage-defining transcription factors? [[papers/Maltas2023_DrugDependence|Maltas2023]]
+- Does the drug holiday schedule itself eventually select for escape? What is the long-term evolutionary fate of drug-dependent populations under optimally scheduled intermittent treatment? [[papers/Maltas2023_DrugDependence|Maltas2023]]
+- Can pre-treatment biopsy transcriptomics prospectively identify drug-dependence-susceptible tumors — and is this achievable from liquid biopsy / ctDNA surveillance alone? [[papers/Maltas2023_DrugDependence|Maltas2023]]
 - How do optimal policies scale to larger drug panels and longer treatment timescales than those tested experimentally?
 
 ## Review article outline
@@ -48,7 +62,8 @@ Adaptive therapy — a clinical approach that modulates treatment intensity in r
 | Conceptual foundations: evolutionary steering vs. suppression | developing | Maltas2019 establishes the core principle; Maltas2025 extends it to dynamic landscapes |
 | MDP and stochastic control frameworks | developing | Maltas2019 (static MDP) and Maltas2025 (d-MDP) are the key entries; extensions to other systems thin |
 | Dynamic/time-varying optimal control | developing | Maltas2025 establishes the d-MDP framework; generalizations to realistic clinical settings needed |
-| Adaptive therapy: theory and clinical evidence | thin | Not yet represented in wiki |
+| Adaptive therapy: theory and clinical evidence | developing | Maltas2023 provides theory, experimental validation, and ABM; clinical trial context discussed |
+| Drug dependence as a control mechanism | developing | Maltas2023 establishes the framework and patient stratification logic; generality to other cancers needed |
 | Collateral sensitivity as a control mechanism | developing | Maltas2019 and Maltas2025 provide the mechanistic link and experimental validation |
 | Robustness and model uncertainty | thin | Explicitly flagged as future work; d-MDP adds temporal uncertainty as a new robustness challenge |
 | Clinical translation | thin | Both lab papers explicitly scope to idealized laboratory populations; translation not addressed |
