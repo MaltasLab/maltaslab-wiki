@@ -1,0 +1,31 @@
+# Source PDFs — immutable source documents, not tracked in git
+raw/papers/*.pdf
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Quartz build output
+public/
+
+# Node
+node_modules/
+.pnp
+.pnp.js
+
+# Environment
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
