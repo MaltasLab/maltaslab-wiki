@@ -21,11 +21,12 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 | [[papers/Gjini2021_PriceEquationMultidrug\|Gjini2021]] | Price equation captures the role of drug interactions and collateral effects in the evolution of multidrug resistance | 2021 | evolution-in-multidrug-environments, collateral-sensitivity, evolutionary-control | high |
 | [[papers/Levy2015_LineageTracking\|Levy2015]] | Quantitative evolutionary dynamics using high-resolution lineage tracking | 2015 | dna-barcoding-lineage-tracking, distribution-of-fitness-effects | high |
 | [[papers/Hegreness2008_AcceleratedResistance\|Hegreness2008]] | Accelerated evolution of resistance in multidrug environments | 2008 | evolution-in-multidrug-environments, fitness-landscapes, evolutionary-control | high |
+| [[papers/Michel2008_MultidrugsResistance\|Michel2008]] | Drug interactions modulate the potential for evolution of resistance | 2008 | evolution-in-multidrug-environments, evolutionary-control, genetic-epistasis | high |
 
 ---
 
 ## Stats
 
-- **Total papers:** 13
+- **Total papers:** 14
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0

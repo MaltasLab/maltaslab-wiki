@@ -20,6 +20,8 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 
 ## Key papers
 
+- Michel2008 proved analytically that, absent cross-resistance, the mutant selection window (MSW) of the optimal drug combination in two-drug space decreases monotonically as drug interactions move from synergy to antagonism; this formally establishes MSW minimization as a design criterion for combination therapy, and identifies drug interaction type (epistasis) and cross-resistance as the two independent parameters that can be optimized to minimize resistance potential [[papers/Michel2008_MultidrugsResistance|Michel2008]]
+
 - Hegreness2008 established that antagonistic drug combinations depress the rate of resistance evolution in *E. coli* relative to single drugs and to synergistic combinations ($\rho = 0.683$ between synergy and adaptation rate), demonstrating that drug interaction type is a parameter available to treatment design; this introduces the tradeoff between immediate inhibitory efficacy (synergy) and long-term resistance forestalling (antagonism) as a foundational design criterion for combination therapy [[papers/Hegreness2008_AcceleratedResistance|Hegreness2008]]
 
 - Karslake2016 demonstrated that density-dependent drug inhibition in *E. faecalis* induces bistable treatment outcomes in a PK/PD model: for drug concentrations between $K_0\gamma(0)$ and $K_0\gamma(C)$, infections above a critical density cannot be cleared; the bistable regime can span doses up to 1000× the MIC and is analytically characterized by a phenomenological density-dependence rate constant $\varepsilon$ estimated from fixed-density turbidostat measurements [[papers/Karslake2016_InoculumEffect|Karslake2016]]

@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] ingest | Michel2008_MultidrugsResistance
+
+Ingested Michel, Yeh, Chait, Moellering & Kishony 2008 (PNAS), a canonical non-lab paper extending the mutant selection window (MSW) concept to two-drug combinations in *S. aureus* via high-throughput scanner-based colony imaging and a mathematical model decomposing $F_{XY}(C_X, C_Y)$ into single-drug resistance frequencies, drug epistasis $\eta_{XY}$, and cross-resistance $\xi$ (one free parameter). Key theoretical result: MSW decreases monotonically from synergy to antagonism when cross-resistance is absent. The model's growth function $\eta(C_X/x, C_Y/y)$ is the exact geometric rescaling assumption later formalized by Dean2020 and Gjini2021. Note: source PDF named kishony2008combo.pdf (last author); cite key Michel2008 follows first-author convention; equal-contribution co-first-author Yeh listed second. Updated evolution-in-multidrug-environments, evolutionary-control, and genetic-epistasis topic hubs; updated lab/overview.md.
+
 ## [2026-04-05] ingest | Hegreness2008_AcceleratedResistance
 
 Ingested Hegreness, Shoresh, Damian, Hartl & Kishony 2008 (PNAS), a canonical non-lab paper establishing experimentally that synergistic drug combinations accelerate resistance evolution in *E. coli* relative to individual drugs (ρ = 0.683 between Bliss synergy S and adaptation rate α across 116 combinations of four antibiotics), while antagonistic combinations depress adaptation. Introduces the geometric isobologram model of resistance mutations as effective concentration reductions — the conceptual precursor to the geometric rescaling framework formalized by Dean2020 and Gjini2021. Note: source PDF named Kishony2008accel.pdf (last author); cite key Hegreness2008 follows first-author convention. Updated evolution-in-multidrug-environments, fitness-landscapes, and evolutionary-control topic hubs; updated lab/overview.md.
