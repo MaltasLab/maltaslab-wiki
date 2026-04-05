@@ -52,6 +52,8 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 
 - Weaver2024 introduced the opportunity landscape — the minimum fitness achievable per genotype across all drugs in the panel — as a drug-set design criterion; in the β-lactamase landscape, CTX (cefotaxime) is the worst-case-optimal drug for 15/16 genotypes, and RL agents preferentially select it as an emergent behavior without explicit instruction [[papers/Weaver2024_RLDrugCycling|Weaver2024]]
 
+- Gjini2021 showed that evolutionary trajectories in simultaneous two-drug environments follow weighted gradient dynamics $d\bar{\mathbf{a}}/dt = \Sigma\nabla G$, and that the weighting between drug interaction (landscape shape) and collateral effects (motion constraints) shifts with dosage ratio — implying that dosage combinations can be systematically chosen to maximize the constraining effect of collateral sensitivity, providing a geometric dosage-optimization principle complementary to MDP-derived drug-cycling policies [[papers/Gjini2021_PriceEquationMultidrug|Gjini2021]]
+
 ## Key concepts and methods
 
 - [[concepts/markov-decision-process|Markov decision process (MDP)]] — primary formal framework for policy optimization in this lab's work; introduced for antibiotic resistance by Maltas2019a
@@ -94,6 +96,7 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 | Drug dependence as a control mechanism | developing | Maltas2023 establishes the framework and patient stratification logic; generality to other cancers needed |
 | Collateral sensitivity as a control mechanism | developing | Maltas2019a and Maltas2025 provide the mechanistic link and experimental validation |
 | Robustness and model uncertainty | thin | Explicitly flagged as future work; d-MDP adds temporal uncertainty as a new robustness challenge |
+| Geometric dosage optimization (Price equation framework) | developing | Gjini2021 establishes gradient dynamics criterion for dosage selection; experimental optimization of dosage ratio to maximize collateral constraint not yet demonstrated |
 | Reinforcement learning and model-free control | developing | Weaver2024 establishes feasibility with RL-fit (fitness-only observable); generalization to other systems and larger landscapes needed |
 | Clinical translation | thin | Weaver2024 RL-fit uses only population fitness — a clinically tractable measurement — but all work still in laboratory/simulation settings |
 

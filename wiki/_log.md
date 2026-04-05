@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] ingest | Gjini2021_PriceEquationMultidrug
+
+Ingested Gjini & Wood 2021 (eLife), a canonical lab paper providing the formal population dynamics foundation for the geometric rescaling framework introduced empirically in Dean2020. Applies the Price equation to the 2D rescaling model ($g_i = G(\alpha_i x, \beta_i y)$) to show that resistance evolution is governed by Cov(α, g) and Cov(β, g); in the monomorphic limit reduces to weighted gradient dynamics Σ∇G, making explicit that drug interaction determines the fitness landscape shape and collateral effects constrain the direction of motion. Note: source PDF named WoodElife.pdf (PI name); cite key Gjini2021 follows first-author convention. Updated evolution-in-multidrug-environments, collateral-sensitivity, and evolutionary-control topic hubs; updated lab/overview.md.
+
 ## [2026-04-05] ingest | Weaver2024_RLDrugCycling
 
 Ingested Weaver, King, Maltas & Scott 2024 (PNAS), a canonical lab paper demonstrating that deep Q-network RL agents can learn effective drug-cycling policies for antibiotic resistance control without knowledge of the underlying fitness landscape or evolutionary model. RL-fit (observing only current population fitness and previous drug) outperforms random cycling in 98/100 replicates and all two-drug protocols; RL-genotype approaches MDP (perfect-information) performance at r=0.96. Introduces the "opportunity landscape" concept. Model system: E. coli β-lactamase Mira et al. 2015 landscapes (16 genotypes × 15 β-lactam antibiotics). Note: source PDF filename WeaverRLDrug.pdf (no year); cite key Weaver2024 follows first-author convention. Updated evolutionary-control and fitness-landscapes topic hubs; updated lab/overview.md.
