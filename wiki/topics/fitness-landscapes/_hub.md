@@ -14,6 +14,8 @@ A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandsca
 
 ## Key papers
 
+- Wood2012 established that the fitness landscape under multidrug combinations has a radically simplified structure: growth responses to three- and four-drug combinations are almost entirely determined by pairwise interaction structure, with higher-order interactions contributing only ~3% of total correlations; this means the 2D ancestral drug interaction surface — the fitness landscape substrate for the geometric rescaling framework — is sufficient to characterize the multidrug fitness landscape without requiring a higher-dimensional description [[papers/Wood2012_MaximumEntropy|Wood2012]]
+
 - Maltas2020 showed that in rugged landscapes (epistasis $\sigma = 1$), paired landscape evolution (rapid alternation) produces higher steady-state fitness than single landscape evolution for a range of positive interlandscape correlations — an effect absent in smooth landscapes and that grows as ruggedness increases [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
 
 - Maltas2020 established that shared fitness maxima — genotypes that are locally optimal in both environments — are the dominant driver of evolutionary dynamics under landscape alternation: for positively correlated rugged pairs, shared maxima have higher average fitness than non-shared maxima, and evolutionary trajectories are channeled toward them; for anticorrelated pairs, the absence of shared maxima drives ergodic-like dynamics with reduced fitness [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]

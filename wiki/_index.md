@@ -8,6 +8,7 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 | Cite key | Title | Year | Topics | Relevance |
 |---|---|---|---|---|
+| [[papers/Wood2012_MaximumEntropy\|Wood2012]] | Mechanism-independent method for predicting response to multidrug combinations in bacteria | 2012 | evolution-in-multidrug-environments, fitness-landscapes | high |
 | [[papers/Couce2024_ChangingFitnessEffects\|Couce2024]] | Changing fitness effects of mutations through long-term bacterial evolution | 2024 | distribution-of-fitness-effects, genetic-epistasis, fitness-landscapes | high |
 | [[papers/Yurtsev2013_BacterialCheating\|Yurtsev2013]] | Bacterial cheating drives the population dynamics of cooperative antibiotic resistance plasmids | 2013 | frequency-dependent-selection, evolutionary-control | high |
 | [[papers/Karslake2016_InoculumEffect\|Karslake2016]] | Population Density Modulates Drug Inhibition and Gives Rise to Potential Bistability of Treatment Outcomes for Bacterial Infections | 2016 | evolutionary-control | high |
@@ -30,6 +31,6 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 ## Stats
 
-- **Total papers:** 17
+- **Total papers:** 18
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0

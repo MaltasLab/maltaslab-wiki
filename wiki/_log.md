@@ -3,6 +3,10 @@
 Append-only log of all wiki operations. Never edit or delete entries.
 Format: `## [YYYY-MM-DD] operation | identifier`
 
+## [2026-04-05] ingest | Wood2012_MaximumEntropy
+
+Ingested Wood, Nishida, Sontag & Cluzel 2012 (PNAS), a canonical non-lab paper establishing that bacterial growth responses to three- and four-drug combinations are dominated by pairwise drug interactions (~97% of correlations), with pure higher-order interactions contributing only ~3%; validated via maximum entropy framework across diverse drug classes in *E. coli* and *S. aureus*. Derived simple algebraic Isserlis-theorem formulas $g_{ijk} = g_i g_{jk} + g_j g_{ik} + g_k g_{ij} - 2g_i g_j g_k$ for mechanism-independent multidrug prediction. Note: Wood is first author on this paper but it is a Cluzel lab paper from Wood's postdoc at Harvard; cite key Wood2012 follows first-author convention. Updated evolution-in-multidrug-environments and fitness-landscapes topic hubs; updated lab/overview.md.
+
 ---
 
 ## [2026-04-05] ingest | Couce2024_ChangingFitnessEffects
