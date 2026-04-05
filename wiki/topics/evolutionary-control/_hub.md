@@ -58,6 +58,8 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 
 - Gjini2021 showed that evolutionary trajectories in simultaneous two-drug environments follow weighted gradient dynamics $d\bar{\mathbf{a}}/dt = \Sigma\nabla G$, and that the weighting between drug interaction (landscape shape) and collateral effects (motion constraints) shifts with dosage ratio — implying that dosage combinations can be systematically chosen to maximize the constraining effect of collateral sensitivity, providing a geometric dosage-optimization principle complementary to MDP-derived drug-cycling policies [[papers/Gjini2021_PriceEquationMultidrug|Gjini2021]]
 
+- Yurtsev2013 discovered the β-lactamase inhibitor paradox: tazobactam and sulbactam — designed to suppress β-lactamase-mediated resistance — paradoxically increase the equilibrium resistant fraction in co-culture by raising the effective $K_M$ of the Michaelis-Menten drug degradation reaction, because higher $K_M$ requires more resistant cells to degrade ampicillin to the MIC; this demonstrates that when resistance is a cooperative (public goods) behavior, standard suppression strategies can be counterproductive [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
+
 ## Key concepts and methods
 
 - [[concepts/markov-decision-process|Markov decision process (MDP)]] — primary formal framework for policy optimization in this lab's work; introduced for antibiotic resistance by Maltas2019a
@@ -81,6 +83,7 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 - What is the relative importance of collateral sensitivity versus competitive suppression (adaptive therapy) as mechanisms for evolutionary control?
 - Can adaptive therapy protocols be designed that are robust to patient-to-patient variation in evolutionary dynamics?
 - Does drug dependence arise in other targeted therapy systems (e.g., EGFR inhibition in NSCLC) and is melanocytic differentiation state logic generalizable to other lineage-defining transcription factors? [[papers/Maltas2023_DrugDependence|Maltas2023]]
+- When resistance is mediated by an extracellularly acting enzyme (β-lactamase as a public good), do standard suppression strategies (β-lactamase inhibitors) systematically fail or reverse due to cooperative population dynamics? Can the equilibrium resistant fraction formula $f_R \approx A_i / (V_{\max} N_i)$ be incorporated into PK/PD treatment models to design inhibitor concentrations that avoid the paradox? [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
 - Does the drug holiday schedule itself eventually select for escape? What is the long-term evolutionary fate of drug-dependent populations under optimally scheduled intermittent treatment? [[papers/Maltas2023_DrugDependence|Maltas2023]]
 - Can pre-treatment biopsy transcriptomics prospectively identify drug-dependence-susceptible tumors — and is this achievable from liquid biopsy / ctDNA surveillance alone? [[papers/Maltas2023_DrugDependence|Maltas2023]]
 - How do optimal policies scale to larger drug panels and longer treatment timescales than those tested experimentally?

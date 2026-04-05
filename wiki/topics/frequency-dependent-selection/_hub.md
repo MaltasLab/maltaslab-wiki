@@ -10,6 +10,8 @@ In the context of this lab, frequency-dependent selection arises most naturally 
 
 A core challenge is connecting theory to experiment: frequency-dependent fitness is often measured indirectly, and the lab has developed a fluorescence-based evolutionary game assay (coculture with nuclear-localized GFP and mCherry labels, time-lapse microscopy) to directly measure ecological interaction curves as a function of ancestor fraction.
 
+A foundational mechanistic example of how positive ecological interactions arise in antibiotic resistance contexts is provided by [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]], which demonstrated that TEM-1 β-lactamase — the enzyme mediating ampicillin resistance — is a cooperative (public goods) behavior. Resistant *E. coli* secrete β-lactamase into the shared extracellular medium, degrading ampicillin for all neighboring cells regardless of their genotype. Sensitive "cheater" cells can thus survive at ampicillin concentrations 50× above their monoculture MIC when co-cultured with resistant cooperators. The equilibrium resistant fraction is governed by a Michaelis-Menten balance: $f_R \approx A_i / (V_{\max} N_i)$, proportional to initial antibiotic concentration and inversely proportional to initial population density — a prediction that collapses data over two orders of magnitude in density. Because both strains can invade when rare, the system exhibits stable coexistence via negative frequency-dependent selection, formally analogous to the snowdrift game. A counterintuitive consequence of this cooperative structure is the **β-lactamase inhibitor paradox**: tazobactam, a β-lactamase inhibitor intended to suppress resistance, increases $K_M$ in the Michaelis-Menten degradation equation and thus *increases* the equilibrium resistant fraction, a prediction validated experimentally with inhibitor constant $K_I = 4.6$ ng/ml. This mechanistic system provides concrete grounding for the ecological fitness ($f_e$) framework of [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]: the public goods character of β-lactamase is an explicit biochemical mechanism by which sensitive cells can have $f_e > 1$ even when their intrinsic monoculture fitness $f_i$ is below the resistant strain.
+
 A direct empirical application of this framework to a clinically derived resistance system is provided by [[papers/Farrokhian2022_CompetitiveExclusionNSCLC|Farrokhian2022]], which measured payoff matrices for a gefitinib-resistant PC9 NSCLC population and its sensitive ancestor. This work reveals a conceptually important asymmetry: **the condition for competitive exclusion is that the gain function must maintain the same sign across all population frequencies**, and monoculture fitness measurements cannot verify this condition. Even with a significant fitness cost (resistant clone grows at ~76% of sensitive monoculture rate), ecological interactions at high-sensitive fractions nearly fully compensate for the cost — implying a potential stable coexistence fixed point near $p_R \approx 0$ that could maintain resistant cells as a "safe harbor" population even in the absence of drug. Drug treatment flips the game entirely: at every tested gefitinib concentration, the gain function inverts sign and the sensitive ancestor is competitively excluded.
 
 ## Key papers
@@ -28,6 +30,14 @@ A direct empirical application of this framework to a clinically derived resista
 
 - Maltas2024 validated the framework experimentally: all three engineered clinical resistance mutations to EGFR TKIs in NSCLC (BRAF-V600E, KRAS-G12V, PIK3CA-E545K) exhibit positive ecological interactions with the ancestor PC-9 cell line, surveying ~70% of known clinical resistance mechanisms to third-generation TKIs [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
 
+- Yurtsev2013 demonstrated that TEM-1 β-lactamase-mediated ampicillin resistance is a public good: sensitive *E. coli* without the resistance plasmid survive at 50× their monoculture MIC when co-cultured with resistant cells, establishing that extracellular drug degradation creates a direct cooperative interaction that drives negative frequency-dependent selection [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
+
+- Yurtsev2013 derived and validated the equilibrium resistant fraction $f_R \approx A_i / (V_{\max} N_i)$ — proportional to initial ampicillin concentration and inversely proportional to initial cell density — showing data collapse over two orders of magnitude in density and providing the first mechanistic derivation of a stable resistance equilibrium from biochemical rate constants [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
+
+- Yurtsev2013 demonstrated stable coexistence of resistant and sensitive *E. coli* under ampicillin via competitive invasion experiments and difference equation maps: each strain can invade when rare, yielding a snowdrift game with negative frequency-dependent selection; overshoot dynamics (f_R exceeds equilibrium before relaxing) are predicted by the model and confirmed experimentally [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
+
+- Yurtsev2013 discovered the β-lactamase inhibitor paradox: tazobactam and sulbactam increase the equilibrium resistant fraction by raising the effective $K_M$ in the Michaelis-Menten ampicillin degradation equation, the opposite of the intended therapeutic effect; validated with $K_I = 4.6$ ng/ml within the published literature range [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
+
 ## Key concepts and methods
 
 - **Intrinsic fitness ($f_i$):** monoculture growth rate of the mutant; the standard quantity measured in resistance assays
@@ -37,6 +47,10 @@ A direct empirical application of this framework to a clinically derived resista
 - **Evolutionary game assay:** fluorescence-based coculture at varying ancestor fractions, with time-lapse microscopy; measures growth rate as a function of ancestor frequency to quantify ecological interaction curves
 - **Generalized Moran process:** birth-death model with frequency-dependent fitness; yields closed-form extinction time distributions
 - **Wright-Fisher simulations:** discrete-generation model with mutation; used to simulate stationary distributions and validate analytical approximations
+- **Antibiotic resistance as a public good** — resistance phenotypes that act via extracellular drug inactivation (e.g., β-lactamase) create shared benefits for the entire local population regardless of individual genotype, making resistance a cooperative rather than purely individual trait; demonstrated empirically in [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
+- **Snowdrift game** — evolutionary game in which both cooperators (resistant cells) and defectors (sensitive cheater cells) can invade when rare, generating a stable interior coexistence equilibrium; arises naturally in cooperative resistance systems where extracellular drug degradation benefits all neighbors [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
+- **Michaelis-Menten antibiotic degradation model** — $dA/dt = -V_{\max} n_R A / (K_M + A)$; used to derive equilibrium resistant fraction $f_R \approx A_i / (V_{\max} N_i)$ from biochemical rate constants; connects enzyme kinetics to population genetics steady states [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
+- **β-lactamase inhibitor paradox** — the counterintuitive prediction that β-lactamase inhibitors (tazobactam, sulbactam) increase the equilibrium resistant fraction by raising $K_M$, because higher $K_M$ requires proportionally more resistant cells to degrade antibiotic to the MIC; validated experimentally in *E. coli* [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
 
 ## Open questions
 
@@ -48,6 +62,9 @@ A direct empirical application of this framework to a clinically derived resista
 - Can the ecological interaction between mutant and ancestor be disrupted therapeutically to accelerate extinction of preexisting resistance before treatment begins? [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
 - How do frequency-dependent interactions between drug-resistant sub-populations (not just mutant-ancestor) affect resistance evolution under treatment?
 - Under what conditions does frequency-dependent selection maintain stable polymorphism versus drive fixation or extinction?
+- Does the public goods / cooperative structure of β-lactamase resistance generalize to other extracellularly acting resistance mechanisms (e.g., aminoglycoside-modifying enzymes secreted into the medium), or is the snowdrift game equilibrium specific to β-lactam/β-lactamase chemistry? [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
+- Can the β-lactamase inhibitor paradox (tazobactam and sulbactam enriching resistant cells by raising $K_M$) be circumvented by dosing strategies that account for Michaelis-Menten dynamics — for example, using inhibitor concentrations sufficient to saturate the enzyme rather than merely raising $K_M$ incrementally? [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
+- How does spatial structure (biofilm, colonization gradients) alter the cooperative dynamics of β-lactamase-mediated resistance — does spatial heterogeneity disrupt or reinforce the snowdrift game equilibrium, and does $f_R \approx A_i / (V_{\max} N_i)$ hold under spatial drug gradients? [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
 
 ## Review article outline
 
@@ -61,6 +78,7 @@ A direct empirical application of this framework to a clinically derived resista
 | Experimental measurement: evolutionary game assay | developing | Farrokhian2022 characterizes gefitinib resistance context; Maltas2024 characterizes engineered resistance mutations |
 | Competitive exclusion criteria and game inversion under drug | developing | Farrokhian2022 establishes the gain-function condition and documents drug-induced game flip |
 | Implications for treatment design | developing | Farrokhian2022 shows lower doses can improve long-term tumor burden by maintaining heterogeneity |
+| Mechanisms of positive ecological interactions: public goods resistance | developing | Yurtsev2013 establishes β-lactamase as a cooperative trait with Michaelis-Menten derivation of equilibrium f_R; generalization to other resistance mechanisms and organisms needed |
 
 ## Cross-topic connections
 

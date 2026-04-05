@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] ingest | Yurtsev2013_BacterialCheating
+
+Ingested Yurtsev, Chao, Datta, Artemova & Gore 2013 (Molecular Systems Biology 9:683), a canonical non-lab paper demonstrating that TEM-1 β-lactamase is a cooperative (public goods) behavior in *E. coli*: resistant cells degrade ampicillin extracellularly, enabling sensitive "cheater" cells to survive at 50× their monoculture MIC. Key findings: equilibrium resistant fraction $f_R \approx A_i / (V_{\max} N_i)$ validated over two orders of magnitude in density; stable coexistence via snowdrift game dynamics (each strain invades when rare); β-lactamase inhibitor paradox — tazobactam and sulbactam increase equilibrium f_R by raising $K_M$. Note: source PDF named BacterialCheating.pdf; cite key Yurtsev2013 follows first-author convention (Gore is last/corresponding author). Updated frequency-dependent-selection and evolutionary-control topic hubs; updated lab/overview.md.
+
 ## [2026-04-05] ingest | Ardell2024_GlobalEpistasis
 
 Ingested Ardell, Martsul, Johnson & Kryazhimskiy 2024 (Science 386:87–92), a canonical non-lab paper measuring fitness effects of ~100 barcoded insertion mutations across 42 *S. cerevisiae* strains in 6 environments. Key finding: global epistasis slopes are nearly environment-invariant (87% of pairwise comparisons statistically indistinguishable); the environment tunes only one effective parameter, the pivot growth rate $\bar{\lambda}_e$, yielding the generalized global epistasis equation $\Delta\lambda_{mge} = b_m(\lambda_{ge} - \bar{\lambda}_e) + \eta_{me} + \xi_{mge}$; DFE moments collapse onto universal environment-independent curves when adjusted for the pivot. No mutation was unconditionally beneficial or deleterious across 42 backgrounds and 6 environments. Note: source PDF named SergeyEpistasis.pdf (corresponding author Kryazhimskiy); cite key Ardell2024 follows first-author convention. Updated genetic-epistasis, distribution-of-fitness-effects, and fitness-landscapes topic hubs; updated lab/overview.md.
