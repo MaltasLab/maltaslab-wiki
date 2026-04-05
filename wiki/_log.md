@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] lint | concept pages and open question annotations
+
+Created 4 concept pages: geometric-rescaling, price-equation, sswm, adaptive-therapy. Annotated 3 open questions as partially addressed: (1) MDP policy robustness to misspecification → partially addressed by Weaver2024 RL approach (evolutionary-control hub); (2) shared maxima reconciliation with MDP success → addressed by Maltas2020 population-level argument (fitness-landscapes hub); (3) long-term maintenance of collateral sensitivity under cycling → partially addressed by Maltas2020 theoretical warning (collateral-sensitivity hub). Added wikilinks for new concept pages in evolution-in-multidrug-environments, fitness-landscapes, and evolutionary-control hubs.
+
 ## [2026-04-05] ingest | Gjini2021_PriceEquationMultidrug
 
 Ingested Gjini & Wood 2021 (eLife), a canonical lab paper providing the formal population dynamics foundation for the geometric rescaling framework introduced empirically in Dean2020. Applies the Price equation to the 2D rescaling model ($g_i = G(\alpha_i x, \beta_i y)$) to show that resistance evolution is governed by Cov(α, g) and Cov(β, g); in the monomorphic limit reduces to weighted gradient dynamics Σ∇G, making explicit that drug interaction determines the fitness landscape shape and collateral effects constrain the direction of motion. Note: source PDF named WoodElife.pdf (PI name); cite key Gjini2021 follows first-author convention. Updated evolution-in-multidrug-environments, collateral-sensitivity, and evolutionary-control topic hubs; updated lab/overview.md.
