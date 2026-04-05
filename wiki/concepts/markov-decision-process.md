@@ -31,7 +31,7 @@ In the context of antibiotic resistance, this corresponds to the difference betw
 
 ## Application to evolutionary control
 
-[[papers/Maltas2019_CollateralSensitivity|Maltas2019]] introduced the MDP framework for antibiotic drug cycling. In this application:
+[[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]] introduced the MDP framework for antibiotic drug cycling. In this application:
 
 - **State** $s_t$: the resistance profile of the bacterial population at time $t$ — a vector of resistance levels to each available drug
 - **Action** $a_t$: the drug applied at time $t$

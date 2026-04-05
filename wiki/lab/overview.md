@@ -8,7 +8,7 @@ The Maltas Lab uses tools from statistical physics, population genetics, evoluti
 
 ## Model systems
 
-- ***Enterococcus faecalis*** — primary bacterial system for antibiotic resistance evolution experiments; rapidly evolves resistance in the laboratory; fully sequenced reference genomes available [[papers/Maltas2019_CollateralSensitivity|Maltas2019]]
+- ***Enterococcus faecalis*** — primary bacterial system for antibiotic resistance evolution experiments; rapidly evolves resistance in the laboratory; fully sequenced reference genomes available [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]]
 - ***Saccharomyces cerevisiae*** — experimental evolution
 - ***BRAF*V600E mutant melanoma** — used to study drug dependence (acquired resistance that requires the drug for survival) in targeted MAPK inhibitor therapy; panel includes A375, COLO679, UACC62, WM793, HS294T, SKMEL5, SKMEL28 cell lines representing the full spectrum from melanocytic to dedifferentiated transcriptional states; collaboration with Kris C. Wood lab (Duke) [[papers/Maltas2023_DrugDependence|Maltas2023]]
 - **Non-small cell lung cancer (NSCLC)** — validated experimental system for evolutionary dynamics in cancer; PC-9 cells (EGFR-mutant adenocarcinoma) used to study preexisting resistance to EGFR tyrosine kinase inhibitors (TKIs); engineered clinical resistance mutations (BRAF-V600E, KRAS-G12V, PIK3CA-E545K) characterized [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
@@ -17,18 +17,19 @@ The Maltas Lab uses tools from statistical physics, population genetics, evoluti
 
 The lab combines **parallel experimental evolution** with **high-throughput phenotypic measurement**. The core experimental workflow for characterizing resistance involves:
 
-1. Serial-passage laboratory evolution: populations exposed to increasing drug concentrations over 8 days (up to ~60 generations), performed in replicate (typically 4 populations per condition) [[papers/Maltas2019_CollateralSensitivity|Maltas2019]]
-2. IC50 measurement: dose-response curves fit to a Hill-like function $f(x) = (1 + (x/K)^h)^{-1}$ across all mutant–drug combinations to quantify resistance as $C \equiv \log_2(\text{IC}_{50,\text{Mut}} / \text{IC}_{50,\text{WT}})$ [[papers/Maltas2019_CollateralSensitivity|Maltas2019]]
-3. Growth cost measurement: logistic growth curves in drug-free media to estimate fitness costs of resistance [[papers/Maltas2019_CollateralSensitivity|Maltas2019]]
-4. Whole-genome sequencing: population and clonal sequencing via the breseq pipeline to identify resistance-associated mutations [[papers/Maltas2019_CollateralSensitivity|Maltas2019]]
+1. Serial-passage laboratory evolution: populations exposed to increasing drug concentrations over 8 days (up to ~60 generations) for antibiotics, or 30–60 days (up to ~450 generations) for slow-adapting nonantibiotic stressors; performed in replicate (typically 4–32 populations per condition) [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]], [[papers/Maltas2019b_NonantibioticStressors|Maltas2019b]]
+2. IC50 measurement: dose-response curves fit to a Hill-like function $f(x) = (1 + (x/K)^h)^{-1}$ across all mutant–drug combinations to quantify resistance as $C \equiv \log_2(\text{IC}_{50,\text{Mut}} / \text{IC}_{50,\text{WT}})$ [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]]
+3. Growth cost measurement: logistic growth curves in drug-free media to estimate fitness costs of resistance [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]]
+4. Whole-genome sequencing: population and clonal sequencing via the breseq pipeline to identify resistance-associated mutations [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]]
 
 ## Theoretical approach
 
 The lab builds mathematical models that are directly parameterized by experimental data and tested against new experiments. Modeling tools include:
 
-- **Markov decision process (MDP) framework** — used to design optimal drug-cycling policies from empirically measured collateral sensitivity profiles; extended to a dynamic MDP (d-MDP) for time-varying collateral landscapes [[papers/Maltas2019_CollateralSensitivity|Maltas2019]], [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]]. See [[concepts/markov-decision-process|Markov decision process]].
+- **Markov decision process (MDP) framework** — used to design optimal drug-cycling policies from empirically measured collateral sensitivity profiles; extended to a dynamic MDP (d-MDP) for time-varying collateral landscapes [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]], [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]]. See [[concepts/markov-decision-process|Markov decision process]].
 - **Optimal drug holiday scheduling** — analytical derivation of $f_\text{on} = 1/(1+\gamma)$ from subpopulation growth rates for drug-dependent cancer; extended to finite-time regimes with initial-composition corrections [[papers/Maltas2023_DrugDependence|Maltas2023]]
 - **2D on-lattice agent-based models (ABMs)** — spatial validation of well-mixed predictions; can be updated in real time from observed growth rates to track time-varying spatial optima [[papers/Maltas2023_DrugDependence|Maltas2023]]
+- **Additive null model for sequential stressor selection** — element-wise sum of log-IC50 collateral profiles to screen for productive sequential environment pairs without exhaustive experimentation; ignores epistasis but validated against experimental results [[papers/Maltas2019b_NonantibioticStressors|Maltas2019b]]
 
 The lab's theoretical perspective emphasizes **population-level statistical structure** over individual-level mechanistic description. Even when individual evolutionary outcomes are highly stochastic and variable, tractable structure often exists at the population level — and that structure can be sufficient to enable rational control strategies.
 
@@ -48,9 +49,11 @@ Beyond bacterial serial-passage evolution, the lab employs cancer cell line evol
 
 ### Collateral sensitivity and evolutionary steering
 
-The lab's work on *E. faecalis* established that collateral sensitivity profiles — while heterogeneous at the individual mutant level — cluster by drug class at the population level. This statistical structure supports the design of MDP-derived drug-cycling policies that outperform intuitive protocols by incorporating **evolutionary steering**: occasionally deploying less effective drugs to guide the population toward a more vulnerable future state [[papers/Maltas2019_CollateralSensitivity|Maltas2019]].
+The lab's work on *E. faecalis* established that collateral sensitivity profiles — while heterogeneous at the individual mutant level — cluster by drug class at the population level. This statistical structure supports the design of MDP-derived drug-cycling policies that outperform intuitive protocols by incorporating **evolutionary steering**: occasionally deploying less effective drugs to guide the population toward a more vulnerable future state [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]].
 
 A subsequent study revealed that collateral sensitivity profiles are not static but evolve over evolutionary time: early adaptation strongly favors collateral resistance, while later adaptation increasingly favors collateral sensitivity — creating transient windows during which drug switching is most effective [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]]. This finding prompted the development of the **dynamic MDP (d-MDP)** framework, which extends the original MDP approach via backward induction over temporally ordered collateral profiles, achieving 50% lower cumulative resistance than static policies in simulation. The lab's view of evolutionary control has matured from "design optimal sequences given fixed collateral effects" to "design optimal sequences given a collateral landscape that is itself evolving" — an intrinsically time-varying optimization problem.
+
+A parallel extension of the collateral sensitivity work demonstrated that the phenomenon is not confined to antibiotic–antibiotic pairs: nonantibiotic stressors including biocides (CHX, TCS), preservatives (NaBz), extreme pH, and osmotic stress also generate collateral sensitivity to antibiotics in *E. faecalis*, with over half (58%) of collateral effects being sensitivities rather than resistances [[papers/Maltas2019b_NonantibioticStressors|Maltas2019b]]. Crucially, sequential exposure to environments with orthogonal sensitizing profiles (e.g., LZD followed by NaBz) compounds vulnerabilities additively — sensitizing populations to ~6 conditions on average versus ~4 for either stressor alone. This raises the possibility that nondrug stressors in clinical environments (hand sanitizers, food preservatives, osmotic stress) could be leveraged as evolutionary levers to enhance antibiotic susceptibility.
 
 ### Frequency-dependent ecological interactions and preexisting resistance
 
@@ -66,4 +69,4 @@ Work spans both **simultaneous** drug combinations (evolution-in-multidrug-envir
 
 ---
 
-*Last updated: 2026-04-05. Updated from canonical ingests: [[papers/Maltas2019_CollateralSensitivity|Maltas2019]], [[papers/Maltas2023_DrugDependence|Maltas2023]], [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]], [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]].*
+*Last updated: 2026-04-05. Updated from canonical ingests: [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]], [[papers/Maltas2019b_NonantibioticStressors|Maltas2019b]], [[papers/Maltas2023_DrugDependence|Maltas2023]], [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]], [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]].*
