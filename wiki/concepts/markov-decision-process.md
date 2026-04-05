@@ -47,6 +47,20 @@ The key finding is that the long-term optimal policy ($\gamma \approx 1$) outper
 - The resulting resistance distribution is **bimodal**: the population alternates between very low resistance (effective drug) and occasionally very high resistance (steering drug), achieving lower *mean* resistance than intermediate strategies
 - Collateral sensitivity is *mechanistically essential*: simulations with collateral sensitivity set to zero show rapid resistance saturation under the same policy
 
+## Dynamic MDP (d-MDP): extending to time-varying collateral profiles
+
+The static MDP assumes collateral profiles are constant throughout treatment — an assumption violated in practice, as collateral effects evolve over time. [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]] introduced the **dynamic MDP (d-MDP)** framework to address this.
+
+The d-MDP solves a sequence of static MDPs, one per measured collateral profile epoch, in **reverse chronological order**. The key modification is to the reward function: rather than rewarding only the resistance to the currently applied drug, the reward at each time step also incorporates the **value of the resulting state in subsequent epochs** — computed by exhaustive simulation under the later-period optimal policy. The algorithm proceeds:
+
+1. Solve the static MDP for the final collateral profile epoch; simulate exhaustively to compute state-value pairs
+2. Solve the static MDP for the second-to-last epoch, using a composite reward that combines current drug resistance and future state value from step 1
+3. Repeat backward in time until the initial epoch is reached
+
+This backward-induction structure ensures that each period's policy "knows" what the collateral landscape will look like in future periods and can trade off current resistance for favorable positioning in the next regime. In simulations calibrated to experimental data, the d-MDP achieves **50% lower cumulative resistance** than the best static MDP derived from any single time point's collateral data [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]].
+
+The framework generalizes: additional collateral profile epochs can be incorporated, reward objectives can be modified (e.g., minimize total resistance rather than maximize sensitivity to at least one drug), and the time scale of evolutionary transitions can be adjusted.
+
 ## Related concepts and pages
 
 - [[topics/evolutionary-control/_hub|evolutionary-control]] — primary application domain

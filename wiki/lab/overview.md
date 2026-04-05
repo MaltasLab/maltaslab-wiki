@@ -41,6 +41,8 @@ Beyond bacterial serial-passage evolution, the lab employs:
 
 The lab's work on *E. faecalis* established that collateral sensitivity profiles — while heterogeneous at the individual mutant level — cluster by drug class at the population level. This statistical structure supports the design of MDP-derived drug-cycling policies that outperform intuitive protocols by incorporating **evolutionary steering**: occasionally deploying less effective drugs to guide the population toward a more vulnerable future state [[papers/Maltas2019_CollateralSensitivity|Maltas2019]].
 
+A subsequent study revealed that collateral sensitivity profiles are not static but evolve over evolutionary time: early adaptation strongly favors collateral resistance, while later adaptation increasingly favors collateral sensitivity — creating transient windows during which drug switching is most effective [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]]. This finding prompted the development of the **dynamic MDP (d-MDP)** framework, which extends the original MDP approach via backward induction over temporally ordered collateral profiles, achieving 50% lower cumulative resistance than static policies in simulation. The lab's view of evolutionary control has matured from "design optimal sequences given fixed collateral effects" to "design optimal sequences given a collateral landscape that is itself evolving" — an intrinsically time-varying optimization problem.
+
 ### Frequency-dependent ecological interactions and preexisting resistance
 
 The lab has developed a mathematical framework showing that negative frequency-dependent selection (positive ecological interaction) between resistant mutants and their sensitive ancestors can extend mutant extinction times by orders of magnitude, dramatically expanding the parameter regime under which preexisting resistance is expected. This reframes preexisting resistance as an eco-evolutionary phenomenon rather than a purely mutational one, and introduces the distribution of ecological effects (DEE) as a new object of study [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]].
@@ -51,4 +53,4 @@ Work spans both **simultaneous** drug combinations (evolution-in-multidrug-envir
 
 ---
 
-*Last updated: 2026-04-05. Updated from canonical ingests: [[papers/Maltas2019_CollateralSensitivity|Maltas2019]], [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]].*
+*Last updated: 2026-04-05. Updated from canonical ingests: [[papers/Maltas2019_CollateralSensitivity|Maltas2019]], [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]], [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]].*

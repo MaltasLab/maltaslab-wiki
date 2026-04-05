@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] ingest | Maltas2025_DynamicCollateralSensitivity
+
+Ingested Maltas, Huynh & Wood 2025 (PLoS Biol), a canonical lab paper characterizing how collateral sensitivity profiles evolve over time in *E. faecalis* and introducing the dynamic MDP (d-MDP) framework for optimal drug scheduling under time-varying collateral landscapes. Updated collateral-sensitivity, evolutionary-control, and evolution-in-fluctuating-environments topic hubs with specific cited contributions and conceptual advances; updated evolutionary-control and collateral-sensitivity hubs to reflect that temporal dynamics of collateral profiles are now a central empirical finding rather than an open question; extended the MDP concept page with the d-MDP framework; updated lab/overview.md to reflect this extension of the lab's evolutionary steering research.
+
 ## [2026-04-05] ingest | Maltas2024_FrequencyDependentPreexistence
 
 Ingested Maltas et al. 2024 (PRX Life), a canonical lab paper developing a mathematical framework for frequency-dependent ecological interactions and preexisting drug resistance, validated experimentally in NSCLC. Updated frequency-dependent-selection and distribution-of-fitness-effects topic hubs with specific cited contributions and conceptual advances. Updated lab/overview.md to reflect NSCLC as an experimental system and the eco-evolutionary framing of the lab's work.

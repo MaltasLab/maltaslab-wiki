@@ -34,7 +34,7 @@ echo "Output:     $OUTFILE"
 
 # marker_single writes to a subdirectory named after the file; we flatten it.
 TMPDIR="$(mktemp -d)"
-marker_single "$PDF" --output_dir "$TMPDIR" --output_format markdown
+conda run -n marker marker_single "$PDF" --output_dir "$TMPDIR" --output_format markdown
 
 # marker creates: $TMPDIR/<basename>/<basename>.md
 MARKER_OUT="$TMPDIR/${BASENAME}/${BASENAME}.md"
