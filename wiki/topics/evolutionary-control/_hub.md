@@ -64,6 +64,8 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 
 - Yurtsev2013 discovered the β-lactamase inhibitor paradox: tazobactam and sulbactam — designed to suppress β-lactamase-mediated resistance — paradoxically increase the equilibrium resistant fraction in co-culture by raising the effective $K_M$ of the Michaelis-Menten drug degradation reaction, because higher $K_M$ requires more resistant cells to degrade ampicillin to the MIC; this demonstrates that when resistance is a cooperative (public goods) behavior, standard suppression strategies can be counterproductive [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
 
+- Tandar2026 established empirical constraints on the clinical applicability of CS-based control by showing that CS is rare in clinical surveillance data (3.03% of species-antibiotic pairs), predominantly species-specific, and often absent for pairs identified in laboratory evolution; only six cross-species conserved CS pairs were identified across >12,000 tested species-antibiotic combinations — establishing that the theoretical and experimental promise of CS-based evolutionary control must be validated against a low base rate of consistent clinical CS [[papers/Tandar2026_ClinicalCollateralSensitivity|Tandar2026]]
+
 ## Key concepts and methods
 
 - [[concepts/markov-decision-process|Markov decision process (MDP)]] — primary formal framework for policy optimization in this lab's work; introduced for antibiotic resistance by Maltas2019a
@@ -96,6 +98,8 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 - Can the opportunity landscape be used to design optimal drug panels from scratch — selecting the minimal set of drugs that maximizes mean opportunity fitness across genotypes — and does this solve the drug selection problem without requiring a full fitness landscape? [[papers/Weaver2024_RLDrugCycling|Weaver2024]]
 - Do RL-discovered drug cycling policies correspond to interpretable rules that could be used clinically without running the algorithm online?
 
+- Given that Tandar2026 shows clinical CS is far rarer (3%) than lab-based studies suggest, does this mean CS-based MDP/d-MDP control strategies are only applicable to the small subset of clinically confirmed CS pairs — and what is the expected loss in policy performance when restricted to these pairs relative to the full lab-characterized CS profiles? [[papers/Tandar2026_ClinicalCollateralSensitivity|Tandar2026]]
+
 ## Review article outline
 
 | Section | Coverage | Notes |
@@ -111,7 +115,7 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 | Robustness and model uncertainty | thin | Explicitly flagged as future work; d-MDP adds temporal uncertainty as a new robustness challenge |
 | Geometric dosage optimization (Price equation framework) | developing | Gjini2021 establishes gradient dynamics criterion for dosage selection; experimental optimization of dosage ratio to maximize collateral constraint not yet demonstrated |
 | Reinforcement learning and model-free control | developing | Weaver2024 establishes feasibility with RL-fit (fitness-only observable); generalization to other systems and larger landscapes needed |
-| Clinical translation | thin | Weaver2024 RL-fit uses only population fitness — a clinically tractable measurement — but all work still in laboratory/simulation settings |
+| Clinical translation | developing | Weaver2024 RL-fit uses only population fitness — a clinically tractable measurement — but lab/simulation only; Tandar2026 establishes the clinical CS baseline: CS is rare (3%) and predominantly species-specific in surveillance data; 6 cross-species conserved pairs identified as candidate targets; gap between lab-validated control strategies and clinically available CS pairs is the central open problem |
 
 ## Cross-topic connections
 
@@ -119,3 +123,29 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 - [[topics/evolution-in-fluctuating-environments/_hub|evolution-in-fluctuating-environments]] — sequential drug protocols are the operational setting for MDP-derived cycling strategies
 - [[topics/frequency-dependent-selection/_hub|frequency-dependent-selection]] — adaptive therapy exploits frequency-dependent competition between sensitive and resistant sub-populations
 - [[topics/fitness-landscapes/_hub|fitness-landscapes]] — landscape topology determines which evolutionary trajectories are accessible and thus what can be controlled
+
+## References
+
+Farrokhian N, Maltas J, Dinh M, Durmaz A, Ellsworth P, Hitomi M, McClure E, Marusyk A, Kaznatcheev A, Scott JG (2022). Measuring competitive exclusion in non-small cell lung cancer. *Science Advances* 8(26): eabm7212. https://doi.org/10.1126/sciadv.abm7212
+
+Gjini E, Wood KB (2021). Price equation captures the role of drug interactions and collateral effects in the evolution of multidrug resistance. *eLife* 10: e64851. https://doi.org/10.7554/eLife.64851
+
+Hegreness M, Shoresh N, Damian D, Hartl D, Kishony R (2008). Accelerated evolution of resistance in multidrug environments. *Proceedings of the National Academy of Sciences* 105(37): 13977–13981. https://doi.org/10.1073/pnas.0805965105
+
+Karslake J, Maltas J, Brumm P, Wood KB (2016). Population Density Modulates Drug Inhibition and Gives Rise to Potential Bistability of Treatment Outcomes for Bacterial Infections. *PLOS Computational Biology* 12(10): e1005098. https://doi.org/10.1371/journal.pcbi.1005098
+
+Kaznatcheev A, Peacock J, Basanta D, Marusyk A, Scott JG (2019). Fibroblasts and Alectinib switch the evolutionary games played by non-small cell lung cancer. *Nature Ecology & Evolution* 3(3): 450–456. https://doi.org/10.1038/s41559-018-0768-z
+
+Maltas J, Wood KB (2019). Pervasive and diverse collateral sensitivity profiles inform optimal strategies to limit antibiotic resistance. *PLOS Biology* 17(10): e3000515. https://doi.org/10.1371/journal.pbio.3000515
+
+Maltas J, Killarney ST, Singleton KR, Strobl MAR, Washart R, Wood KC, Wood KB (2023). Drug dependence in cancer is exploitable by optimally constructed treatment holidays. *Nature Ecology & Evolution* 7. https://doi.org/10.1038/s41559-023-02255-x
+
+Maltas J, Huynh A, Wood KB (2025). Dynamic collateral sensitivity profiles highlight opportunities and challenges for optimizing antibiotic treatments. *PLOS Biology* 23(1): e3002970. https://doi.org/10.1371/journal.pbio.3002970
+
+Michel J-B, Yeh PJ, Chait R, Moellering RC, Kishony R (2008). Drug interactions modulate the potential for evolution of resistance. *Proceedings of the National Academy of Sciences* 105(39): 14918–14923. https://doi.org/10.1073/pnas.0800944105
+
+Tandar ST, Zwep LB, Woudt SHS, Schoffelen AF, Smits WK, Aulin LBS, Liakopoulos A, van Hasselt JGC (2026). Clinical prevalence of collateral sensitivity: a systematic exploration of multicentre antimicrobial surveillance data. *Lancet Microbe*. https://doi.org/10.1016/j.lanmic.2025.101274
+
+Weaver DT, King ES, Maltas J, Scott JG (2024). Reinforcement learning informs optimal treatment strategies to limit antibiotic resistance. *Proceedings of the National Academy of Sciences* 121(15): e2303165121. https://doi.org/10.1073/pnas.2303165121
+
+Yurtsev EA, Chao HX, Datta MS, Artemova T, Gore J (2013). Bacterial cheating drives the population dynamics of cooperative antibiotic resistance plasmids. *Molecular Systems Biology* 9: 683. https://doi.org/10.1038/msb.2013.39

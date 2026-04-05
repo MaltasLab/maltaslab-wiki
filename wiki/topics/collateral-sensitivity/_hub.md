@@ -16,6 +16,8 @@ A closely related extension, introduced by [[papers/Dean2020_DrugComboEvolution|
 
 A fourth conceptual layer, introduced by [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]], is that even the population-level collateral profile is not a fixed object — it evolves over time as resistance accumulates. Early adaptation is dominated by broad collateral resistance (over 91% of instantaneous effects in the first two days of selection), plausibly driven by nonspecific efflux or stress responses that confer low-level multi-drug resistance. As the population is forced to acquire more targeted resistance mutations under escalating drug pressure, the landscape shifts toward collateral sensitivity. This temporal arc creates transient windows during which collateral sensitivity to a second drug is maximized — windows that must be precisely timed to exploit. The implication for treatment design is significant: static characterization of collateral profiles (as in endpoint measurements) captures only a snapshot of a moving target. Optimal drug scheduling requires knowledge of *when* collateral sensitivity occurs, not just *whether* it occurs.
 
+A critical empirical challenge for translating CS-based therapies from laboratory to clinic is quantified by [[papers/Tandar2026_ClinicalCollateralSensitivity|Tandar2026]]: CS is strikingly rare in clinical surveillance data. Across >5 million MIC measurements from 30 pathogen species and 86 antibiotics, only 3.03% of species-antibiotic pairs show CS (vs. 41.9% showing collateral resistance). Many CS pairs robustly identified under controlled laboratory evolution — including aminoglycoside CS in ciprofloxacin-resistant *P. aeruginosa* — are absent from clinical isolate populations, likely because clinical populations evolve resistance through diverse mechanisms that don't all confer the same CS trade-offs. This introduces a conceptual distinction between **mechanism-linked CS** (arising from one dominant resistance mechanism and consistent across isolates) and **trajectory-dependent CS** (reliable under one evolutionary path but lost under alternatives). For therapeutic application, only the former class is likely to be clinically actionable. Cross-species conservation is the most tractable operational criterion: six CS pairs conserved across four ESKAPEE pathogens — three involving colistin resistance (cefazolin, ampicillin, levofloxacin), mechanistically linked to LPS-layer loss increasing membrane permeability — represent the best-characterized candidates for broad-spectrum clinical exploitation. The clinical analysis thus motivates a more selective view of which CS pairs to pursue, informed by both mechanistic consistency and cross-species prevalence.
+
 ## Key papers
 
 - Maltas2019a showed that collateral effects are pervasive across 900 mutant–drug combinations in *E. faecalis* V583 (~73% of combinations show statistically significant changes in IC50) but highly heterogeneous, with profiles for parallel populations evolved to the same drug sometimes differing qualitatively [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]]
@@ -48,6 +50,10 @@ A fourth conceptual layer, introduced by [[papers/Maltas2025_DynamicCollateralSe
 
 - Maltas2025 reported that no evolved strain became collaterally sensitive to LZD at any time point, and DAP collateral sensitivity was rare throughout — notable because these are last-resort antibiotics for MDR gram-positive infections and their collateral profiles appear stable across the evolutionary trajectory [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]]
 
+- Tandar2026 quantified CS prevalence across 5.1M clinical MIC measurements from 30 pathogen species and 86 antibiotics, finding that CS is rare (3.03% of 12,024 species-antibiotic pairs) relative to collateral resistance (41.9%), and that CS interactions are predominantly species-specific — 220 pairs found in only 1 species, 45 in 2 species — establishing that most lab-identified CS pairs do not produce consistent species-wide patterns in clinical isolate populations [[papers/Tandar2026_ClinicalCollateralSensitivity|Tandar2026]]
+
+- Tandar2026 identified six CS pairs conserved across four ESKAPEE pathogens (*A. baumannii*, *E. coli*, *K. pneumoniae*, *P. aeruginosa*): colistin→cefazolin, colistin→ampicillin, colistin→levofloxacin (all mechanistically linked to LPS-layer loss), linezolid→azithromycin, tobramycin→cefuroxime, and chloramphenicol→amoxicillin-clavulanate; one three-way interaction (linezolid + meropenem → azithromycin) conserved across four Gram-positive species — providing the most concrete current targets for broad-spectrum CS-based therapy [[papers/Tandar2026_ClinicalCollateralSensitivity|Tandar2026]]
+
 ## Key concepts and methods
 
 - [[concepts/markov-decision-process|Markov decision process (MDP)]] — framework for designing optimal drug-cycling policies from collateral sensitivity data
@@ -57,7 +63,7 @@ A fourth conceptual layer, introduced by [[papers/Maltas2025_DynamicCollateralSe
 
 ## Open questions
 
-- How conserved are collateral sensitivity profiles across closely related species or strains? Recent work suggests conservation across *E. coli* isolates [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]] cites; needs direct testing in *E. faecalis* clinical isolates.
+- ~~How conserved are collateral sensitivity profiles across closely related species or strains?~~ **Addressed by [[papers/Tandar2026_ClinicalCollateralSensitivity|Tandar2026]]**: CS is predominantly species-specific in clinical isolate populations; only 6 pairwise CS interactions are conserved across ≥4 pathogen species. Conservation is rare and mechanistically constrained — most conserved interactions involve colistin resistance (LPS-layer loss). New open question: are there CS interactions in *E. faecalis* clinical isolates that are conserved across *Enterococcus* species (not tested in Tandar2026), and how do they compare to the profiles characterized in laboratory *E. faecalis* V583?
 - How much do collateral effects depend on the mechanism of resistance (target modification vs. efflux vs. enzymatic inactivation)? Genome sequencing identifies candidate genes but cannot resolve mechanisms [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]].
 - ~~Can collateral sensitivity be maintained over multiple rounds of drug cycling, or do populations evolve cross-resistance to all drugs in the cycle?~~ **Partially addressed by [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]**: in the theoretical model of anticorrelated fitness landscapes (mutual collateral sensitivity), rapid alternation drives ergodic-like dynamics that broadly sample genotype space; shared maxima can still emerge under sufficient epistasis, providing a theoretical warning that cycling may produce cross-resistance even with mutual collateral sensitivity. New question: what is the empirical timescale over which shared maxima become the dominant resistance outcome under drug cycling, and can it be predicted from measurable landscape or collateral sensitivity properties? [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]], [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
 - ~~How do collateral profiles change dynamically as resistance accumulates?~~ **Addressed by [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]]**: early adaptation strongly favors collateral resistance; later stages shift toward sensitivity; but individual drug-pair dynamics are idiosyncratic and near-unpredictable between time steps. New open question: what molecular mechanisms drive this global temporal shift, and how conserved is it across species and drug panels?
@@ -68,6 +74,10 @@ A fourth conceptual layer, introduced by [[papers/Maltas2025_DynamicCollateralSe
 - How reliably can the collateral effects produced by single-drug selection be exploited in sequential protocols when prior combination therapy has already eliminated those collateral sensitivities? [[papers/Dean2020_DrugComboEvolution|Dean2020]] shows that combination selection removes the collateral sensitivities that single-drug selection produces, raising the question of whether clinical patients who received combination therapy have a different collateral sensitivity landscape than those who received single drugs.
 - In the Price equation framework, the constraining effect of collateral sensitivity on resistance evolution shifts with dosage ratio; can optimal dosages be identified that maximally exploit collateral sensitivity for a given drug pair, and does this criterion align with or contradict MDP-derived cycling policies? [[papers/Gjini2021_PriceEquationMultidrug|Gjini2021]]
 - Does epistasis between resistance mutations reshape collateral profiles in ways that undermine the static MDP model? [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]] A theoretical study of paired fitness landscapes [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]] shows that even anticorrelated landscape pairs (the model of mutual collateral sensitivity) can generate shared fitness maxima under sufficient ruggedness, implying that cycling drugs with mutual collateral sensitivity may still produce cross-resistance — a warning that the benefit of collateral sensitivity cycling depends on the epistatic structure of the resistance landscape.
+
+- What distinguishes "mechanism-linked CS" (arising from one dominant resistance mechanism, consistent across isolates and detectable clinically) from "trajectory-dependent CS" (reliable under one evolutionary path but absent under alternative clinical resistance routes)? Can these two classes be predicted from prior knowledge of resistance mechanism diversity, and does this distinction explain the lab-clinic CS gap documented by [[papers/Tandar2026_ClinicalCollateralSensitivity|Tandar2026]]?
+
+- Does the 14.2% of clinical CS interactions that would shift mean MIC across the susceptibility breakpoint translate to clinical benefit at the individual patient level — does a population-level statistical shift in MIC produce meaningful treatment responses in practice?
 
 ## Review article outline
 
@@ -83,8 +93,8 @@ A fourth conceptual layer, introduced by [[papers/Maltas2025_DynamicCollateralSe
 | Experimental measurement methods (IC50, dose-response, serial passage) | strong | Maltas2019a and Maltas2025 provide a detailed methodological blueprint |
 | Transient dosing windows and drug-switch timing | developing | Maltas2025 establishes the concept with CRO/DOX; needs characterization across drug pairs |
 | Fitness costs of resistance and their relationship to collateral sensitivity | developing | Maltas2019a measures growth costs; mechanistic link to collateral effects not established |
-| Implications for treatment design | developing | Maltas2019a and Maltas2025 are the key entry points; broader clinical translation thin |
-| Cross-organism and cross-drug generality | thin | A critical gap; only *E. faecalis* V583 characterized in depth |
+| Implications for treatment design | developing | Maltas2019a and Maltas2025 are the key mechanistic entry points; Tandar2026 provides the clinical prevalence baseline — CS is rare, but 14.2% of clinical CS interactions cross the susceptibility breakpoint; colistin-resistance pairs are the strongest current candidates for clinical application |
+| Cross-organism and cross-drug generality | developing | Tandar2026 provides the first large-scale clinical assessment across 30 species and 86 antibiotics: CS is rare (3%) and predominantly species-specific; 6 pairwise pairs conserved across ≥4 ESKAPEE species; colistin-resistance CS mechanistically characterized; lab-clinic gap documented |
 
 ## Cross-topic connections
 
@@ -92,3 +102,19 @@ A fourth conceptual layer, introduced by [[papers/Maltas2025_DynamicCollateralSe
 - [[topics/evolution-in-fluctuating-environments/_hub|evolution-in-fluctuating-environments]] — sequential drug protocols that exploit collateral effects are the experimental setting for testing control strategies
 - [[topics/fitness-landscapes/_hub|fitness-landscapes]] — collateral effects reflect the structure of the resistance fitness landscape across drug environments; LZD→CHL cross-resistance illustrates fitness valley crossing
 - [[topics/genetic-epistasis/_hub|genetic-epistasis]] — epistasis between resistance mutations can reshape collateral profiles over time
+
+## References
+
+Dean Z, Maltas J, Wood KB (2020). Antibiotic interactions shape short-term evolution of resistance in *E. faecalis*. *PLOS Pathogens* 16(3): e1008278. https://doi.org/10.1371/journal.ppat.1008278
+
+Gjini E, Wood KB (2021). Price equation captures the role of drug interactions and collateral effects in the evolution of multidrug resistance. *eLife* 10: e64851. https://doi.org/10.7554/eLife.64851
+
+Maltas J, Wood KB (2019). Pervasive and diverse collateral sensitivity profiles inform optimal strategies to limit antibiotic resistance. *PLOS Biology* 17(10): e3000515. https://doi.org/10.1371/journal.pbio.3000515
+
+Maltas J, Krasnick B, Wood KB (2019). Using Selection by Nonantibiotic Stressors to Sensitize Bacteria to Antibiotics. *Molecular Biology and Evolution* 37(4). https://doi.org/10.1093/molbev/msz303
+
+Maltas J, McNally DM, Wood KB (2020). Evolution in paired fitness landscapes with tunable interlandscape correlations. *Evolution*. [DOI VERIFY]
+
+Maltas J, Huynh A, Wood KB (2025). Dynamic collateral sensitivity profiles highlight opportunities and challenges for optimizing antibiotic treatments. *PLOS Biology* 23(1): e3002970. https://doi.org/10.1371/journal.pbio.3002970
+
+Tandar ST, Zwep LB, Woudt SHS, Schoffelen AF, Smits WK, Aulin LBS, Liakopoulos A, van Hasselt JGC (2026). Clinical prevalence of collateral sensitivity: a systematic exploration of multicentre antimicrobial surveillance data. *Lancet Microbe*. https://doi.org/10.1016/j.lanmic.2025.101274
