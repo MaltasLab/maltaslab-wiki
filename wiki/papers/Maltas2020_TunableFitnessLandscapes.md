@@ -1,5 +1,5 @@
 ---
-title: "[VERIFY: title not captured in PDF conversion — see raw/papers/MaltasTunable.pdf p.1]"
+title: "Evolution in paired fitness landscapes with tunable interlandscape correlations"
 authors: [Maltas J, McNally DM, Wood KB]
 year: 2020
 venue: "Evolution"
