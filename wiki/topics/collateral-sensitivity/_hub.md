@@ -55,7 +55,7 @@ A fourth conceptual layer, introduced by [[papers/Maltas2025_DynamicCollateralSe
 - How wide are transient collateral sensitivity windows for drug pairs beyond CRO→DOX, and can window timing and width be predicted from early-timepoint collateral data?
 - Do nonantibiotic stressors encountered in clinical settings (biocides, preservatives, osmotic environments) systematically shift bacterial populations toward antibiotic sensitivity, resistance, or neither? [[papers/Maltas2019b_NonantibioticStressors|Maltas2019b]] shows this is measurable in laboratory evolution but clinical relevance needs direct study.
 - Can sequential nonantibiotic→antibiotic or nonantibiotic→nonantibiotic selection strategies be extended beyond two steps using the additive model as a guide, and how does epistasis accumulate across longer sequences? [[papers/Maltas2019b_NonantibioticStressors|Maltas2019b]]
-- Does epistasis between resistance mutations reshape collateral profiles in ways that undermine the static MDP model? [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]]
+- Does epistasis between resistance mutations reshape collateral profiles in ways that undermine the static MDP model? [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]] A theoretical study of paired fitness landscapes [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]] shows that even anticorrelated landscape pairs (the model of mutual collateral sensitivity) can generate shared fitness maxima under sufficient ruggedness, implying that cycling drugs with mutual collateral sensitivity may still produce cross-resistance — a warning that the benefit of collateral sensitivity cycling depends on the epistatic structure of the resistance landscape.
 
 ## Review article outline
 

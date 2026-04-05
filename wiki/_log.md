@@ -17,6 +17,10 @@ Ingested Maltas, Krasnick & Wood 2019 (Mol Biol Evol), a canonical lab paper ext
 
 Ingested Maltas, Huynh & Wood 2025 (PLoS Biol), a canonical lab paper characterizing how collateral sensitivity profiles evolve over time in *E. faecalis* and introducing the dynamic MDP (d-MDP) framework for optimal drug scheduling under time-varying collateral landscapes. Updated collateral-sensitivity, evolutionary-control, and evolution-in-fluctuating-environments topic hubs with specific cited contributions and conceptual advances; updated evolutionary-control and collateral-sensitivity hubs to reflect that temporal dynamics of collateral profiles are now a central empirical finding rather than an open question; extended the MDP concept page with the d-MDP framework; updated lab/overview.md to reflect this extension of the lab's evolutionary steering research.
 
+## [2026-04-05] ingest | Maltas2020_TunableFitnessLandscapes
+
+Ingested Maltas, McNally & Wood 2020 (Evolution), a canonical lab paper developing a Markov chain model of asexual evolution in paired fitness landscapes with tunable interlandscape correlations. NOTE: PDF title not captured by converter — flagged [VERIFY] throughout. Updated fitness-landscapes, evolution-in-fluctuating-environments, and genetic-epistasis topic hubs with specific cited contributions and conceptual advances. Updated lab/overview.md to reflect fitness landscape theory as a core theoretical tool. NOTE: paper DOI and exact title require verification from original PDF page 1.
+
 ## [2026-04-05] ingest | Maltas2024_FrequencyDependentPreexistence
 
 Ingested Maltas et al. 2024 (PRX Life), a canonical lab paper developing a mathematical framework for frequency-dependent ecological interactions and preexisting drug resistance, validated experimentally in NSCLC. Updated frequency-dependent-selection and distribution-of-fitness-effects topic hubs with specific cited contributions and conceptual advances. Updated lab/overview.md to reflect NSCLC as an experimental system and the eco-evolutionary framing of the lab's work.

@@ -30,6 +30,10 @@ A further complication — and opportunity — is that the collateral landscape 
 
 - Maltas2019b demonstrated that sequential selection through orthogonally sensitizing environments (LZD followed by NaBz) sensitizes *E. faecalis* to ~6 conditions on average — significantly more than either environment alone (~4) — validating the concept that sequential exposure to environments with non-overlapping sensitizing effects can compound vulnerabilities; an additive null model accurately identified this pair and predicted the resulting profiles [[papers/Maltas2019b_NonantibioticStressors|Maltas2019b]]
 
+- Maltas2020 showed in a Markov chain model of SSWM evolution that rapid switching between positively correlated rugged landscapes outperforms static single-landscape adaptation at steady state — an effect that requires both nonzero epistasis and positive interlandscape correlation, and that only emerges at moderate to long timescales (not at short ones where static adaptation is fastest) [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
+
+- Maltas2020 showed that anticorrelated landscape pairs (the theoretical model of mutual collateral sensitivity) produce ergodic-like steady-state dynamics that broadly sample genotype space rather than converging on shared fitness maxima — providing a theoretical explanation for why the benefit of cycling mutually collaterally sensitive drugs depends on the epistatic structure of the resistance landscape [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
+
 ## Key concepts and methods
 
 - [[concepts/markov-decision-process|Markov decision process (MDP)]] — the formal framework used to design optimal sequential drug policies
