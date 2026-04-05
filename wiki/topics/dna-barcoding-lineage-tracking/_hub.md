@@ -30,6 +30,8 @@ For this lab, lineage tracking methods are important because they allow direct m
 
 - NguyenBa2019 established the rich-get-richer effect: high-fitness lineages expand to larger sizes, reducing effective drift and granting access to both weak- and strong-effect beneficial mutations; low-fitness lineages, constrained by smaller sizes and higher drift, can only establish large-effect mutations; this creates a fitness-dependent DFE access mechanism that is not included in standard traveling wave theory and introduces a positive feedback between fitness rank and future adaptive potential [[papers/NguyenBa2019_TravelingWave|NguyenBa2019]]
 
+- Kinsler2024 extended the Levy2015 pooled barcoded fitness assay to multi-step adaptive walks: 5 distinct barcoded first-step mutant populations were independently evolved for ~176 generations in 16 replicate experiments, yielding isolation and whole-genome sequencing of 324 second-step adaptive mutants across multiple growth-phase transfer conditions (1-, 2-, 3-, and 5-Day); fitness was resolved into fermentation, respiration, and stationary phase performance components by comparing fitness across transfer lengths — demonstrating that the barcode-pooled performance assay is scalable to multi-founder, multi-step experiments and can decompose fitness into orthogonal performance components [[papers/Kinsler2024_TwoStepEvolution|Kinsler2024]]
+
 ## Key concepts and methods
 
 - **Renewable barcoding system:** 3 orthogonal Cre-Lox site pairs (loxP, lox2722, lox5171) whose states are flipped by galactose-inducible Cre expression every 100 generations; fresh barcodes (~50,000 per epoch) subdivide all extant lineages while ancestral barcode strings encode full ancestry; enables multi-epoch ancestry-resolved tracking; introduced by [[papers/NguyenBa2019_TravelingWave|NguyenBa2019]]
@@ -56,6 +58,8 @@ For this lab, lineage tracking methods are important because they allow direct m
 - Is leapfrogging frequency in a traveling wave analytically predictable from the ratio of strong-mutation supply rate to mean fitness advantage of the wave front — and does this ratio vary between YPD and YPA in ways that predict evolutionary predictability? [[papers/NguyenBa2019_TravelingWave|NguyenBa2019]]
 - Can the renewable barcoding system be combined with whole-genome sequencing of lineage representatives to directly measure the DFE conditional on fitness class — empirically quantifying the rich-get-richer DFE access differential across fitness ranks? [[papers/NguyenBa2019_TravelingWave|NguyenBa2019]]
 
+- The Kinsler2024 framework for measuring performance across multiple growth phases (by comparing fitness across transfer length conditions) could be adapted to measure performance across drug-selection vs. drug-free environments; could this reveal whether resistance mutations pleiotropically improve fitness in one drug condition at a cost in another — directly quantifying the collateral sensitivity landscape via the barcoded pooled fitness assay? [[papers/Kinsler2024_TwoStepEvolution|Kinsler2024]]
+
 ## Review article outline
 
 | Section | Coverage | Notes |
@@ -66,7 +70,7 @@ For this lab, lineage tracking methods are important because they allow direct m
 | Clonal interference and adaptive dynamics | developing | Levy2015 establishes two-phase dynamics; establishment threshold; massive clonal interference in large populations |
 | Beneficial mutation rate spectrum | developing | Levy2015 non-exponential μ(s); challenges extreme value theory; application to other organisms needed |
 | Preexisting variation and standing selection | developing | Levy2015 ~6,000 shared mutations; connects to clinical preexisting resistance |
-| Applications to experimental evolution | developing | Levy2015 yeast serial batch (168 gen, single epoch); NguyenBa2019 extends to 1,000 generations (10 epochs, renewable barcodes), traveling wave confirmed, leapfrogging and rich-get-richer discovered; extension to bacteria and clinical contexts needed |
+| Applications to experimental evolution | developing | Levy2015 yeast serial batch (168 gen, single epoch); NguyenBa2019 extends to 1,000 generations (10 epochs, renewable barcodes), traveling wave confirmed, leapfrogging and rich-get-richer discovered; Kinsler2024 extends to multi-step walks with 16 replicate second-step evolution experiments, 324 whole-genome-sequenced mutants, and performance decomposition across growth phases; extension to bacteria and clinical contexts needed |
 | Traveling wave dynamics and DFE access stratification | developing | NguyenBa2019 establishes rich-get-richer effect and leapfrogging; theoretical framework needed for fitness-dependent DFE access in traveling waves |
 | Clinical and in vivo applications | thin | No papers yet; conceptual connection to preexisting resistance in Maltas2024 |
 
@@ -76,3 +80,11 @@ For this lab, lineage tracking methods are important because they allow direct m
 - [[topics/distribution-of-fitness-effects/_hub|distribution-of-fitness-effects]] — lineage tracking gives the most direct empirical access to the beneficial DFE; Levy2015's non-exponential μ(s) is the central finding for this connection
 - [[topics/fitness-landscapes/_hub|fitness-landscapes]] — SSWM regime breaks down when $N\mu > 1$; Levy2015 demonstrates the large-$N\mu$ regime directly, where clonal interference dominates
 - [[topics/evolution-in-fluctuating-environments/_hub|evolution-in-fluctuating-environments]] — barcoded populations can track lineage dynamics under cycling protocols; the preexisting variation framework connects to resistance evolution before drug selection begins
+
+## References
+
+Kinsler G, Li Y, Sherlock G, Petrov DA (2024). A high-resolution two-step evolution experiment in yeast reveals a shift from pleiotropic to modular adaptation. *PLOS Biology* 22(12): e3002848. https://doi.org/10.1371/journal.pbio.3002848
+
+Levy SF, Blundell JR, Venkataram S, Petrov DA, Fisher DS, Sherlock G (2015). Quantitative evolutionary dynamics using high-resolution lineage tracking. *Nature* 519: 181–187. https://doi.org/10.1038/nature14279
+
+Nguyen Ba AN, Cvijović I, Rojas Echenique JI, Lawrence KR, Rego-Costa A, Liu X, Levy SF, Desai MM (2019). High-resolution lineage tracking reveals traveling wave of adaptation in laboratory yeast. *Nature* 575(7783): 494–499. https://doi.org/10.1038/s41586-019-1749-3

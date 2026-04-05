@@ -14,6 +14,8 @@ An important empirical demonstration that the effective fitness landscape is not
 
 A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]] is that the consequences of environmental fluctuations for evolution cannot be understood from single-landscape properties alone — they depend on the *joint* structure of the landscape pair: specifically, the correlation between landscape peaks ($\rho$) and the ruggedness of each landscape ($\sigma$). In smooth landscapes, alternating environments has minimal effect except when landscapes are strongly anticorrelated. In rugged landscapes, positive interlandscape correlation enables fitness gains above single-landscape levels by channeling trajectories toward **shared fitness maxima** — genotypes locally optimal in both environments. Shared maxima in positively correlated rugged landscapes tend to have higher average fitness than non-shared maxima, providing a structural explanation for why correlated-environment cycling can outperform static adaptation. The paper also establishes that anticorrelated landscape pairs drive ergodic-like steady-state dynamics, broadly sampling genotype space and reducing average fitness — a theoretical parallel to the collateral sensitivity cycling strategies employed in [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]], and a warning that naively cycling anticorrelated-landscape drugs may not achieve the intended effect when epistasis is present.
 
+A direct empirical window into how the accessible region of a fitness landscape changes during an adaptive walk comes from [[papers/Kinsler2024_TwoStepEvolution|Kinsler2024]]. Rather than a single genotype-to-fitness map, this work treats adaptation in a multidimensional **performance space** (fermentation × respiration × stationary phase) and asks which region of that space a population can access at each step. The central finding is that the accessible region contracts and reorients between steps: first-step mutations occupy a pleiotropic corridor (85% improve both fermentation and respiration simultaneously), while second-step mutations are largely confined to a respiration-specialist corridor (only 35% improve both). This shift is mechanistically explained by the **coherent pleiotropy** of signaling pathways — Ras/PKA and TOR/Sch9 are pre-wired to coordinately affect multiple metabolic traits, making mutations in these pathways capable of simultaneously improving performance in several fitness-relevant dimensions. Once these pathway targets are exhausted by the first adaptive step, evolution can only access molecular modules specific to individual performances. The fitness landscape is thus not a static substrate but one whose accessible beneficial region is continuously restructured by the mutations already fixed — a point that complements the eco-evolutionary restructuring observed by [[papers/Good2017_MolecularEvolutionLTEE|Good2017]] and the theoretical paired-landscape framework of [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]].
+
 ## Key papers
 
 - Wood2012 established that the fitness landscape under multidrug combinations has a radically simplified structure: growth responses to three- and four-drug combinations are almost entirely determined by pairwise interaction structure, with higher-order interactions contributing only ~3% of total correlations; this means the 2D ancestral drug interaction surface — the fitness landscape substrate for the geometric rescaling framework — is sufficient to characterize the multidrug fitness landscape without requiring a higher-dimensional description [[papers/Wood2012_MaximumEntropy|Wood2012]]
@@ -50,6 +52,10 @@ A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandsca
 
 - Couce2024 demonstrated that the *E. coli* fitness landscape is simultaneously **macroscopically stable** and **locally dynamic** over 50,000 generations of LTEE evolution: the statistical architecture of the landscape (mean fitness effect, deleterious tail) is conserved without directional change, while the beneficial portion of the landscape is completely renewed on the timescale of ~2,000 generations by sign epistasis; the global landscape shape is therefore more conserved than the local topology — establishing that landscape stability and landscape dynamism operate at different scales and timescales [[papers/Couce2024_ChangingFitnessEffects|Couce2024]]
 
+- Kinsler2024 demonstrated that the accessible region of a multidimensional performance space (fermentation × respiration) changes structurally across two adaptive steps: 85% of first-step mutations improve performance in both fermentation and respiration simultaneously (occupying a pleiotropic corridor), while only 35% of second-step mutations do; most second-step mutants instead occupy a respiration-specialist corridor — establishing that the accessible region of the performance landscape contracts and reorients as specific mutational targets are depleted [[papers/Kinsler2024_TwoStepEvolution|Kinsler2024]]
+
+- Kinsler2024 identified "coherent pleiotropy" as the mechanism underlying early-step adaptive pleiotropy: signaling pathways (Ras/PKA, TOR/Sch9) are pre-wired to coherently modulate multiple downstream phenotypes, making mutations in these pathways capable of simultaneously improving performance in several fitness-relevant dimensions; once these pathway targets are exhausted at the first step, subsequent adaptation must engage performance-specific molecular modules, producing modular improvement confined to a single region of performance space [[papers/Kinsler2024_TwoStepEvolution|Kinsler2024]]
+
 ## Key concepts and methods
 
 - **Rough Mt. Fuji landscape** — additive base landscape $F(\sigma) = -cD(\sigma, \sigma^*) + \eta(\sigma)$ with i.i.d. random fitness component $\eta(\sigma)$; ruggedness governed by $\theta = c/\sqrt{\text{Var}(\eta)}$; originally introduced by Aita et al. (2000) for protein evolution; single-parameter form and comprehensive mathematical analysis by [[papers/Neidhart2014_RMFModel|Neidhart2014]]; applied to paired landscapes using Gaussian noise parameterized by $\sigma = \sqrt{\text{Var}(\eta)}$ in [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
@@ -74,6 +80,8 @@ A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandsca
 - Would eco-evolutionary coexistence (negative frequency-dependent selection between subpopulations) emerge spontaneously in laboratory antibiotic resistance evolution experiments at comparable timescales (~10,000 generations), and if so, would it reshape the effective collateral sensitivity landscape in a way that undermines MDP-designed drug sequences? [[papers/Good2017_MolecularEvolutionLTEE|Good2017]]
 - What ecological mechanisms maintain clade coexistence in the 8 non-Ara–2 LTEE populations that develop coexistence? If the mechanism varies (glucose/acetate cross-feeding vs. other niche differentiation), does this imply that ecological landscape restructuring is mechanistically diverse — or is there a single generic ecological epistasis that arises in any sufficiently evolved asexual population? [[papers/Good2017_MolecularEvolutionLTEE|Good2017]]
 
+- Does the pleiotropic → modular transition documented by Kinsler2024 in the yeast fermentation/respiration performance space have analogues in antibiotic resistance evolution — do early resistance mutations (e.g., in global regulators like MarR or RpoB) provide coherently pleiotropic cross-condition fitness gains that deplete with adaptation, forcing later mutations to become drug-specific? [[papers/Kinsler2024_TwoStepEvolution|Kinsler2024]]
+
 ## Review article outline
 
 | Section | Coverage | Notes |
@@ -85,6 +93,7 @@ A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandsca
 | Environment-dependence of fitness landscapes | developing | Maltas2020 theoretical; empirical landscape variation across drugs thin |
 | Landscapes and treatment design | developing | Maltas2020 provides theoretical framing; Maltas2019a provides empirical link to drug cycling; Weaver2024 shows RL can exploit empirical landscape topology for control |
 | Eco-evolutionary landscapes: landscape restructuring by emergent ecology | developing | Good2017 establishes spontaneous eco-evolutionary coexistence in 9/12 LTEE populations restructures effective landscape to be frequency-dependent; no theoretical framework yet for predicting when this arises or how it alters control strategies |
+| Adaptive walks and performance landscape structure | developing | Kinsler2024 provides two-step high-resolution characterization in yeast multidimensional performance space; documents pleiotropic → modular shift driven by Ras/PKA target exhaustion; introduces coherent pleiotropy concept; extension to resistance landscapes needed |
 
 ## Cross-topic connections
 
@@ -92,3 +101,31 @@ A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandsca
 - [[topics/distribution-of-fitness-effects/_hub|distribution-of-fitness-effects]] — the DFE is a local property of the landscape
 - [[topics/collateral-sensitivity/_hub|collateral-sensitivity]] — collateral effects reflect the structure of the landscape across environments
 - [[topics/evolutionary-control/_hub|evolutionary-control]] — landscape topology determines what control strategies are feasible
+
+## References
+
+Ardell SM, Martsul A, Johnson MS, Kryazhimskiy S (2024). Environment-independent distribution of mutational effects emerges from microscopic epistasis. *Science* 386(6717): 87–92. https://doi.org/10.1126/science.adn0753
+
+Bakerlee CW, Nguyen Ba AN, Shulgina Y, Rojas Echenique JI, Desai MM (2022). Idiosyncratic epistasis leads to global fitness-correlated trends. *Science* 376(6593): 630–635. https://doi.org/10.1126/science.abm4774
+
+Couce A, Limdi A, Magnan M, Owen SV, Herren CM, Lenski RE, Tenaillon O, Baym M (2024). Changing fitness effects of mutations through long-term bacterial evolution. *Science* 383: eadd1417. https://doi.org/10.1126/science.add1417
+
+Good BH, McDonald MJ, Barrick JE, Lenski RE, Desai MM (2017). The dynamics of molecular evolution over 60,000 generations. *Nature* 551(7678): 45–50. https://doi.org/10.1038/nature24287
+
+Hegreness M, Shoresh N, Damian D, Hartl D, Kishony R (2008). Accelerated evolution of resistance in multidrug environments. *Proceedings of the National Academy of Sciences* 105(37): 13977–13981. https://doi.org/10.1073/pnas.0805965105
+
+Kinsler G, Li Y, Sherlock G, Petrov DA (2024). A high-resolution two-step evolution experiment in yeast reveals a shift from pleiotropic to modular adaptation. *PLOS Biology* 22(12): e3002848. https://doi.org/10.1371/journal.pbio.3002848
+
+Kryazhimskiy S, Rice DP, Jerison ER, Desai MM (2014). Global epistasis makes adaptation predictable despite sequence-level stochasticity. *Science* 344(6191): 1519–1522. https://doi.org/10.1126/science.1250939
+
+Maltas J, Wood KB (2019). Pervasive and diverse collateral sensitivity profiles inform optimal strategies to limit antibiotic resistance. *PLOS Biology* 17(10): e3000515. https://doi.org/10.1371/journal.pbio.3000515
+
+Maltas J, McNally DM, Wood KB (2020). Evolution in paired fitness landscapes with tunable interlandscape correlations. *Evolution*. [DOI VERIFY]
+
+Neidhart J, Szendro IG, Krug J (2014). Adaptation in Tunably Rugged Fitness Landscapes: The Rough Mount Fuji Model. *Genetics*. https://doi.org/10.1534/genetics.114.167668
+
+Nguyen Ba AN, Cvijović I, Rojas Echenique JI, Lawrence KR, Rego-Costa A, Liu X, Levy SF, Desai MM (2019). High-resolution lineage tracking reveals traveling wave of adaptation in laboratory yeast. *Nature* 575(7783): 494–499. https://doi.org/10.1038/s41586-019-1749-3
+
+Weaver DT, King ES, Maltas J, Scott JG (2024). Reinforcement learning informs optimal treatment strategies to limit antibiotic resistance. *Proceedings of the National Academy of Sciences* 121(15): e2303165121. https://doi.org/10.1073/pnas.2303165121
+
+Wood K, Nishida S, Sontag ED, Cluzel P (2012). Mechanism-independent method for predicting response to multidrug combinations in bacteria. *Proceedings of the National Academy of Sciences*. https://doi.org/10.1073/pnas.1201281109

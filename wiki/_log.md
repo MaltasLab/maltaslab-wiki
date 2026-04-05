@@ -113,3 +113,7 @@ Ingested Maltas & Wood 2019 (PLoS Biol), a canonical lab paper characterizing co
 
 Initialized wiki directory structure, all topic hubs, index, log, and lab overview.
 No papers ingested. Quartz publishing infrastructure installed and connected to GitHub.
+
+## [2026-04-05] ingest | Kinsler2024_TwoStepEvolution
+
+Ingested Kinsler, Li, Sherlock & Petrov 2024 (PLoS Biol), a high-resolution two-step barcoded evolution experiment in *S. cerevisiae* showing that first-step mutations (Ras/PKA, TOR/Sch9 pathways) are pleiotropically adaptive (85% improve both fermentation and respiration performance) while second-step mutations shift dramatically toward modular adaptation (35% pleiotropic; 98% improve respiration only), with molecular targets shifting from general signaling genes to TCA cycle, RTG pathway, and mitochondrial biogenesis genes. Introduces the concept of "coherent pleiotropy" of signaling pathways as the explanation for early-step adaptive pleiotropy, and its exhaustion as the driver of later modular adaptation. Updated fitness-landscapes, genetic-epistasis, distribution-of-fitness-effects, and dna-barcoding-lineage-tracking topic hubs with specific cited contributions; added References sections to all four hubs.

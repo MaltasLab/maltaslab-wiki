@@ -48,6 +48,8 @@ The first high-resolution empirical measurement of the full beneficial mutation 
 
 - NguyenBa2019 demonstrated the **rich-get-richer effect**: high-fitness lineages in a traveling wave expand to larger clone sizes, lowering effective genetic drift and granting access to the full DFE including weak-effect mutations ($s < 2\%$), while low-fitness lineages with smaller populations can only establish large-effect mutations; this establishes that the accessible portion of the beneficial DFE is **not a fixed population-level property** but varies with lineage fitness — a fitness-dependent DFE access mechanism with direct implications for which mutations are available under any selection regime [[papers/NguyenBa2019_TravelingWave|NguyenBa2019]]
 
+- Kinsler2024 quantified the DFE at the second step of glucose-limited yeast evolution, showing that the rate of large-benefit mutations ($s \geq 1.0$ per cycle, each cycle ~8 generations) is substantially reduced relative to the first step and that the mean second-step benefit is ~82% per cycle relative to the first-step parental strain; crucially, the DFE shifts not only in scale but in structure — second-step mutations cluster in mitochondrial and respiration-specific functional categories (TCA cycle, RTG pathway, mitochondrial biogenesis genes) that are absent from the first-step DFE — illustrating that the beneficial DFE can undergo both quantitative (reduced magnitude, consistent with global diminishing returns epistasis) and qualitative (changed mutational target classes) transformations across adaptive steps [[papers/Kinsler2024_TwoStepEvolution|Kinsler2024]]
+
 ## Key concepts and methods
 
 - **Distribution of ecological effects (DEE):** ecological analogue of the DFE; distribution of $f_e$ values across resistance mutations; introduced by [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]], not yet empirically measured in any system
@@ -81,7 +83,7 @@ The first high-resolution empirical measurement of the full beneficial mutation 
 | Theory: extreme value theory and the DFE tail | developing | Levy2015 directly falsifies the EVT prediction; need broader survey of EVT-based models |
 | Empirical measurement of the DFE | developing | Levy2015 provides first high-resolution $\mu(s)$ measurement via lineage tracking; NguyenBa2019 extends to multi-epoch tracking and reveals DFE access is fitness-stratified (rich-get-richer); bacterial DFE needed |
 | Environment-dependence of the DFE | developing | Ardell2024 shows DFE variation reduces to a single parameter (pivot growth rate) across 6 environments; extension to antibiotic resistance mutations needed |
-| DFE and epistasis | thin | No papers yet |
+| DFE and epistasis | developing | Kinsler2024 provides two-step empirical evidence: DFE shifts in both magnitude (diminishing returns) and structure (changed mutational target classes) between adaptive steps in yeast; quantitative + qualitative DFE change across steps; connection to global epistasis (Kryazhimskiy2014, Ardell2024) needs formalization |
 | DFE implications for resistance evolution prediction | developing | Levy2015 shows DFE shape directly determines determinism vs. stochasticity; connection to two-phase dynamics |
 | Standing variation and preexisting mutations | developing | Levy2015 quantifies preexisting mutations from mutation supply rate; connection to clinical preexisting resistance |
 | Distribution of ecological effects (DEE): theory | developing | Maltas2024 introduces the concept and derives general framework |
@@ -94,3 +96,23 @@ The first high-resolution empirical measurement of the full beneficial mutation 
 - [[topics/genetic-epistasis/_hub|genetic-epistasis]] — epistasis reshapes the DFE over the course of adaptation
 - [[topics/fitness-landscapes/_hub|fitness-landscapes]] — the DFE is a local property of the fitness landscape
 - [[topics/evolution-in-multidrug-environments/_hub|evolution-in-multidrug-environments]] — drug combinations alter the DFE for resistance
+
+## References
+
+Ardell SM, Martsul A, Johnson MS, Kryazhimskiy S (2024). Environment-independent distribution of mutational effects emerges from microscopic epistasis. *Science* 386(6717): 87–92. https://doi.org/10.1126/science.adn0753
+
+Couce A, Limdi A, Magnan M, Owen SV, Herren CM, Lenski RE, Tenaillon O, Baym M (2024). Changing fitness effects of mutations through long-term bacterial evolution. *Science* 383: eadd1417. https://doi.org/10.1126/science.add1417
+
+Cvijović I, Good BH, Jerison ER, Desai MM (2015). Fate of a mutation in a fluctuating environment. *Proceedings of the National Academy of Sciences* 112. https://doi.org/10.1073/pnas.1505406112
+
+Good BH, McDonald MJ, Barrick JE, Lenski RE, Desai MM (2017). The dynamics of molecular evolution over 60,000 generations. *Nature* 551(7678): 45–50. https://doi.org/10.1038/nature24287
+
+Kinsler G, Li Y, Sherlock G, Petrov DA (2024). A high-resolution two-step evolution experiment in yeast reveals a shift from pleiotropic to modular adaptation. *PLOS Biology* 22(12): e3002848. https://doi.org/10.1371/journal.pbio.3002848
+
+Kryazhimskiy S, Rice DP, Jerison ER, Desai MM (2014). Global epistasis makes adaptation predictable despite sequence-level stochasticity. *Science* 344(6191): 1519–1522. https://doi.org/10.1126/science.1250939
+
+Levy SF, Blundell JR, Venkataram S, Petrov DA, Fisher DS, Sherlock G (2015). Quantitative evolutionary dynamics using high-resolution lineage tracking. *Nature* 519: 181–187. https://doi.org/10.1038/nature14279
+
+Maltas J, Tadele DS, Durmaz A, McFarland CD, Hinczewski M, Scott JG (2024). Frequency-Dependent Ecological Interactions Increase the Prevalence, and Shape the Distribution, of Preexisting Drug Resistance. *PRX Life* 2: 023010. https://doi.org/10.1103/PRXLife.2.023010
+
+Nguyen Ba AN, Cvijović I, Rojas Echenique JI, Lawrence KR, Rego-Costa A, Liu X, Levy SF, Desai MM (2019). High-resolution lineage tracking reveals traveling wave of adaptation in laboratory yeast. *Nature* 575(7783): 494–499. https://doi.org/10.1038/s41586-019-1749-3

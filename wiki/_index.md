@@ -8,6 +8,7 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 | Cite key | Title | Year | Topics | Relevance |
 |---|---|---|---|---|
+| [[papers/Kinsler2024_TwoStepEvolution\|Kinsler2024]] | A high-resolution two-step evolution experiment in yeast reveals a shift from pleiotropic to modular adaptation | 2024 | fitness-landscapes, genetic-epistasis, distribution-of-fitness-effects, dna-barcoding-lineage-tracking | high |
 | [[papers/Neidhart2014_RMFModel\|Neidhart2014]] | Adaptation in Tunably Rugged Fitness Landscapes: The Rough Mount Fuji Model | 2014 | fitness-landscapes, genetic-epistasis | medium |
 | [[papers/NguyenBa2019_TravelingWave\|NguyenBa2019]] | High-resolution lineage tracking reveals traveling wave of adaptation in laboratory yeast | 2019 | dna-barcoding-lineage-tracking, distribution-of-fitness-effects, fitness-landscapes | high |
 | [[papers/Bakerlee2022_IdiosyncraticEpistasis\|Bakerlee2022]] | Idiosyncratic epistasis leads to global fitness-correlated trends | 2022 | genetic-epistasis, fitness-landscapes | high |
@@ -38,6 +39,6 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 ## Stats
 
-- **Total papers:** 25
+- **Total papers:** 26
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0

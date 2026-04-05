@@ -60,6 +60,8 @@ A theoretical framework developed by [[papers/Maltas2020_TunableFitnessLandscape
 
 - Couce2024 showed that epistatic changes in the fitness effects of specific mutations — both in the deleterious tail (3-6% of mutations per evolved strain had significantly changed effects over 50K generations) and in gene essentiality (~17% of ancestral essential genes changed status in at least one lineage) — occurred in parallel across independent LTEE lineages more than expected by chance, demonstrating that epistasis generates repeatable evolutionary contingency: the same mutational vulnerabilities and redundancies are repeatedly uncovered by selection acting on the same physiological architecture [[papers/Couce2024_ChangingFitnessEffects|Couce2024]]
 
+- Kinsler2024 provided a multi-step empirical demonstration of how epistatic constraints reshape the accessible adaptive landscape over successive steps: first-step mutations in the Ras/PKA and TOR/Sch9 signaling pathways are pleiotropically adaptive (85% improve both fermentation and respiration); second-step mutations show dramatically reduced pleiotropic adaptation (only 35% improve both), shifting to modular improvement of respiration alone — driven not by changed selection pressure or physiological limits but by the depletion of a small number of pathway-level targets capable of coordinated multi-trait improvement; this identifies **target exhaustion** as a form of epistatic constraint that restructures the accessible adaptive landscape at the second step, complementing the global diminishing-returns epistasis of [[papers/Kryazhimskiy2014_GlobalEpistasis|Kryazhimskiy2014]] [[papers/Kinsler2024_TwoStepEvolution|Kinsler2024]]
+
 ## Key concepts and methods
 
 - **Rough Mt. Fuji landscape ruggedness parameter $\theta = c/\sqrt{\text{Var}(\eta)}$** — ratio of additive slope $c$ to standard deviation of random fitness component; controls landscape topology: $\theta \to \infty$ (additive, 1 maximum), $\theta \to 0$ (maximally rugged HoC, $2^L/L$ maxima); introduced by [[papers/Neidhart2014_RMFModel|Neidhart2014]] as a simplification of Aita et al. (2000); applied with Gaussian noise (ruggedness $\sigma = \sqrt{\text{Var}(\eta)}$) in [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
@@ -85,12 +87,14 @@ A theoretical framework developed by [[papers/Maltas2020_TunableFitnessLandscape
 - What specific potentiating mutations underlie the ~16 missed opportunities identified by Good2017? Can they be identified from existing metagenomic sequence data by looking for mutations shared in populations that acquired the contingent gene but absent in those that did not — and would this reveal predictable epistatic modules? [[papers/Good2017_MolecularEvolutionLTEE|Good2017]]
 - Does the coupon-collecting → historical contingency shift observed in LTEE gene appearance times apply to antibiotic resistance evolution, where mechanistic constraint may compress or eliminate the coupon-collecting phase and push the system directly into the contingency-dominated regime? [[papers/Good2017_MolecularEvolutionLTEE|Good2017]]
 
+- Kinsler2024's "coherent pleiotropy" concept implies that signaling pathways are a special class of adaptive targets with epistatic properties distinct from structural or metabolic genes — they coordinate multiple downstream traits; is there a formal epistasis model capturing this distinction, and does it predict how quickly pleiotropic targets are exhausted as a function of pathway depth, connectivity, or mutational target size? [[papers/Kinsler2024_TwoStepEvolution|Kinsler2024]]
+
 ## Review article outline
 
 | Section | Coverage | Notes |
 |---|---|---|
 | Types of epistasis (magnitude, sign, reciprocal sign, global) | developing | Ardell2024 provides systematic characterization of global epistasis across genotypes and environments; Maltas2020 treats ruggedness as a proxy; Bakerlee2022 shows FCTs arise from idiosyncratic interactions, unifying the global/idiosyncratic dichotomy |
-| Global epistasis: theory and empirics | developing | Kryazhimskiy2014 provides foundational empirical establishment in *S. cerevisiae*: global > modular/idiosyncratic, rule of declining adaptability, targeted knockout confirmation; Ardell2024 extends to environment-invariance and the pivot growth rate framework; Reddy-Desai theory (2021) provides mechanistic framework |
+| Global epistasis: theory and empirics | developing | Kryazhimskiy2014 provides foundational empirical establishment in *S. cerevisiae*: global > modular/idiosyncratic, rule of declining adaptability, targeted knockout confirmation; Ardell2024 extends to environment-invariance and the pivot growth rate framework; Reddy-Desai theory (2021) provides mechanistic framework; Kinsler2024 provides two-step adaptive walk evidence showing target exhaustion as a structural form of diminishing returns |
 | Epistasis as landscape ruggedness: theory | developing | Neidhart2014 introduces and analyzes simplified single-parameter RMF model (original due to Aita et al. 2000): explicit formulas for number of maxima, fitness correlations, walk length; Maltas2020 applies paired RMF landscapes to alternating environments |
 | Epistasis in antibiotic resistance mutations | thin | Candidate mutations identified in Maltas2019b but epistatic interactions unresolved; Ardell2024 framework not yet applied to drug resistance mutations |
 | Epistasis and collateral sensitivity profiles | thin | Maltas2019b notes complications; mechanism not resolved |
@@ -103,3 +107,25 @@ A theoretical framework developed by [[papers/Maltas2020_TunableFitnessLandscape
 - [[topics/fitness-landscapes/_hub|fitness-landscapes]] — epistasis is the molecular basis for non-additive fitness landscape structure
 - [[topics/distribution-of-fitness-effects/_hub|distribution-of-fitness-effects]] — epistasis changes the DFE as adaptation proceeds
 - [[topics/collateral-sensitivity/_hub|collateral-sensitivity]] — epistatic interactions between resistance mutations can affect collateral sensitivity profiles
+
+## References
+
+Ardell SM, Martsul A, Johnson MS, Kryazhimskiy S (2024). Environment-independent distribution of mutational effects emerges from microscopic epistasis. *Science* 386(6717): 87–92. https://doi.org/10.1126/science.adn0753
+
+Bakerlee CW, Nguyen Ba AN, Shulgina Y, Rojas Echenique JI, Desai MM (2022). Idiosyncratic epistasis leads to global fitness-correlated trends. *Science* 376(6593): 630–635. https://doi.org/10.1126/science.abm4774
+
+Couce A, Limdi A, Magnan M, Owen SV, Herren CM, Lenski RE, Tenaillon O, Baym M (2024). Changing fitness effects of mutations through long-term bacterial evolution. *Science* 383: eadd1417. https://doi.org/10.1126/science.add1417
+
+Good BH, McDonald MJ, Barrick JE, Lenski RE, Desai MM (2017). The dynamics of molecular evolution over 60,000 generations. *Nature* 551(7678): 45–50. https://doi.org/10.1038/nature24287
+
+Kinsler G, Li Y, Sherlock G, Petrov DA (2024). A high-resolution two-step evolution experiment in yeast reveals a shift from pleiotropic to modular adaptation. *PLOS Biology* 22(12): e3002848. https://doi.org/10.1371/journal.pbio.3002848
+
+Kryazhimskiy S, Rice DP, Jerison ER, Desai MM (2014). Global epistasis makes adaptation predictable despite sequence-level stochasticity. *Science* 344(6191): 1519–1522. https://doi.org/10.1126/science.1250939
+
+Maltas J, Krasnick B, Wood KB (2019). Using Selection by Nonantibiotic Stressors to Sensitize Bacteria to Antibiotics. *Molecular Biology and Evolution* 37(4). https://doi.org/10.1093/molbev/msz303
+
+Maltas J, McNally DM, Wood KB (2020). Evolution in paired fitness landscapes with tunable interlandscape correlations. *Evolution*. [DOI VERIFY]
+
+Michel J-B, Yeh PJ, Chait R, Moellering RC, Kishony R (2008). Drug interactions modulate the potential for evolution of resistance. *Proceedings of the National Academy of Sciences* 105(39): 14918–14923. https://doi.org/10.1073/pnas.0800944105
+
+Neidhart J, Szendro IG, Krug J (2014). Adaptation in Tunably Rugged Fitness Landscapes: The Rough Mount Fuji Model. *Genetics*. https://doi.org/10.1534/genetics.114.167668
