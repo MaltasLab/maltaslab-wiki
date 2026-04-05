@@ -155,6 +155,13 @@ If a section appears garbled, tables are malformed, or figures are missing:
 - Note the page number(s) in the source PDF for PI to review
 - Do not skip ingesting the paper — flag and continue
 
+Figures are not extracted by the converter — only captions. Do not 
+include image references (![](filename.jpeg)) in wiki pages as they 
+will appear as broken links. Instead, describe key figures in plain 
+language under a ## Key figures section on the paper page, using the 
+caption text and surrounding context to summarize what each important 
+figure shows.
+
 ---
 
 ## How ideas propagate from papers

@@ -8,9 +8,9 @@ The Maltas Lab uses tools from statistical physics, population genetics, evoluti
 
 ## Model systems
 
-- ***Enterococcus faecalis*** — primary system for antibiotic resistance evolution experiments; rapidly evolves resistance in the laboratory; fully sequenced reference genomes available [[papers/Maltas2019_CollateralSensitivity|Maltas2019]]
+- ***Enterococcus faecalis*** — primary bacterial system for antibiotic resistance evolution experiments; rapidly evolves resistance in the laboratory; fully sequenced reference genomes available [[papers/Maltas2019_CollateralSensitivity|Maltas2019]]
 - ***Saccharomyces cerevisiae*** — experimental evolution
-- **Non-small cell lung cancer** — evolutionary dynamics in cancer; explicit target system for applying insights from microbial work
+- **Non-small cell lung cancer (NSCLC)** — validated experimental system for evolutionary dynamics in cancer; PC-9 cells (EGFR-mutant adenocarcinoma) used to study preexisting resistance to EGFR tyrosine kinase inhibitors (TKIs); engineered clinical resistance mutations (BRAF-V600E, KRAS-G12V, PIK3CA-E545K) characterized [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
 
 ## Experimental approach
 
@@ -27,15 +27,23 @@ The lab builds mathematical models that are directly parameterized by experiment
 
 The lab's theoretical perspective emphasizes **population-level statistical structure** over individual-level mechanistic description. Even when individual evolutionary outcomes are highly stochastic and variable, tractable structure often exists at the population level — and that structure can be sufficient to enable rational control strategies.
 
+## Experimental methods
+
+Beyond bacterial serial-passage evolution, the lab employs:
+
+- **Evolutionary game assay:** fluorescence-based coculture of GFP-labeled ancestor and mCherry-labeled mutant NSCLC cells at varying initial ancestor fractions; time-lapse microscopy every 4 h over 96 h using a BioSpa automated incubator; CellProfiler image analysis to extract cell counts and compute frequency-dependent growth curves [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
+- **Lentiviral engineering:** stable expression of resistance-conferring oncogenes (BRAF-V600E, KRAS-G12V, PIK3CA-E545K) in PC-9 cells [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
+- **Whole-exome sequencing and RNA-Seq:** GATK/BWA-MEM pipeline for variant calling; STAR/SALMON for transcriptomics; GSVA for pathway analysis [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]]
+
 ## Core research themes
 
 ### Collateral sensitivity and evolutionary steering
 
 The lab's work on *E. faecalis* established that collateral sensitivity profiles — while heterogeneous at the individual mutant level — cluster by drug class at the population level. This statistical structure supports the design of MDP-derived drug-cycling policies that outperform intuitive protocols by incorporating **evolutionary steering**: occasionally deploying less effective drugs to guide the population toward a more vulnerable future state [[papers/Maltas2019_CollateralSensitivity|Maltas2019]].
 
-### Frequency-dependent interactions
+### Frequency-dependent ecological interactions and preexisting resistance
 
-The lab studies frequency-dependent selection — scenarios where the fitness of a genotype depends on its frequency in the population — as a mechanism shaping evolutionary dynamics in mixed populations (e.g., drug-sensitive and drug-resistant sub-populations competing under treatment).
+The lab has developed a mathematical framework showing that negative frequency-dependent selection (positive ecological interaction) between resistant mutants and their sensitive ancestors can extend mutant extinction times by orders of magnitude, dramatically expanding the parameter regime under which preexisting resistance is expected. This reframes preexisting resistance as an eco-evolutionary phenomenon rather than a purely mutational one, and introduces the distribution of ecological effects (DEE) as a new object of study [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]].
 
 ### Multi-drug environments
 
@@ -43,4 +51,4 @@ Work spans both **simultaneous** drug combinations (evolution-in-multidrug-envir
 
 ---
 
-*Last updated: 2026-04-05. Updated from canonical ingest: [[papers/Maltas2019_CollateralSensitivity|Maltas2019]].*
+*Last updated: 2026-04-05. Updated from canonical ingests: [[papers/Maltas2019_CollateralSensitivity|Maltas2019]], [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]].*
