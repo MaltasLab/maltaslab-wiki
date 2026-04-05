@@ -46,6 +46,8 @@ The first high-resolution empirical measurement of the full beneficial mutation 
 
 - Good2017 showed that the rate of molecular evolution in nonmutator LTEE populations declines modestly from ~20 to ~10 substitutions per 10,000 generations over 60,000 generations, declining more slowly than fitness gains — consistent with [[papers/Couce2024_ChangingFitnessEffects|Couce2024]]'s DFE renewal finding that beneficial mutations are continuously replenished by sign epistasis, maintaining a non-negligible supply of accessible beneficial mutations even as fitness gains per substitution shrink [[papers/Good2017_MolecularEvolutionLTEE|Good2017]]
 
+- NguyenBa2019 demonstrated the **rich-get-richer effect**: high-fitness lineages in a traveling wave expand to larger clone sizes, lowering effective genetic drift and granting access to the full DFE including weak-effect mutations ($s < 2\%$), while low-fitness lineages with smaller populations can only establish large-effect mutations; this establishes that the accessible portion of the beneficial DFE is **not a fixed population-level property** but varies with lineage fitness — a fitness-dependent DFE access mechanism with direct implications for which mutations are available under any selection regime [[papers/NguyenBa2019_TravelingWave|NguyenBa2019]]
+
 ## Key concepts and methods
 
 - **Distribution of ecological effects (DEE):** ecological analogue of the DFE; distribution of $f_e$ values across resistance mutations; introduced by [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]], not yet empirically measured in any system
@@ -70,13 +72,14 @@ The first high-resolution empirical measurement of the full beneficial mutation 
 - Does the coupon-collecting model (target size as primary predictor of early adaptation) apply to antibiotic resistance, where early adaptation may be dominated by loss-of-function mutations in specific mechanistic modules (efflux pump regulators, target genes) — or are resistance mutations too mechanistically constrained to exhibit broad target-size scaling? [[papers/Couce2024_ChangingFitnessEffects|Couce2024]]
 - Does global epistasis slope invariance (Ardell2024) hold for antibiotic resistance mutations specifically, or only for the quasi-random insertion mutations studied? Resistance mutations may be mechanistically constrained in ways that violate the statistical assumptions underlying global epistasis [[papers/Ardell2024_GlobalEpistasis|Ardell2024]]
 - Can the pivot growth rate framework (Ardell2024) predict how the DFE for new resistance mutations shifts as *E. faecalis* adapts to antibiotics — i.e., does higher background fitness in drug reduce the supply of further beneficial mutations, explaining the slowing of adaptation observed at late timepoints? [[papers/Ardell2024_GlobalEpistasis|Ardell2024]]
+- Does the rich-get-richer DFE access mechanism — in which high-fitness lineages access the full DFE while low-fitness lineages are restricted to large-effect mutations — operate during antibiotic resistance evolution? If so, would high-fitness resistant lineages disproportionately accumulate weak-effect secondary resistance mutations that would not otherwise establish, while drug-suppressed lineages are limited to large-effect escape mutations? [[papers/NguyenBa2019_TravelingWave|NguyenBa2019]]
 
 ## Review article outline
 
 | Section | Coverage | Notes |
 |---|---|---|
 | Theory: extreme value theory and the DFE tail | developing | Levy2015 directly falsifies the EVT prediction; need broader survey of EVT-based models |
-| Empirical measurement of the DFE | developing | Levy2015 provides first high-resolution $\mu(s)$ measurement via lineage tracking; bacterial DFE needed |
+| Empirical measurement of the DFE | developing | Levy2015 provides first high-resolution $\mu(s)$ measurement via lineage tracking; NguyenBa2019 extends to multi-epoch tracking and reveals DFE access is fitness-stratified (rich-get-richer); bacterial DFE needed |
 | Environment-dependence of the DFE | developing | Ardell2024 shows DFE variation reduces to a single parameter (pivot growth rate) across 6 environments; extension to antibiotic resistance mutations needed |
 | DFE and epistasis | thin | No papers yet |
 | DFE implications for resistance evolution prediction | developing | Levy2015 shows DFE shape directly determines determinism vs. stochasticity; connection to two-phase dynamics |
