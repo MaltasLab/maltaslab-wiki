@@ -32,6 +32,8 @@ A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandsca
 
 - Maltas2019a illustrated landscape concepts through the LZD→CHL evolutionary trajectory, in which LZD selection drives populations across a fitness valley to reach CHL resistance levels exceeding those achieved by direct CHL selection — a concrete empirical case of cross-environment fitness peak structure [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]]
 
+- Couce2024 demonstrated that the *E. coli* fitness landscape is simultaneously **macroscopically stable** and **locally dynamic** over 50,000 generations of LTEE evolution: the statistical architecture of the landscape (mean fitness effect, deleterious tail) is conserved without directional change, while the beneficial portion of the landscape is completely renewed on the timescale of ~2,000 generations by sign epistasis; the global landscape shape is therefore more conserved than the local topology — establishing that landscape stability and landscape dynamism operate at different scales and timescales [[papers/Couce2024_ChangingFitnessEffects|Couce2024]]
+
 ## Key concepts and methods
 
 - **Rough Mt. Fuji landscape** — additive base landscape with epistatic noise $\xi_j \sim \mathcal{N}(0, \sigma^2)$; $\sigma$ parameterizes ruggedness (epistasis)
@@ -52,6 +54,7 @@ A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandsca
 - How does population size interact with landscape ruggedness to determine evolutionary predictability? Clonal interference reduces but does not eliminate tunable-correlation effects at moderate $x$ [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
 - Can the opportunity landscape be used to design optimal drug panels from scratch — selecting the minimal set of drugs that maximizes mean opportunity fitness — and how does panel size trade off against coverage of genotype space? [[papers/Weaver2024_RLDrugCycling|Weaver2024]]
 - Do RL agents trained on empirical landscapes (*E. coli* β-lactamase) learn policies that correspond to human-interpretable landscape features (e.g., always choosing the highest-opportunity drug), or do they exploit non-obvious landscape structure?
+- Does the beneficial tail contraction (non-exponential → exponential) observed over 50K generations in the LTEE provide a generalizable diagnostic for "distance to fitness peak" in empirical resistance landscapes — could this transition be used to predict when resistance evolution in patients will plateau? [[papers/Couce2024_ChangingFitnessEffects|Couce2024]]
 
 ## Review article outline
 

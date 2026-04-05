@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] ingest | Couce2024_ChangingFitnessEffects
+
+Ingested Couce, Limdi, Magnan, Owen, Herren, Lenski, Tenaillon & Baym 2024 (Science 383:eadd1417), a canonical non-lab paper measuring genome-wide DFE evolution across 50,000 generations of *E. coli* LTEE using transposon insertion libraries (UMI-TnSeq and INSeq). Key findings: macroscopic DFE shape conserved (deleterious tail, mean); beneficial tail contracts from non-exponential (ancestor) to exponential (evolved clones) — reconciling EVT predictions with prior inconsistent evidence; sign epistasis is pervasive (>90% of beneficial mutations flip sign in 2000 generations); target size predicts early adaptive targets better than fitness effects (r = 0.71 vs. 0.26); ~17% of essential genes changed essentiality in parallel across independent lineages. Note: source PDF named baymlenski.pdf (corresponding authors Baym + Lenski); cite key Couce2024 follows first-author convention; equal co-first-authors Couce and Limdi; equal co-last-authors Tenaillon and Baym. Updated distribution-of-fitness-effects, genetic-epistasis, and fitness-landscapes topic hubs; updated lab/overview.md.
+
 ## [2026-04-05] ingest | Yurtsev2013_BacterialCheating
 
 Ingested Yurtsev, Chao, Datta, Artemova & Gore 2013 (Molecular Systems Biology 9:683), a canonical non-lab paper demonstrating that TEM-1 β-lactamase is a cooperative (public goods) behavior in *E. coli*: resistant cells degrade ampicillin extracellularly, enabling sensitive "cheater" cells to survive at 50× their monoculture MIC. Key findings: equilibrium resistant fraction $f_R \approx A_i / (V_{\max} N_i)$ validated over two orders of magnitude in density; stable coexistence via snowdrift game dynamics (each strain invades when rare); β-lactamase inhibitor paradox — tazobactam and sulbactam increase equilibrium f_R by raising $K_M$. Note: source PDF named BacterialCheating.pdf; cite key Yurtsev2013 follows first-author convention (Gore is last/corresponding author). Updated frequency-dependent-selection and evolutionary-control topic hubs; updated lab/overview.md.

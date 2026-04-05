@@ -34,6 +34,10 @@ A theoretical framework developed by [[papers/Maltas2020_TunableFitnessLandscape
 
 - Maltas2019b identified mutations in known antibiotic resistance genes (marR efflux regulator, penicillin-binding protein EF\_1148, ABC transporter EF\_2227) in *E. faecalis* populations adapted to nonantibiotic stressors (osmotic stress, NaBz, biocides), noting that phenotype-genotype relationships are complicated by epistasis and genetic background — the same mutation produces different collateral profiles depending on what other mutations are already present [[papers/Maltas2019b_NonantibioticStressors|Maltas2019b]]
 
+- Couce2024 quantified the pervasiveness of sign epistasis over evolutionary time in *E. coli* LTEE: only 5.9% of beneficial mutations available to the ancestor remain beneficial at 2,000 generations; >90% become neutral or deleterious; the DFE of ancestrally-beneficial mutations in evolved backgrounds regresses completely to the parent distribution mean — establishing that sign epistasis is so pervasive among beneficial mutations that it essentially fully renews the accessible landscape on the timescale of thousands of generations [[papers/Couce2024_ChangingFitnessEffects|Couce2024]]
+
+- Couce2024 showed that epistatic changes in the fitness effects of specific mutations — both in the deleterious tail (3-6% of mutations per evolved strain had significantly changed effects over 50K generations) and in gene essentiality (~17% of ancestral essential genes changed status in at least one lineage) — occurred in parallel across independent LTEE lineages more than expected by chance, demonstrating that epistasis generates repeatable evolutionary contingency: the same mutational vulnerabilities and redundancies are repeatedly uncovered by selection acting on the same physiological architecture [[papers/Couce2024_ChangingFitnessEffects|Couce2024]]
+
 ## Key concepts and methods
 
 - **Rough Mt. Fuji landscape ruggedness parameter $\sigma$** — controls amplitude of random epistatic noise added to an additive base landscape; $\sigma = 0$ (no epistasis) to $\sigma \gg 1$ (highly epistatic); number of local maxima grows from 1 to $2^N/(N+1)$ as $\sigma$ increases [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
@@ -52,6 +56,7 @@ A theoretical framework developed by [[papers/Maltas2020_TunableFitnessLandscape
 - How does the genetic background (strain, species) affect the magnitude and sign of epistatic interactions? Maltas2019b notes that the same mutations can produce different collateral phenotypes across backgrounds [[papers/Maltas2019b_NonantibioticStressors|Maltas2019b]]
 - Can the ruggedness level $\sigma$ of the Maltas2020 model be calibrated to empirical resistance landscape data? [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
 - When epistasis is strong enough to create shared maxima even between anticorrelated (mutual collateral sensitivity) landscape pairs, does this undermine MDP-based drug cycling strategies? How large is the effect under realistic population sizes and switching timescales?
+- Does the near-complete renewal of the accessible beneficial landscape (via sign epistasis) over ~2,000 generations of bacterial evolution occur at similar timescales in antibiotic resistance contexts — or does the mechanistic constraint of resistance pathways (efflux, target alteration) slow the turnover compared to general metabolic adaptation in the LTEE? [[papers/Couce2024_ChangingFitnessEffects|Couce2024]]
 
 ## Review article outline
 
