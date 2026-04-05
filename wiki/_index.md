@@ -8,6 +8,7 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 | Cite key | Title | Year | Topics | Relevance |
 |---|---|---|---|---|
+| [[papers/Dean2020_DrugComboEvolution\|Dean2020]] | Antibiotic interactions shape short-term evolution of resistance in E. faecalis | 2020 | evolution-in-multidrug-environments, collateral-sensitivity | high |
 | [[papers/Farrokhian2022_CompetitiveExclusionNSCLC\|Farrokhian2022]] | Measuring competitive exclusion in non-small cell lung cancer | 2022 | frequency-dependent-selection, evolutionary-control | high |
 | [[papers/Maltas2020_TunableFitnessLandscapes\|Maltas2020]] | [VERIFY title] Evolution in paired fitness landscapes with tunable interlandscape correlations | 2020 | fitness-landscapes, evolution-in-fluctuating-environments, genetic-epistasis | high |
 | [[papers/Maltas2023_DrugDependence\|Maltas2023]] | Drug dependence in cancer is exploitable by optimally constructed treatment holidays | 2023 | evolutionary-control, evolution-in-fluctuating-environments | high |
@@ -20,6 +21,6 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 ## Stats
 
-- **Total papers:** 7
+- **Total papers:** 8
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0

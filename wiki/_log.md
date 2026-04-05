@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] ingest | Dean2020_DrugComboEvolution
+
+Ingested Dean, Maltas & Wood 2020 (PLoS Pathogens), a canonical lab paper characterizing how four two-drug antibiotic combinations spanning synergistic to suppressive interactions shape evolution of resistance in E. faecalis V583. Introduced the geometric rescaling framework linking resistance evolution to the ancestral 2D growth response surface, showing that synergistic combinations can accelerate resistance, suppressive combinations eliminate resistance to one drug entirely, and resistance profiles are nearly growth-optimized along contours connecting single-drug endpoints. First paper to populate the evolution-in-multidrug-environments hub; updated collateral-sensitivity hub with combination-therapy modulation of cross-resistance profiles; updated lab/overview.md.
+
 ## [2026-04-05] ingest | Farrokhian2022_CompetitiveExclusionNSCLC
 
 Ingested Farrokhian, Maltas et al. 2022 (Science Advances), a canonical lab paper (equal-contribution first authorship with Jeff Maltas) measuring frequency-dependent ecological interactions between gefitinib-resistant and sensitive PC9 NSCLC cells via the evolutionary game assay. Established that monoculture fitness cost cannot predict competitive exclusion, that drug treatment flips competitive exclusion from resistant-to-sensitive to sensitive-to-resistant, and that lower drug doses may better control long-term tumor burden by maintaining competitive suppression. Note: source PDF filename misspelled as Farrhokian.pdf; wiki page and cite key use correct spelling Farrokhian2022. Updated frequency-dependent-selection and evolutionary-control topic hubs; updated lab/overview.md.

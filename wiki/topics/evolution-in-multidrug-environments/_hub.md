@@ -4,38 +4,61 @@
 
 This topic covers populations evolving under **simultaneous** exposure to two or more drugs applied together in the same environment. The key distinction from drug cycling or sequential protocols is that the selective pressure is a combination — the organism must cope with both drugs at once, and resistance mutations are selected in that combined context.
 
-The primary questions are: how do drug combinations shape the fitness landscape for resistance evolution, what kinds of resistance mutations are selected under combination therapy versus monotherapy, and do drug combinations slow or accelerate resistance evolution relative to single drugs? Drug interactions (synergy, antagonism, additivity) play a critical role here, as they determine the effective selective pressure at sub-inhibitory concentrations and shape the fitness costs of resistance.
+The primary questions are: how do drug combinations shape the fitness landscape for resistance evolution, what kinds of resistance mutations are selected under combination therapy versus monotherapy, and do drug combinations slow or accelerate resistance evolution relative to single drugs? Drug interactions (synergy, antagonism, additivity, suppression) play a critical role here, as they determine the effective selective pressure at sub-inhibitory concentrations and shape the fitness costs of resistance.
 
-A key finding from the broader field is that the evolutionary outcome under combination therapy depends heavily on the type of drug interaction: antagonistic combinations can paradoxically accelerate resistance evolution under certain conditions, while synergistic combinations do not always slow it. This lab is interested in building quantitative frameworks that connect the pharmacological properties of drug combinations (interaction type, dose-response surfaces) to the evolutionary dynamics of resistance.
+A key finding from the broader field — and confirmed by this lab's work in *E. faecalis* — is that the evolutionary outcome under combination therapy depends heavily on the type of drug interaction in a counterintuitive direction: **synergistic combinations can accelerate resistance evolution even when resistance profiles are identical to those selected by single drugs, while antagonistic and suppressive combinations often slow or eliminate resistance**. This directly challenges the clinical intuition that synergistic drug combinations are evolutionarily preferable to single-drug treatment.
+
+[[papers/Dean2020_DrugComboEvolution|Dean2020]] introduces the key conceptual framework for this lab's approach: **geometric rescaling of the ancestral two-drug growth response surface**. Resistance mutations effectively act as concentration rescalings — an evolved cell growing in external concentration $C$ behaves approximately as an ancestral cell growing in a lower effective concentration $C' = C/\text{fold-change}$. Because the ancestral growth response surface encodes the full pharmacological interaction geometry (synergy, antagonism, suppression), the evolutionary consequences of any resistance phenotype can be predicted by locating the rescaled concentrations on that surface. This framework makes three predictions experimentally validated in *E. faecalis*: (1) identical resistance profiles yield different growth rates under different dosage combinations, because location on the curved response surface matters; (2) resistance profiles selected under different combinations lie near growth-optimal positions along contours connecting the single-drug resistance endpoints; and (3) suppressive interactions can eliminate selective pressure for resistance to a co-administered drug entirely when the response surface becomes approximately vertical. The power of this framework is that it connects pharmacology to evolutionary dynamics using only two quantities — the ancestral response surface and the resistance phenotype — without requiring knowledge of specific mutations or molecular mechanisms.
+
+This lab is interested in building quantitative frameworks that connect the pharmacological properties of drug combinations (interaction type, dose-response surfaces) to the evolutionary dynamics of resistance, and in understanding how collateral sensitivity and cross-resistance between drugs in a combination modulate which evolutionary trajectories are accessible.
 
 ## Key papers
 
-*(none yet — populate during ingest)*
+- Dean2020 demonstrated that a synergistic CRO-AMP (dual β-lactam) combination significantly accelerates growth adaptation compared to either drug alone ($p < 10^{-4}$), even though populations evolve nearly identical cross-resistance profiles under all dosage conditions — the accelerated adaptation is explained by the steep curvature of the synergistic response surface, which means the same resistance level maps to a larger growth increase in combination conditions [[papers/Dean2020_DrugComboEvolution|Dean2020]]
+
+- Dean2020 showed that antagonistic (AMP-STR) and moderately antagonistic (CRO-CIP) combinations slow growth adaptation relative to single-drug conditions, and that resistance profiles under combinations reflect the dominant drug in the mixture rather than both drugs simultaneously [[papers/Dean2020_DrugComboEvolution|Dean2020]]
+
+- Dean2020 demonstrated that a suppressive interaction (TGC-CIP) can completely eliminate resistance to a co-administered drug: above a critical TGC concentration ($\text{TGC}_\text{crit} \approx 0.03$ µg/mL), virtually no CIP resistance evolves even though populations are exposed to significant CIP concentrations — a consequence of the response surface becoming approximately vertical with respect to CIP at high TGC [[papers/Dean2020_DrugComboEvolution|Dean2020]]
+
+- Dean2020 introduced and validated the geometric rescaling framework: resistance mutations reduce the effective drug concentration experienced by cells, and the growth consequences of any resistance profile can be predicted by plotting the rescaled concentrations on the ancestral two-drug growth surface; rescaling qualitatively explains both differential growth adaptation rates (for CRO-AMP and TGC-CIP) and which resistance profiles are favored under each dosage combination (for AMP-STR and CRO-CIP) [[papers/Dean2020_DrugComboEvolution|Dean2020]]
+
+- Dean2020 showed that resistance profiles observed across different dosage combinations are nearly growth-optimized: observed mean resistance profiles in AMP-STR and CRO-CIP combinations fall within ~15% of the growth-optimal value along contours in resistance space connecting the endpoints selected by the individual component drugs [[papers/Dean2020_DrugComboEvolution|Dean2020]]
 
 ## Key concepts and methods
 
-*(none yet)*
+- **Two-drug growth response surface $g(D_1, D_2)$** — the full 2D map of per capita growth rate as a function of concentrations of both drugs; encodes interaction type through the shape of its isoboles (contours of constant growth)
+- **Loewe additivity null model** — defines non-interacting (additive) drug pairs as those where isoboles are linear; deviations toward concavity = synergy; toward convexity = antagonism; non-monotonic isoboles = suppression
+- **Geometric rescaling** — framework introduced by [[papers/Dean2020_DrugComboEvolution|Dean2020]]: resistance is modeled as a reduction in effective drug concentration; evolutionary consequences predicted by locating rescaled concentrations on the ancestral growth surface
+- **Growth-optimal contour** — in the 2D resistance space spanned by IC$_{50}$ fold-changes to each drug, the contour connecting single-drug resistance endpoints along which observed resistance profiles approximately lie; each position predicts a growth value via rescaling
+- **Iso-inhibitory selection** — experimental design holding initial inhibition level constant across dosage combinations (by selecting conditions along a contour of constant growth rate), isolating the effect of drug ratio from the effect of selection pressure
+- **Laboratory evolution protocol** — 24 replicate populations evolved 3–4 days in 96-well plates with daily dilution; IC$_{50}$ profiling via Hill-function dose-response curves [[papers/Dean2020_DrugComboEvolution|Dean2020]]
 
 ## Open questions
 
+- Does the geometric rescaling framework generalize beyond two-drug combinations — can it be extended to 3+ drug environments where the response surface is higher-dimensional? [[papers/Dean2020_DrugComboEvolution|Dean2020]]
+- What are the genetic mechanisms underlying CRO-AMP accelerated adaptation? The paper explicitly does not characterize mutations; penicillin-binding protein changes are a plausible candidate for dual β-lactam cross-resistance [[papers/Dean2020_DrugComboEvolution|Dean2020]]
+- Can the rescaling framework be extended from qualitative to quantitative by incorporating fitness costs and population heterogeneity (multiple coexisting resistance phenotypes)? [[papers/Dean2020_DrugComboEvolution|Dean2020]]
+- Do the evolutionary dynamics under combination therapy transfer from planktonic to biofilm environments, where density effects and spatial heterogeneity alter resistance dynamics? [[papers/Dean2020_DrugComboEvolution|Dean2020]]
+- Can the growth-optimization prediction be used prospectively — before running evolution experiments — to identify which resistance profiles are most likely to emerge under a given combination?
+- How does the evolutionary response to combination therapy change at drug concentrations above the MIC (clinical concentrations), vs. the sub-MIC conditions studied here?
 - Does combination therapy reliably slow resistance evolution, and under what conditions?
-- How do drug interaction types (synergy/antagonism) affect the rate and mechanism of resistance evolution?
-- What is the relationship between the fitness landscape under combination therapy and the landscapes under each drug alone?
 - How does population size and mutation supply affect evolutionary outcomes under combination therapy?
 
 ## Review article outline
 
 | Section | Coverage | Notes |
 |---|---|---|
-| Drug interaction pharmacology (synergy, antagonism, Bliss, Loewe) | thin | No papers yet |
-| Fitness landscapes under drug combinations | thin | No papers yet |
-| Resistance evolution rates: combination vs. monotherapy | thin | No papers yet |
-| Mechanisms of resistance to drug combinations | thin | No papers yet |
-| Clinical and experimental evidence | thin | No papers yet |
+| Drug interaction pharmacology (synergy, antagonism, Loewe, Bliss) | developing | Dean2020 uses Loewe and measures surfaces across 90-100 combinations per pair; need broader survey |
+| Geometric rescaling framework | developing | Dean2020 establishes and validates this approach in *E. faecalis*; extension to other organisms needed |
+| Resistance evolution rates: combination vs. monotherapy | developing | Dean2020 provides quantitative comparison across 4 drug pairs; broader evidence base needed |
+| Collateral effects under combination therapy | developing | Dean2020 shows combinations modulate and eliminate single-drug collateral sensitivities |
+| Mechanisms of resistance to drug combinations | thin | Not characterized in Dean2020; genetic basis of CRO-AMP cross-resistance unknown |
+| Growth-optimal resistance profiles and selection predictions | developing | Dean2020 establishes the contour-optimization prediction; needs validation in other systems |
+| Clinical and experimental evidence | developing | Dean2020 studies clinically relevant pairs (CRO-AMP, AMP-STR) but in planktonic lab conditions |
 
 ## Cross-topic connections
 
-- [[topics/evolution-in-fluctuating-environments/_hub|evolution-in-fluctuating-environments]] — contrast: simultaneous vs. sequential drug exposure
-- [[topics/collateral-sensitivity/_hub|collateral-sensitivity]] — resistance under combination therapy can create collateral effects
-- [[topics/fitness-landscapes/_hub|fitness-landscapes]] — combination drug environments define a higher-dimensional fitness landscape
-- [[topics/evolutionary-control/_hub|evolutionary-control]] — combination therapy is one strategy for controlling resistance evolution
+- [[topics/evolution-in-fluctuating-environments/_hub|evolution-in-fluctuating-environments]] — contrast: simultaneous vs. sequential drug exposure; the same drug pair can yield very different resistance trajectories depending on whether applied together or in sequence
+- [[topics/collateral-sensitivity/_hub|collateral-sensitivity]] — drug combinations modulate cross-resistance profiles; the CRO-CIP combination eliminates the collateral sensitivities that single-drug selection produces; Dean2020 shows how pharmacological interaction geometry shapes the collateral landscape
+- [[topics/fitness-landscapes/_hub|fitness-landscapes]] — combination drug environments define a higher-dimensional fitness landscape; the rescaling framework links the phenotypic (growth rate) space to the genotypic landscape
+- [[topics/evolutionary-control/_hub|evolutionary-control]] — combination therapy is one mechanism for constraining or steering evolution; Dean2020 shows that suppressive interactions can eliminate resistance to one drug entirely, offering a design principle for drug combination selection
