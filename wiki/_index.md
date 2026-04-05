@@ -8,6 +8,7 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 | Cite key | Title | Year | Topics | Relevance |
 |---|---|---|---|---|
+| [[papers/Bakerlee2022_IdiosyncraticEpistasis\|Bakerlee2022]] | Idiosyncratic epistasis leads to global fitness-correlated trends | 2022 | genetic-epistasis, fitness-landscapes | high |
 | [[papers/Cvijovic2015_MutationFluctuating\|Cvijovic2015]] | Fate of a mutation in a fluctuating environment | 2015 | evolution-in-fluctuating-environments, distribution-of-fitness-effects | high |
 | [[papers/Kryazhimskiy2014_GlobalEpistasis\|Kryazhimskiy2014]] | Global epistasis makes adaptation predictable despite sequence-level stochasticity | 2014 | genetic-epistasis, distribution-of-fitness-effects, fitness-landscapes | high |
 | [[papers/Good2017_MolecularEvolutionLTEE\|Good2017]] | The dynamics of molecular evolution over 60,000 generations | 2017 | distribution-of-fitness-effects, genetic-epistasis, fitness-landscapes | high |
@@ -35,6 +36,6 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 ## Stats
 
-- **Total papers:** 22
+- **Total papers:** 23
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0
