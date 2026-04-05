@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] ingest | Karslake2016_InoculumEffect
+
+Ingested Karslake, Maltas, Brumm & Wood 2016 (PLoS Comput Biol), a canonical lab paper directly measuring per capita growth of E. faecalis V583 as a function of population density using custom turbidostats, establishing that density-dependent drug inhibition is pervasive and mediated in part by community-driven pH changes, and showing that this density dependence induces bistability of treatment outcomes in a PK/PD model. Note: source PDF is named Wood2016IE.pdf (PI name) but cite key is Karslake2016 (first author convention). Updated evolutionary-control hub with specific cited contributions; updated lab/overview.md.
+
 ## [2026-04-05] ingest | Dean2020_DrugComboEvolution
 
 Ingested Dean, Maltas & Wood 2020 (PLoS Pathogens), a canonical lab paper characterizing how four two-drug antibiotic combinations spanning synergistic to suppressive interactions shape evolution of resistance in E. faecalis V583. Introduced the geometric rescaling framework linking resistance evolution to the ancestral 2D growth response surface, showing that synergistic combinations can accelerate resistance, suppressive combinations eliminate resistance to one drug entirely, and resistance profiles are nearly growth-optimized along contours connecting single-drug endpoints. First paper to populate the evolution-in-multidrug-environments hub; updated collateral-sensitivity hub with combination-therapy modulation of cross-resistance profiles; updated lab/overview.md.
