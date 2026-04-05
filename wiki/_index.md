@@ -17,11 +17,12 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 | [[papers/Maltas2024_FrequencyDependentPreexistence\|Maltas2024]] | Frequency-Dependent Ecological Interactions Increase the Prevalence, and Shape the Distribution, of Preexisting Drug Resistance | 2024 | frequency-dependent-selection, distribution-of-fitness-effects | high |
 | [[papers/Maltas2019b_NonantibioticStressors\|Maltas2019b]] | Using Selection by Nonantibiotic Stressors to Sensitize Bacteria to Antibiotics | 2019 | collateral-sensitivity, evolution-in-fluctuating-environments | high |
 | [[papers/Maltas2019a_CollateralSensitivity\|Maltas2019a]] | Pervasive and diverse collateral sensitivity profiles inform optimal strategies to limit antibiotic resistance | 2019 | collateral-sensitivity, evolutionary-control, evolution-in-fluctuating-environments | high |
+| [[papers/Weaver2024_RLDrugCycling\|Weaver2024]] | Reinforcement learning informs optimal treatment strategies to limit antibiotic resistance | 2024 | evolutionary-control, fitness-landscapes | high |
 
 ---
 
 ## Stats
 
-- **Total papers:** 9
+- **Total papers:** 10
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0

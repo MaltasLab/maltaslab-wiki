@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] ingest | Weaver2024_RLDrugCycling
+
+Ingested Weaver, King, Maltas & Scott 2024 (PNAS), a canonical lab paper demonstrating that deep Q-network RL agents can learn effective drug-cycling policies for antibiotic resistance control without knowledge of the underlying fitness landscape or evolutionary model. RL-fit (observing only current population fitness and previous drug) outperforms random cycling in 98/100 replicates and all two-drug protocols; RL-genotype approaches MDP (perfect-information) performance at r=0.96. Introduces the "opportunity landscape" concept. Model system: E. coli β-lactamase Mira et al. 2015 landscapes (16 genotypes × 15 β-lactam antibiotics). Note: source PDF filename WeaverRLDrug.pdf (no year); cite key Weaver2024 follows first-author convention. Updated evolutionary-control and fitness-landscapes topic hubs; updated lab/overview.md.
+
 ## [2026-04-05] ingest | Karslake2016_InoculumEffect
 
 Ingested Karslake, Maltas, Brumm & Wood 2016 (PLoS Comput Biol), a canonical lab paper directly measuring per capita growth of E. faecalis V583 as a function of population density using custom turbidostats, establishing that density-dependent drug inhibition is pervasive and mediated in part by community-driven pH changes, and showing that this density dependence induces bistability of treatment outcomes in a PK/PD model. Note: source PDF is named Wood2016IE.pdf (PI name) but cite key is Karslake2016 (first author convention). Updated evolutionary-control hub with specific cited contributions; updated lab/overview.md.

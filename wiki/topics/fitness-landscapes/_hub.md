@@ -8,6 +8,8 @@ The concept was introduced by Sewall Wright and has been central to evolutionary
 
 For this lab, fitness landscapes are both a conceptual framework and a practical object of study. Understanding the landscape of antibiotic resistance — how many beneficial mutations exist, how they interact (epistasis), and how the landscape changes across environments (drug types, concentrations) — is essential for predicting evolutionary trajectories and designing treatment strategies. The key insight connecting landscapes to control is that the ruggedness of the landscape determines the degree to which evolution is channeled versus free, and thus the degree to which it can be steered.
 
+A key empirical advance is the use of fully characterized fitness landscapes as substrates for testing evolutionary control strategies. [[papers/Weaver2024_RLDrugCycling|Weaver2024]] leveraged the Mira et al. 2015 *E. coli* β-lactamase landscape — growth rates for 16 genotypes (4 binary TEM-1 β-lactamase alleles) across 15 β-lactam antibiotics — as a benchmark for comparing RL, MDP, and random drug-cycling policies. This is significant because it anchors the control problem in measured rather than theoretically generated landscapes: the landscape topology (specifically, that CTX places 15/16 genotypes in fitness valleys) directly shapes which policies are effective. The **opportunity landscape** introduced by Weaver2024 — the minimum fitness each genotype can be forced into across the available drug panel — translates landscape topology into a drug-selection criterion: drugs that maximize mean opportunity fitness can reliably trap the evolving population regardless of its current state. This provides a new connection between landscape analysis and control design that is independent of transition model assumptions.
+
 A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]] is that the consequences of environmental fluctuations for evolution cannot be understood from single-landscape properties alone — they depend on the *joint* structure of the landscape pair: specifically, the correlation between landscape peaks ($\rho$) and the ruggedness of each landscape ($\sigma$). In smooth landscapes, alternating environments has minimal effect except when landscapes are strongly anticorrelated. In rugged landscapes, positive interlandscape correlation enables fitness gains above single-landscape levels by channeling trajectories toward **shared fitness maxima** — genotypes locally optimal in both environments. Shared maxima in positively correlated rugged landscapes tend to have higher average fitness than non-shared maxima, providing a structural explanation for why correlated-environment cycling can outperform static adaptation. The paper also establishes that anticorrelated landscape pairs drive ergodic-like steady-state dynamics, broadly sampling genotype space and reducing average fitness — a theoretical parallel to the collateral sensitivity cycling strategies employed in [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]], and a warning that naively cycling anticorrelated-landscape drugs may not achieve the intended effect when epistasis is present.
 
 ## Key papers
@@ -20,6 +22,10 @@ A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandsca
 
 - Maltas2020 demonstrated that the optimal protocol (static vs. switching) is timescale-dependent: at short times, static environments always produce greater fitness; only at moderate to long timescales does switching between correlated rugged landscapes produce fitness advantages [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
 
+- Weaver2024 used the empirical Mira et al. 2015 *E. coli* β-lactamase fitness landscapes (16 genotypes × 15 β-lactam drugs, derived from combinatorial mutagenesis of TEM-1 β-lactamase) as a benchmark for RL-based drug cycling, establishing that landscape topology directly determines policy effectiveness: CTX (cefotaxime) places 15/16 genotypes in fitness valleys, making it the dominant "opportunity drug" that RL agents preferentially select [[papers/Weaver2024_RLDrugCycling|Weaver2024]]
+
+- Weaver2024 introduced the opportunity landscape — the minimum fitness per genotype over all available drugs — as a landscape-derived criterion for drug panel design: high mean opportunity fitness indicates a drug set that can reliably force the evolving population into low-fitness states regardless of current resistance genotype [[papers/Weaver2024_RLDrugCycling|Weaver2024]]
+
 - Maltas2019a illustrated landscape concepts through the LZD→CHL evolutionary trajectory, in which LZD selection drives populations across a fitness valley to reach CHL resistance levels exceeding those achieved by direct CHL selection — a concrete empirical case of cross-environment fitness peak structure [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]]
 
 ## Key concepts and methods
@@ -29,6 +35,8 @@ A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandsca
 - **Shared fitness maximum** — genotype that is a local maximum in both landscapes A and B; frequency increases with $\rho$ and $\sigma$; mean fitness of shared maxima exceeds non-shared maxima for positive $\rho$
 - **SSWM Markov chain** — Strong Selection Weak Mutation model; population evolves as random walk among uphill neighbors; analytically tractable via matrix exponentiation
 - **Normalized entropy** $S(\bar{p})/S_\text{max}$ — measure of genotype distribution breadth at steady state; low entropy = concentrated in shared maxima; high entropy = ergodic-like sampling
+- **Opportunity landscape** — for each genotype, the minimum fitness over the available drug panel; identifies which drugs can maximally constrain the evolving population regardless of its state [[papers/Weaver2024_RLDrugCycling|Weaver2024]]
+- **TEM-1 β-lactamase alleles** — A42G, E104K, M182T, G238S; 4 binary loci defining 16 genotypes used in Mira et al. 2015 empirical landscapes; benchmark landscape for RL control in [[papers/Weaver2024_RLDrugCycling|Weaver2024]]
 
 ## Open questions
 
@@ -38,17 +46,19 @@ A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandsca
 - Can empirical collateral sensitivity data be used to estimate the effective correlation $\rho$ between drug-pair fitness landscapes, and does this predict the success of drug cycling in experiments?
 - When epistasis produces shared maxima even under anticorrelated (mutual collateral sensitivity) landscape pairs, how does this reconcile with the success of MDP-based cycling in [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]]?
 - How does population size interact with landscape ruggedness to determine evolutionary predictability? Clonal interference reduces but does not eliminate tunable-correlation effects at moderate $x$ [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
+- Can the opportunity landscape be used to design optimal drug panels from scratch — selecting the minimal set of drugs that maximizes mean opportunity fitness — and how does panel size trade off against coverage of genotype space? [[papers/Weaver2024_RLDrugCycling|Weaver2024]]
+- Do RL agents trained on empirical landscapes (*E. coli* β-lactamase) learn policies that correspond to human-interpretable landscape features (e.g., always choosing the highest-opportunity drug), or do they exploit non-obvious landscape structure?
 
 ## Review article outline
 
 | Section | Coverage | Notes |
 |---|---|---|
 | Theory: landscape models (NK, HoC, rough Mt. Fuji) | developing | Maltas2020 introduces and uses rough Mt. Fuji; NK and empirical models not yet represented |
-| Empirical measurement of fitness landscapes | thin | No papers yet |
+| Empirical measurement of fitness landscapes | developing | Weaver2024 uses Mira et al. 2015 *E. coli* β-lactamase landscapes as a benchmark; lab has not independently measured these landscapes |
 | Landscape ruggedness and evolutionary predictability | developing | Maltas2020 establishes how ruggedness modulates adaptation under alternating environments |
 | Joint landscape structure: paired landscapes and shared maxima | developing | Maltas2020 introduces framework; no empirical validation yet |
 | Environment-dependence of fitness landscapes | developing | Maltas2020 theoretical; empirical landscape variation across drugs thin |
-| Landscapes and treatment design | developing | Maltas2020 provides theoretical framing; Maltas2019a provides empirical link to drug cycling |
+| Landscapes and treatment design | developing | Maltas2020 provides theoretical framing; Maltas2019a provides empirical link to drug cycling; Weaver2024 shows RL can exploit empirical landscape topology for control |
 
 ## Cross-topic connections
 
