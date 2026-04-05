@@ -26,6 +26,8 @@ A foundational theoretical result from [[papers/Maltas2020_TunableFitnessLandsca
 
 - Weaver2024 introduced the opportunity landscape — the minimum fitness per genotype over all available drugs — as a landscape-derived criterion for drug panel design: high mean opportunity fitness indicates a drug set that can reliably force the evolving population into low-fitness states regardless of current resistance genotype [[papers/Weaver2024_RLDrugCycling|Weaver2024]]
 
+- Hegreness2008 demonstrated with a geometric isobologram model that the same resistance mutation (modeled as an effective drug concentration reduction) achieves different fitness gains depending on drug-pair interaction type: in synergistic environments the mutation crosses more isoboles than in additive or antagonistic environments, establishing that drug interaction type determines the shape of the fitness landscape for resistance mutations and thus the selective pressure driving adaptation [[papers/Hegreness2008_AcceleratedResistance|Hegreness2008]]
+
 - Maltas2019a illustrated landscape concepts through the LZD→CHL evolutionary trajectory, in which LZD selection drives populations across a fitness valley to reach CHL resistance levels exceeding those achieved by direct CHL selection — a concrete empirical case of cross-environment fitness peak structure [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]]
 
 ## Key concepts and methods

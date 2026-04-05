@@ -20,6 +20,8 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 
 ## Key papers
 
+- Hegreness2008 established that antagonistic drug combinations depress the rate of resistance evolution in *E. coli* relative to single drugs and to synergistic combinations ($\rho = 0.683$ between synergy and adaptation rate), demonstrating that drug interaction type is a parameter available to treatment design; this introduces the tradeoff between immediate inhibitory efficacy (synergy) and long-term resistance forestalling (antagonism) as a foundational design criterion for combination therapy [[papers/Hegreness2008_AcceleratedResistance|Hegreness2008]]
+
 - Karslake2016 demonstrated that density-dependent drug inhibition in *E. faecalis* induces bistable treatment outcomes in a PK/PD model: for drug concentrations between $K_0\gamma(0)$ and $K_0\gamma(C)$, infections above a critical density cannot be cleared; the bistable regime can span doses up to 1000× the MIC and is analytically characterized by a phenomenological density-dependence rate constant $\varepsilon$ estimated from fixed-density turbidostat measurements [[papers/Karslake2016_InoculumEffect|Karslake2016]]
 
 - Karslake2016 showed that optimal step-like dosing (front-loading drug at concentration $D_0/\tau$ and switching off at time $\tau T$, with $\tau$ minimizing final population size) reduces population size by >25% relative to naive constant dosing at the same total drug exposure for drugs with strong density dependence ($\varepsilon = 0.9$, as for tigecycline in *E. faecalis*) [[papers/Karslake2016_InoculumEffect|Karslake2016]]

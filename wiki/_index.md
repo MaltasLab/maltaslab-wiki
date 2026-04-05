@@ -20,11 +20,12 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 | [[papers/Weaver2024_RLDrugCycling\|Weaver2024]] | Reinforcement learning informs optimal treatment strategies to limit antibiotic resistance | 2024 | evolutionary-control, fitness-landscapes | high |
 | [[papers/Gjini2021_PriceEquationMultidrug\|Gjini2021]] | Price equation captures the role of drug interactions and collateral effects in the evolution of multidrug resistance | 2021 | evolution-in-multidrug-environments, collateral-sensitivity, evolutionary-control | high |
 | [[papers/Levy2015_LineageTracking\|Levy2015]] | Quantitative evolutionary dynamics using high-resolution lineage tracking | 2015 | dna-barcoding-lineage-tracking, distribution-of-fitness-effects | high |
+| [[papers/Hegreness2008_AcceleratedResistance\|Hegreness2008]] | Accelerated evolution of resistance in multidrug environments | 2008 | evolution-in-multidrug-environments, fitness-landscapes, evolutionary-control | high |
 
 ---
 
 ## Stats
 
-- **Total papers:** 12
+- **Total papers:** 13
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0

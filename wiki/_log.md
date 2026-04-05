@@ -5,6 +5,10 @@ Format: `## [YYYY-MM-DD] operation | identifier`
 
 ---
 
+## [2026-04-05] ingest | Hegreness2008_AcceleratedResistance
+
+Ingested Hegreness, Shoresh, Damian, Hartl & Kishony 2008 (PNAS), a canonical non-lab paper establishing experimentally that synergistic drug combinations accelerate resistance evolution in *E. coli* relative to individual drugs (ρ = 0.683 between Bliss synergy S and adaptation rate α across 116 combinations of four antibiotics), while antagonistic combinations depress adaptation. Introduces the geometric isobologram model of resistance mutations as effective concentration reductions — the conceptual precursor to the geometric rescaling framework formalized by Dean2020 and Gjini2021. Note: source PDF named Kishony2008accel.pdf (last author); cite key Hegreness2008 follows first-author convention. Updated evolution-in-multidrug-environments, fitness-landscapes, and evolutionary-control topic hubs; updated lab/overview.md.
+
 ## [2026-04-05] ingest | Levy2015_LineageTracking
 
 Ingested Levy, Blundell, Venkataram, Petrov, Fisher & Sherlock 2015 (Nature), a canonical non-lab foundational paper constructing a 500,000-barcode Cre-loxP lineage tracking system in *S. cerevisiae* monitoring ~25,000 adaptive lineages across ~168 generations of serial batch evolution. Key findings: the beneficial mutation rate spectrum $\mu(s)$ is non-exponential and structured — concentrated at moderate effects (2–5%) with an approximately flat tail at higher effects — directly challenging extreme value theory predictions; this structure produces two-phase evolutionary dynamics (deterministic early phase driven by the abundant moderate-effect class, stochastic late phase governed by rare high-effect mutations); ~6,000 "preexisting" mutations shared between replicates quantify standing variation in large populations as a general expectation. Fully populated the dna-barcoding-lineage-tracking hub (first paper for this hub); updated distribution-of-fitness-effects hub and lab/overview.md.
