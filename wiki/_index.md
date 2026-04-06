@@ -8,6 +8,7 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 | Cite key | Title | Year | Topics | Relevance |
 |---|---|---|---|---|
+| [[papers/Lazar2013_AntibioticHypersensitivity\|Lazar2013]] | Bacterial evolution of antibiotic hypersensitivity | 2013 | collateral-sensitivity | high |
 | [[papers/Lazar2018_CollateralSensitivityAMPs\|Lazar2018]] | Antibiotic-resistant bacteria show widespread collateral sensitivity to antimicrobial peptides | 2018 | collateral-sensitivity, evolutionary-control | high |
 | [[papers/Hansen2020_ContainmentStrategy\|Hansen2020]] | Antibiotics can be used to contain drug-resistant bacteria by maintaining sufficiently large sensitive populations | 2020 | evolutionary-control, frequency-dependent-selection | high |
 | [[papers/Tandar2026_ClinicalCollateralSensitivity\|Tandar2026]] | Clinical prevalence of collateral sensitivity: a systematic exploration of multicentre antimicrobial surveillance data | 2026 | collateral-sensitivity, evolutionary-control | high |
@@ -43,6 +44,6 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 ## Stats
 
-- **Total papers:** 30
+- **Total papers:** 31
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0
