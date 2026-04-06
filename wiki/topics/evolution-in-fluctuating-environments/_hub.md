@@ -84,7 +84,7 @@ The population-genetic foundation for why the timescale of environmental fluctua
 
 ## References
 
-Barbosa C, Römhild R, Rosenstiel P, Schulenburg H (2019). Evolutionary stability of collateral sensitivity to antibiotics in the model pathogen *Pseudomonas aeruginosa*. *eLife* 8. [DOI VERIFY]
+Barbosa C, Römhild R, Rosenstiel P, Schulenburg H (2019). Evolutionary stability of collateral sensitivity to antibiotics in the model pathogen *Pseudomonas aeruginosa*. *eLife* 8: e51481. https://doi.org/10.7554/eLife.51481
 
 Imamovic L, Sommer MOA (2013). Use of Collateral Sensitivity Networks to Design Drug Cycling Protocols That Avoid Resistance Development. *Science Translational Medicine* 5(204): 204ra132. https://doi.org/10.1126/scitranslmed.3006609
 

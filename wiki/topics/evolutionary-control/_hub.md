@@ -218,7 +218,7 @@ Oz T, Guvenek A, Yildiz S, Karaboga E, Tamer YT, Mumcuyan N, Ozan VB, Senturk GH
 
 Yurtsev EA, Chao HX, Datta MS, Artemova T, Gore J (2013). Bacterial cheating drives the population dynamics of cooperative antibiotic resistance plasmids. *Molecular Systems Biology* 9: 683. https://doi.org/10.1038/msb.2013.39
 
-Barbosa C, Römhild R, Rosenstiel P, Schulenburg H (2019). Evolutionary stability of collateral sensitivity to antibiotics in the model pathogen *Pseudomonas aeruginosa*. *eLife* 8. [DOI VERIFY]
+Barbosa C, Römhild R, Rosenstiel P, Schulenburg H (2019). Evolutionary stability of collateral sensitivity to antibiotics in the model pathogen *Pseudomonas aeruginosa*. *eLife* 8: e51481. https://doi.org/10.7554/eLife.51481
 
 De Jong MG, Wood KB (2018). Tuning Spatial Profiles of Selection Pressure to Modulate the Evolution of Drug Resistance. *Physical Review Letters* 120(23): 238102. https://doi.org/10.1103/PhysRevLett.120.238102
 

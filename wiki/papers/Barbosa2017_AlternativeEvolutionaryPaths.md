@@ -3,7 +3,7 @@ title: "Alternative Evolutionary Paths to Bacterial Antibiotic Resistance Cause 
 authors: [Barbosa C, Trebosc V, Kemmer C, Rosenstiel P, Beardmore R, Schulenburg H, Jansen G]
 year: 2017
 venue: "Molecular Biology and Evolution"
-doi: ""
+doi: "10.1093/molbev/msx158"
 arxiv: ""
 topics: [collateral-sensitivity]
 lab_paper: false

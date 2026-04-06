@@ -3,7 +3,7 @@ title: "Evolutionary stability of collateral sensitivity to antibiotics in the m
 authors: [Barbosa C, Römhild R, Rosenstiel P, Schulenburg H]
 year: 2019
 venue: "eLife"
-doi: ""
+doi: "10.7554/eLife.51481"
 arxiv: ""
 topics: [collateral-sensitivity, evolutionary-control, evolution-in-fluctuating-environments]
 lab_paper: false

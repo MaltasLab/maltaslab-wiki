@@ -207,7 +207,7 @@ Maltas J, McNally DM, Wood KB (2020). Evolution in paired fitness landscapes wit
 
 Maltas J, Huynh A, Wood KB (2025). Dynamic collateral sensitivity profiles highlight opportunities and challenges for optimizing antibiotic treatments. *PLOS Biology* 23(1): e3002970. https://doi.org/10.1371/journal.pbio.3002970
 
-Barbosa C, Trebosc V, Kemmer C, Rosenstiel P, Beardmore R, Schulenburg H, Jansen G (2017). Alternative Evolutionary Paths to Bacterial Antibiotic Resistance Cause Distinct Collateral Effects. *Molecular Biology and Evolution*. [DOI VERIFY]
+Barbosa C, Trebosc V, Kemmer C, Rosenstiel P, Beardmore R, Schulenburg H, Jansen G (2017). Alternative Evolutionary Paths to Bacterial Antibiotic Resistance Cause Distinct Collateral Effects. *Molecular Biology and Evolution*. https://doi.org/10.1093/molbev/msx158
 
 Imamovic L, Ellabaan MMH, Machado AMD, Citterio L, Wulff T, Molin S, Johansen HK, Sommer MOA (2018). Drug-Driven Phenotypic Convergence Supports Rational Treatment Strategies of Chronic Infections. *Cell*. https://doi.org/10.1016/j.cell.2017.12.012
 
@@ -217,6 +217,6 @@ Roemhild R, Linkevicius M, Andersson DI (2020). Molecular mechanisms of collater
 
 Tandar ST, Zwep LB, Woudt SHS, Schoffelen AF, Smits WK, Aulin LBS, Liakopoulos A, van Hasselt JGC (2026). Clinical prevalence of collateral sensitivity: a systematic exploration of multicentre antimicrobial surveillance data. *Lancet Microbe*. https://doi.org/10.1016/j.lanmic.2025.101274
 
-Barbosa C, Römhild R, Rosenstiel P, Schulenburg H (2019). Evolutionary stability of collateral sensitivity to antibiotics in the model pathogen *Pseudomonas aeruginosa*. *eLife* 8. [DOI VERIFY]
+Barbosa C, Römhild R, Rosenstiel P, Schulenburg H (2019). Evolutionary stability of collateral sensitivity to antibiotics in the model pathogen *Pseudomonas aeruginosa*. *eLife* 8: e51481. https://doi.org/10.7554/eLife.51481
 
 Imamovic L, Sommer MOA (2013). Use of Collateral Sensitivity Networks to Design Drug Cycling Protocols That Avoid Resistance Development. *Science Translational Medicine* 5(204): 204ra132. https://doi.org/10.1126/scitranslmed.3006609
