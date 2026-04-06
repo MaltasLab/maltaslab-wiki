@@ -140,7 +140,7 @@ Kryazhimskiy S, Rice DP, Jerison ER, Desai MM (2014). Global epistasis makes ada
 
 Maltas J, Wood KB (2019). Pervasive and diverse collateral sensitivity profiles inform optimal strategies to limit antibiotic resistance. *PLOS Biology* 17(10): e3000515. https://doi.org/10.1371/journal.pbio.3000515
 
-Maltas J, McNally DM, Wood KB (2020). Evolution in paired fitness landscapes with tunable interlandscape correlations. *Evolution*. [DOI VERIFY]
+Maltas J, McNally DM, Wood KB (2020). Evolution in alternating environments with tunable interlandscape correlations. *Evolution*. https://doi.org/10.1111/evo.14121
 
 Mira PM, Crona K, Greene D, Meza JC, Sturmfels B, Barlow M (2015). Rational Design of Antibiotic Treatment Plans: A Treatment Strategy for Managing Evolution and Reversing Resistance. *PLoS ONE* 10(5): e0122283. https://doi.org/10.1371/journal.pone.0122283
 

@@ -94,7 +94,7 @@ Maltas J, Wood KB (2019). Pervasive and diverse collateral sensitivity profiles 
 
 Maltas J, Krasnick B, Wood KB (2019). Using Selection by Nonantibiotic Stressors to Sensitize Bacteria to Antibiotics. *Molecular Biology and Evolution* 37(4). https://doi.org/10.1093/molbev/msz303
 
-Maltas J, McNally DM, Wood KB (2020). Evolution in paired fitness landscapes with tunable interlandscape correlations. *Evolution*. [DOI VERIFY]
+Maltas J, McNally DM, Wood KB (2020). Evolution in alternating environments with tunable interlandscape correlations. *Evolution*. https://doi.org/10.1111/evo.14121
 
 Maltas J, Killarney ST, Singleton KR, Strobl MAR, Washart R, Wood KC, Wood KB (2023). Drug dependence in cancer is exploitable by optimally constructed treatment holidays. *Nature Ecology & Evolution* 7. https://doi.org/10.1038/s41559-023-02255-x
 

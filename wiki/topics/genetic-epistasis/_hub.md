@@ -127,7 +127,7 @@ Kryazhimskiy S, Rice DP, Jerison ER, Desai MM (2014). Global epistasis makes ada
 
 Maltas J, Krasnick B, Wood KB (2019). Using Selection by Nonantibiotic Stressors to Sensitize Bacteria to Antibiotics. *Molecular Biology and Evolution* 37(4). https://doi.org/10.1093/molbev/msz303
 
-Maltas J, McNally DM, Wood KB (2020). Evolution in paired fitness landscapes with tunable interlandscape correlations. *Evolution*. [DOI VERIFY]
+Maltas J, McNally DM, Wood KB (2020). Evolution in alternating environments with tunable interlandscape correlations. *Evolution*. https://doi.org/10.1111/evo.14121
 
 Michel J-B, Yeh PJ, Chait R, Moellering RC, Kishony R (2008). Drug interactions modulate the potential for evolution of resistance. *Proceedings of the National Academy of Sciences* 105(39): 14918–14923. https://doi.org/10.1073/pnas.0800944105
 

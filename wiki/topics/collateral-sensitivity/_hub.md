@@ -203,7 +203,7 @@ Maltas J, Wood KB (2019). Pervasive and diverse collateral sensitivity profiles 
 
 Maltas J, Krasnick B, Wood KB (2019). Using Selection by Nonantibiotic Stressors to Sensitize Bacteria to Antibiotics. *Molecular Biology and Evolution* 37(4). https://doi.org/10.1093/molbev/msz303
 
-Maltas J, McNally DM, Wood KB (2020). Evolution in paired fitness landscapes with tunable interlandscape correlations. *Evolution*. [DOI VERIFY]
+Maltas J, McNally DM, Wood KB (2020). Evolution in alternating environments with tunable interlandscape correlations. *Evolution*. https://doi.org/10.1111/evo.14121
 
 Maltas J, Huynh A, Wood KB (2025). Dynamic collateral sensitivity profiles highlight opportunities and challenges for optimizing antibiotic treatments. *PLOS Biology* 23(1): e3002970. https://doi.org/10.1371/journal.pbio.3002970
 

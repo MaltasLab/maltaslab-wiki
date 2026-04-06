@@ -1,9 +1,9 @@
 ---
-title: "Evolution in paired fitness landscapes with tunable interlandscape correlations"
+title: "Evolution in alternating environments with tunable interlandscape correlations"
 authors: [Maltas J, McNally DM, Wood KB]
 year: 2020
 venue: "Evolution"
-doi: ""
+doi: "10.1111/evo.14121"
 arxiv: ""
 topics: [fitness-landscapes, evolution-in-fluctuating-environments, genetic-epistasis]
 lab_paper: true
