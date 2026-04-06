@@ -8,6 +8,7 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 | Cite key | Title | Year | Topics | Relevance |
 |---|---|---|---|---|
+| [[papers/Imamovic2018_PhenotypicConvergence\|Imamovic2018]] | Drug-Driven Phenotypic Convergence Supports Rational Treatment Strategies of Chronic Infections | 2018 | collateral-sensitivity, evolutionary-control | high |
 | [[papers/Oz2014_SelectionPressure\|Oz2014]] | Strength of Selection Pressure Is an Important Parameter Contributing to the Complexity of Antibiotic Resistance Evolution | 2014 | collateral-sensitivity, evolutionary-control | high |
 | [[papers/Roemhild2020_NitrofurantoinCS\|Roemhild2020]] | Molecular mechanisms of collateral sensitivity to the antibiotic nitrofurantoin | 2020 | collateral-sensitivity | high |
 | [[papers/Evgrafov2015_StaphCS\|Evgrafov2015]] | Collateral Resistance and Sensitivity Modulate Evolution of High-Level Resistance to Drug Combination Treatment in Staphylococcus aureus | 2015 | evolution-in-multidrug-environments, collateral-sensitivity | high |
@@ -47,6 +48,6 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 ## Stats
 
-- **Total papers:** 34
+- **Total papers:** 35
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0
