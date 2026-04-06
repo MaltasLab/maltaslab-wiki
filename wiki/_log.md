@@ -3,6 +3,10 @@
 Append-only log of all wiki operations. Never edit or delete entries.
 Format: `## [YYYY-MM-DD] operation | identifier`
 
+## [2026-04-06] ingest | Imamovic2013_CollateralSensitivityCycling
+
+Ingested Imamovic & Sommer 2013 (Science Translational Medicine), the founding paper of collateral sensitivity cycling as a named clinical treatment paradigm. Maps 23-drug CS network in *E. coli* MG1655; enumerates 207 possible CS cycles; provides proof of principle that GEN/CFX cycling based on reciprocal CS completely eradicates resistant subpopulations at each drug switch; shows CS reduces MPC and accelerates kill kinetics; 94% concordance with two clinical isolates. Conversion quality good — full paper captured. Updated collateral-sensitivity (new "What this topic is about" paragraph + 4 Key papers), evolutionary-control (new paragraph + 2 Key papers), and evolution-in-fluctuating-environments (1 Key papers + References) hubs.
+
 ## [2026-04-06] ingest | Barbosa2019_EvolutionaryStability
 
 Ingested Barbosa, Römhild, Rosenstiel & Schulenburg 2019 (eLife), a two-step evolution experiment in *P. aeruginosa* PA14 testing the evolutionary stability of reciprocal CS under sequential drug exposure. Starting from Barbosa2017 PIT↔STR and CAR↔GEN populations, clonal lineages were challenged with the CS-targeting second drug under four conditions (mild/strong × unconstrained/constrained). Three outcomes: extinction (frequent), multidrug resistance escape (occasional), and trade-off maintenance (predominant among survivors). Drug order affects outcome distribution. Conversion quality was very poor (59 lines only; abstract/intro/start of Results captured; full quantitative results and Methods absent). Updated collateral-sensitivity, evolutionary-control, and evolution-in-fluctuating-environments topic hubs with specific cited contributions; added References section to evolution-in-fluctuating-environments hub.

@@ -42,6 +42,8 @@ The population-genetic foundation for why the timescale of environmental fluctua
 
 - Maltas2020 showed that anticorrelated landscape pairs (the theoretical model of mutual collateral sensitivity) produce ergodic-like steady-state dynamics that broadly sample genotype space rather than converging on shared fitness maxima — providing a theoretical explanation for why the benefit of cycling mutually collaterally sensitive drugs depends on the epistatic structure of the resistance landscape [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
 
+- Imamovic2013 provided the founding experimental proof of principle for CS-guided sequential drug cycling: alternating gentamicin and cefuroxime — chosen for reciprocal CS profiles in an *E. coli* CS network enumerated from 23-drug resistance evolution data — completely eradicated each resistant subpopulation at each drug switch step, establishing that rationally designed sequential drug sequences can sustain efficacy against resistance evolution [[papers/Imamovic2013_CollateralSensitivityCycling|Imamovic2013]]
+
 - Barbosa2019 showed that during the first drug switch in a CS cycling protocol with *P. aeruginosa* (PIT↔STR and CAR↔GEN pairs), three evolutionary fates are possible: extinction (frequent), multidrug resistance escape (occasional), and trade-off maintenance (predominant among survivors); drug order affects which outcome predominates, operating through CS effect size, epistasis, and fitness costs — establishing that the direction and conditions of the first switch are non-interchangeable parameters for sequential therapy design [[papers/Barbosa2019_EvolutionaryStability|Barbosa2019]]
 
 ## Key concepts and methods
@@ -83,6 +85,8 @@ The population-genetic foundation for why the timescale of environmental fluctua
 ## References
 
 Barbosa C, Römhild R, Rosenstiel P, Schulenburg H (2019). Evolutionary stability of collateral sensitivity to antibiotics in the model pathogen *Pseudomonas aeruginosa*. *eLife* 8. [DOI VERIFY]
+
+Imamovic L, Sommer MOA (2013). Use of Collateral Sensitivity Networks to Design Drug Cycling Protocols That Avoid Resistance Development. *Science Translational Medicine* 5(204): 204ra132. https://doi.org/10.1126/scitranslmed.3006609
 
 Cvijović I, Good BH, Jerison ER, Desai MM (2015). Fate of a mutation in a fluctuating environment. *Proceedings of the National Academy of Sciences* 112. https://doi.org/10.1073/pnas.1505406112
 
