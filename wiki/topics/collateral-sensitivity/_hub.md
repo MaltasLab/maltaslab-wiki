@@ -24,6 +24,8 @@ A critical empirical challenge for translating CS-based therapies from laborator
 
 ## Key papers
 
+- Evgrafov2015 demonstrated in *S. aureus* that CS between constituent drugs of a drug combination is a stronger predictor of resistance evolution at clinically relevant (above-MIC) concentrations than drug interaction type: combinations where single-drug resistance creates CS to the partner drug had significantly lower resistance evolution (Mann-Whitney P < 0.05) — extending CS-based combination design principles to above-MIC conditions and a clinically relevant Gram-positive pathogen [[papers/Evgrafov2015_StaphCS|Evgrafov2015]]
+
 - Lazar2013 established the first systematic network map of CS interactions in *E. coli*: at least 35% of antibiotic pairs show CS in at least one direction, CS is absent between same-target antibiotic pairs ($p = 0.013$) and depleted between pairs with overlapping chemogenomic profiles ($p < 10^{-5}$), and aminoglycosides dominate the network (44% of all CS interactions, spanning DNA synthesis, cell-wall synthesis, and non-aminoglycoside protein synthesis classes) [[papers/Lazar2013_AntibioticHypersensitivity|Lazar2013]]
 
 - Lazar2013 identified the PMF-reduction mechanism as the driver of aminoglycoside-induced hypersensitivity: mutations in trkH (found in 64% of sequenced aminoglycoside-adapted clones), cyoB, hemA, and ispA reduce the membrane electrochemical potential, which simultaneously diminishes AcrAB efflux activity and increases intracellular accumulation of non-aminoglycoside antibiotics; 75% of CS-linked antibiotics are AcrAB substrates; AcrAB overexpression rescues sensitivity in wild-type but not in PMF-deficient mutant backgrounds [[papers/Lazar2013_AntibioticHypersensitivity|Lazar2013]]
@@ -126,6 +128,8 @@ A critical empirical challenge for translating CS-based therapies from laborator
 Dean Z, Maltas J, Wood KB (2020). Antibiotic interactions shape short-term evolution of resistance in *E. faecalis*. *PLOS Pathogens* 16(3): e1008278. https://doi.org/10.1371/journal.ppat.1008278
 
 Lázár V, Singh GP, Spohn R, Nagy I, Horváth B, Hrtyan M, Busa-Fekete R, Bogos B, Méhi O, Csörgő B, Pósfai G, Fekete G, Szappanos B, Kégl B, Papp B, Pál C (2013). Bacterial evolution of antibiotic hypersensitivity. *Molecular Systems Biology* 9: 700. https://doi.org/10.1038/msb.2013.57
+
+Rodriguez de Evgrafov M, Gumpert H, Munck C, Thomsen TT, Sommer MOA (2015). Collateral Resistance and Sensitivity Modulate Evolution of High-Level Resistance to Drug Combination Treatment in *Staphylococcus aureus*. *Molecular Biology and Evolution*. https://doi.org/10.1093/molbev/msv006
 
 Lázár V, Martins A, Spohn R, Daruka L, Grézal G, Fekete G, Számel M, Jangir PK, Kintses B, Csörgő B, Nyerges Á, Györkei Á, Kincses A, Dér A, Walter FR, Deli MA, Urbán E, Hegedűs Z, Olajos G, Méhi O, Bálint B, Nagy I, Martinek TA, Papp B, Pál C (2018). Antibiotic-resistant bacteria show widespread collateral sensitivity to antimicrobial peptides. *Nature Microbiology* 3(6): 718–731. https://doi.org/10.1038/s41564-018-0164-0
 
