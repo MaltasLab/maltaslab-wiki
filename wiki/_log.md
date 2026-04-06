@@ -3,6 +3,10 @@
 Append-only log of all wiki operations. Never edit or delete entries.
 Format: `## [YYYY-MM-DD] operation | identifier`
 
+## [2026-04-06] ingest | DeJong2018_SpatialSelectionPressure
+
+Ingested De Jong & Wood 2018 (Physical Review Letters), a canonical lab paper establishing the theoretical framework for spatial evolutionary control of drug resistance. Uses stochastic Moran meta-population model (M=3 habitats) + MFPT via adjoint equations to show that spatial heterogeneity in drug concentration accelerates resistance fixation in the high-migration regime and slows it in the low-migration regime — a three-regime phase diagram in (β, μ) space. Specifically predicts E. faecalis (low motility → low migration) is in the deceleration regime. Optimal spatial profiles for existing resistant subpopulations derived and shown to be counterintuitive. Updated evolutionary-control hub (new paragraph + 2 Key papers + 2 open questions + review outline row), fitness-landscapes hub (1 Key papers + review outline row), and lab/overview.md (new theoretical approach entry + new "Spatial heterogeneity" core theme section).
+
 ## [2026-04-06] ingest | Imamovic2013_CollateralSensitivityCycling
 
 Ingested Imamovic & Sommer 2013 (Science Translational Medicine), the founding paper of collateral sensitivity cycling as a named clinical treatment paradigm. Maps 23-drug CS network in *E. coli* MG1655; enumerates 207 possible CS cycles; provides proof of principle that GEN/CFX cycling based on reciprocal CS completely eradicates resistant subpopulations at each drug switch; shows CS reduces MPC and accelerates kill kinetics; 94% concordance with two clinical isolates. Conversion quality good — full paper captured. Updated collateral-sensitivity (new "What this topic is about" paragraph + 4 Key papers), evolutionary-control (new paragraph + 2 Key papers), and evolution-in-fluctuating-environments (1 Key papers + References) hubs.

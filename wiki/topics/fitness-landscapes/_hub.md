@@ -58,6 +58,8 @@ A direct empirical window into how the accessible region of a fitness landscape 
 
 - Kinsler2024 demonstrated that the accessible region of a multidimensional performance space (fermentation × respiration) changes structurally across two adaptive steps: 85% of first-step mutations improve performance in both fermentation and respiration simultaneously (occupying a pleiotropic corridor), while only 35% of second-step mutations do; most second-step mutants instead occupy a respiration-specialist corridor — establishing that the accessible region of the performance landscape contracts and reorients as specific mutational targets are depleted [[papers/Kinsler2024_TwoStepEvolution|Kinsler2024]]
 
+- DeJong2018 applied the Moran model and MFPT framework to a spatially structured fitness landscape — the spatial distribution of drug selection pressure across M=3 connected microhabitats — showing that the phase diagram of fixation dynamics (whether heterogeneity accelerates or decelerates resistance) is governed by the ratio of migration to mutation rate; in the low-migration limit, the MFPT decomposes as the expected maximum of independent habitat fixation times, analytically establishing that the homogeneous landscape minimizes fixation time via a bottleneck mechanism; these results extend the MFPT/Moran toolkit from single-environment fitness landscapes to spatially extended landscapes where the "landscape" is the externally imposed selection pressure profile rather than the intrinsic genotype-to-fitness map [[papers/DeJong2018_SpatialSelectionPressure|DeJong2018]]
+
 - Kinsler2024 identified "coherent pleiotropy" as the mechanism underlying early-step adaptive pleiotropy: signaling pathways (Ras/PKA, TOR/Sch9) are pre-wired to coherently modulate multiple downstream phenotypes, making mutations in these pathways capable of simultaneously improving performance in several fitness-relevant dimensions; once these pathway targets are exhausted at the first step, subsequent adaptation must engage performance-specific molecular modules, producing modular improvement confined to a single region of performance space [[papers/Kinsler2024_TwoStepEvolution|Kinsler2024]]
 
 ## Key concepts and methods
@@ -100,6 +102,7 @@ A direct empirical window into how the accessible region of a fitness landscape 
 | Landscapes and treatment design | developing | Maltas2020 provides theoretical framing; Maltas2019a provides empirical link to drug cycling; Weaver2024 shows RL can exploit empirical landscape topology for control |
 | Eco-evolutionary landscapes: landscape restructuring by emergent ecology | developing | Good2017 establishes spontaneous eco-evolutionary coexistence in 9/12 LTEE populations restructures effective landscape to be frequency-dependent; no theoretical framework yet for predicting when this arises or how it alters control strategies |
 | Adaptive walks and performance landscape structure | developing | Kinsler2024 provides two-step high-resolution characterization in yeast multidimensional performance space; documents pleiotropic → modular shift driven by Ras/PKA target exhaustion; introduces coherent pleiotropy concept; extension to resistance landscapes needed |
+| Spatially heterogeneous selection pressure landscapes | thin | DeJong2018 establishes phase diagram for fixation dynamics on spatial drug concentration profiles; MFPT/Moran framework extended to M=3 meta-population; predicts E. faecalis (low migration) in deceleration regime; experimental validation and extension to multi-step resistance needed |
 
 ## Cross-topic connections
 
@@ -109,6 +112,8 @@ A direct empirical window into how the accessible region of a fitness landscape 
 - [[topics/evolutionary-control/_hub|evolutionary-control]] — landscape topology determines what control strategies are feasible
 
 ## References
+
+De Jong MG, Wood KB (2018). Tuning Spatial Profiles of Selection Pressure to Modulate the Evolution of Drug Resistance. *Physical Review Letters* 120(23): 238102. https://doi.org/10.1103/PhysRevLett.120.238102
 
 Ardell SM, Martsul A, Johnson MS, Kryazhimskiy S (2024). Environment-independent distribution of mutational effects emerges from microscopic epistasis. *Science* 386(6717): 87–92. https://doi.org/10.1126/science.adn0753
 

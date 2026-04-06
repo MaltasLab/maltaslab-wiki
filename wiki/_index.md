@@ -8,6 +8,7 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 | Cite key | Title | Year | Topics | Relevance |
 |---|---|---|---|---|
+| [[papers/DeJong2018_SpatialSelectionPressure\|DeJong2018]] | Tuning Spatial Profiles of Selection Pressure to Modulate the Evolution of Drug Resistance | 2018 | evolutionary-control, fitness-landscapes | high |
 | [[papers/Imamovic2013_CollateralSensitivityCycling\|Imamovic2013]] | Use of Collateral Sensitivity Networks to Design Drug Cycling Protocols That Avoid Resistance Development | 2013 | collateral-sensitivity, evolutionary-control, evolution-in-fluctuating-environments | high |
 | [[papers/Barbosa2019_EvolutionaryStability\|Barbosa2019]] | Evolutionary stability of collateral sensitivity to antibiotics in the model pathogen *Pseudomonas aeruginosa* | 2019 | collateral-sensitivity, evolutionary-control, evolution-in-fluctuating-environments | high |
 | [[papers/Barbosa2017_AlternativeEvolutionaryPaths\|Barbosa2017]] | Alternative Evolutionary Paths to Bacterial Antibiotic Resistance Cause Distinct Collateral Effects | 2017 | collateral-sensitivity | high |
@@ -51,6 +52,6 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 ## Stats
 
-- **Total papers:** 38
+- **Total papers:** 39
 - **Last ingest:** 2026-04-06
 - **Pending topic assignment:** 0
