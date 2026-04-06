@@ -78,6 +78,8 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 
 - Tandar2026 established empirical constraints on the clinical applicability of CS-based control by showing that CS is rare in clinical surveillance data (3.03% of species-antibiotic pairs), predominantly species-specific, and often absent for pairs identified in laboratory evolution; only six cross-species conserved CS pairs were identified across >12,000 tested species-antibiotic combinations — establishing that the theoretical and experimental promise of CS-based evolutionary control must be validated against a low base rate of consistent clinical CS [[papers/Tandar2026_ClinicalCollateralSensitivity|Tandar2026]]
 
+- Oz2014 established that selection pressure strength (dose during evolution) is a controllable parameter that shapes the resistance trajectory independently of final resistance level: strongly selected *E. coli* populations developed cross-resistance in 27% of drug pairs and CS in 10% vs. 23% and 6% for mildly selected populations; the effect is not mediated by direct resistance magnitude ($R = 0.23$) — implying that dose is an evolutionary control lever for shaping the cross-resistance landscape that operates orthogonally to drug choice and drug sequence [[papers/Oz2014_SelectionPressure|Oz2014]]
+
 ## Key concepts and methods
 
 - [[concepts/markov-decision-process|Markov decision process (MDP)]] — primary formal framework for policy optimization in this lab's work; introduced for antibiotic resistance by Maltas2019a
@@ -111,6 +113,8 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 - Do RL-discovered drug cycling policies correspond to interpretable rules that could be used clinically without running the algorithm online?
 
 - Given that Tandar2026 shows clinical CS is far rarer (3%) than lab-based studies suggest, does this mean CS-based MDP/d-MDP control strategies are only applicable to the small subset of clinically confirmed CS pairs — and what is the expected loss in policy performance when restricted to these pairs relative to the full lab-characterized CS profiles? [[papers/Tandar2026_ClinicalCollateralSensitivity|Tandar2026]]
+
+- Can dose be incorporated as an explicit decision variable in MDP, d-MDP, or RL frameworks — not just which drug to give but at what strength — to minimize cross-resistance generation while maintaining therapeutic effect? [[papers/Oz2014_SelectionPressure|Oz2014]] establishes that dose history shapes the CS and cross-resistance landscape; adaptive therapy modulates dose in response to population burden; but formal dose optimization for cross-resistance control has not been developed [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]], [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]]
 
 - Mira2015's exhaustive search over all $15^k$ antibiotic sequences is computationally feasible only for small $k$ (tested up to $k = 6$); running time grows as $15^k$. The MDP (value iteration) and RL (deep Q-network) frameworks each reduce the computational burden, but do they recover near-optimal return-to-wild-type probabilities relative to Mira2015's exact solution — and under what conditions does the approximation gap matter clinically? [[papers/Mira2015_RationalAntibioticTreatment|Mira2015]], [[papers/Weaver2024_RLDrugCycling|Weaver2024]]
 
@@ -172,5 +176,7 @@ Mira PM, Crona K, Greene D, Meza JC, Sturmfels B, Barlow M (2015). Rational Desi
 Tandar ST, Zwep LB, Woudt SHS, Schoffelen AF, Smits WK, Aulin LBS, Liakopoulos A, van Hasselt JGC (2026). Clinical prevalence of collateral sensitivity: a systematic exploration of multicentre antimicrobial surveillance data. *Lancet Microbe*. https://doi.org/10.1016/j.lanmic.2025.101274
 
 Weaver DT, King ES, Maltas J, Scott JG (2024). Reinforcement learning informs optimal treatment strategies to limit antibiotic resistance. *Proceedings of the National Academy of Sciences* 121(15): e2303165121. https://doi.org/10.1073/pnas.2303165121
+
+Oz T, Guvenek A, Yildiz S, Karaboga E, Tamer YT, Mumcuyan N, Ozan VB, Senturk GH, Cokol M, Yeh P, Toprak E (2014). Strength of Selection Pressure Is an Important Parameter Contributing to the Complexity of Antibiotic Resistance Evolution. *Molecular Biology and Evolution*. https://doi.org/10.1093/molbev/msu191
 
 Yurtsev EA, Chao HX, Datta MS, Artemova T, Gore J (2013). Bacterial cheating drives the population dynamics of cooperative antibiotic resistance plasmids. *Molecular Systems Biology* 9: 683. https://doi.org/10.1038/msb.2013.39
