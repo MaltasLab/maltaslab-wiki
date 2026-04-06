@@ -49,7 +49,7 @@ where $\bar{\alpha}_m = \sum_{ij} \alpha_i m_{ji} f_j$ is the mean trait value a
 
 ## Related concepts and pages
 
-- [[concepts/geometric-rescaling|Geometric rescaling]] — the model assumption that makes $g_i = G(\alpha_i x, \beta_i y)$ and connects the Price equation to measurable resistance phenotypes
+- [[concepts/geometric-drug-concentration-rescaling|Geometric drug concentration rescaling]] — the model assumption that makes $g_i = G(\alpha_i x, \beta_i y)$ and connects the Price equation to measurable resistance phenotypes
 - [[topics/evolution-in-multidrug-environments/_hub|evolution-in-multidrug-environments]] — the primary application domain in this lab
 - [[topics/collateral-sensitivity/_hub|collateral-sensitivity]] — collateral effects appear as the off-diagonal elements of $\Sigma$ in the gradient dynamics
 - [[papers/Gjini2021_PriceEquationMultidrug|Gjini2021]] — the derivation and application of the Price equation to two-drug resistance evolution

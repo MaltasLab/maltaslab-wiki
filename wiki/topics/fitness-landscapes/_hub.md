@@ -75,6 +75,7 @@ A direct empirical window into how the accessible region of a fitness landscape 
 - **Normalized entropy** $S(\bar{p})/S_\text{max}$ — measure of genotype distribution breadth at steady state; low entropy = concentrated in shared maxima; high entropy = ergodic-like sampling
 - **Opportunity landscape** — for each genotype, the minimum fitness over the available drug panel; identifies which drugs can maximally constrain the evolving population regardless of its state [[papers/Weaver2024_RLDrugCycling|Weaver2024]]
 - **TEM-1 β-lactamase alleles** — M69L, E104K, G238S, N276D; 4 binary loci defining 16 genotypes in [[papers/Mira2015_RationalAntibioticTreatment|Mira2015]]; benchmark landscape for RL control in [[papers/Weaver2024_RLDrugCycling|Weaver2024]]
+- [[concepts/clonal-interference|Clonal interference]] — competition between simultaneously expanding beneficial mutants before any one fixes; in spatially structured environments, operates in physical space rather than genotypic space, with lineages blocking each other spatially as demonstrated in [[papers/Baym2016_MegaplateSpatialEvolution|Baym2016]]
 
 ## Open questions
 
