@@ -72,6 +72,10 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 
 - Yurtsev2013 discovered the β-lactamase inhibitor paradox: tazobactam and sulbactam — designed to suppress β-lactamase-mediated resistance — paradoxically increase the equilibrium resistant fraction in co-culture by raising the effective $K_M$ of the Michaelis-Menten drug degradation reaction, because higher $K_M$ requires more resistant cells to degrade ampicillin to the MIC; this demonstrates that when resistance is a cooperative (public goods) behavior, standard suppression strategies can be counterproductive [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
 
+- Lazar2018 demonstrated that the antimicrobial peptide PGLA, administered at subinhibitory concentrations as an adjuvant, causes up to 30-fold re-sensitization of antibiotic-resistant *E. coli* to antibiotics — exploiting widespread collateral sensitivity of antibiotic-resistant bacteria to AMPs as a control mechanism that is mechanistically grounded in outer membrane LPS composition changes and operates independently of antibiotic-based cycling strategies [[papers/Lazar2018_CollateralSensitivityAMPs|Lazar2018]]
+
+- Lazar2018 showed that antibiotic-PGLA co-treatment prevented de novo resistance evolution from exceeding EUCAST clinical breakpoints over 160 laboratory generations (vs. 40- and 390-fold MIC increases under tetracycline and ciprofloxacin alone); a control experiment with tobramycin + BAC5 — where BAC5 shows cross-resistance rather than CS to tobramycin-resistant strains — produced no reduction in resistance evolution, confirming that the effect is mechanistically specific to collateral sensitivity [[papers/Lazar2018_CollateralSensitivityAMPs|Lazar2018]]
+
 - Tandar2026 established empirical constraints on the clinical applicability of CS-based control by showing that CS is rare in clinical surveillance data (3.03% of species-antibiotic pairs), predominantly species-specific, and often absent for pairs identified in laboratory evolution; only six cross-species conserved CS pairs were identified across >12,000 tested species-antibiotic combinations — establishing that the theoretical and experimental promise of CS-based evolutionary control must be validated against a low base rate of consistent clinical CS [[papers/Tandar2026_ClinicalCollateralSensitivity|Tandar2026]]
 
 ## Key concepts and methods
@@ -125,7 +129,7 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 | Game-type switching as a control strategy | developing | Kaznatcheev2019 establishes the principle empirically in ALK+ NSCLC; theoretical framework for designing game-switching interventions across cancer types not yet developed |
 | Population density effects on drug efficacy and bistability | developing | Karslake2016 establishes the framework and PK/PD bistability predictions in *E. faecalis*; extension to in vivo and clinical settings needed |
 | Drug dependence as a control mechanism | developing | Maltas2023 establishes the framework and patient stratification logic; generality to other cancers needed |
-| Collateral sensitivity as a control mechanism | developing | Maltas2019a and Maltas2025 provide the mechanistic link and experimental validation |
+| Collateral sensitivity as a control mechanism | developing | Maltas2019a and Maltas2025 provide MDP/d-MDP framework and experimental validation; Lazar2018 provides AMP-adjuvant proof-of-principle extending CS exploitation to a cross-domain (antibiotic→AMP) strategy with mechanistic characterization |
 | Robustness and model uncertainty | thin | Explicitly flagged as future work; d-MDP adds temporal uncertainty as a new robustness challenge |
 | Geometric dosage optimization (Price equation framework) | developing | Gjini2021 establishes gradient dynamics criterion for dosage selection; experimental optimization of dosage ratio to maximize collateral constraint not yet demonstrated |
 | Empirical landscape construction and resistance reversal | strong | Mira2015 provides the TEM β-lactamase benchmark landscape and exact exhaustive treatment path optimization; foundational for all downstream control work on this system |
@@ -142,6 +146,8 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 ## References
 
 Farrokhian N, Maltas J, Dinh M, Durmaz A, Ellsworth P, Hitomi M, McClure E, Marusyk A, Kaznatcheev A, Scott JG (2022). Measuring competitive exclusion in non-small cell lung cancer. *Science Advances* 8(26): eabm7212. https://doi.org/10.1126/sciadv.abm7212
+
+Lázár V, Martins A, Spohn R, Daruka L, Grézal G, Fekete G, Számel M, Jangir PK, Kintses B, Csörgő B, Nyerges Á, Györkei Á, Kincses A, Dér A, Walter FR, Deli MA, Urbán E, Hegedűs Z, Olajos G, Méhi O, Bálint B, Nagy I, Martinek TA, Papp B, Pál C (2018). Antibiotic-resistant bacteria show widespread collateral sensitivity to antimicrobial peptides. *Nature Microbiology* 3(6): 718–731. https://doi.org/10.1038/s41564-018-0164-0
 
 Hansen E, Karslake J, Woods RJ, Read AF, Wood KB (2020). Antibiotics can be used to contain drug-resistant bacteria by maintaining sufficiently large sensitive populations. *PLoS Biology* 18(5): e3000713. https://doi.org/10.1371/journal.pbio.3000713
 
