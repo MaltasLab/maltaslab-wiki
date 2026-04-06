@@ -336,11 +336,25 @@ Followed by these sections in order:
 ## Cross-topic connections
 [Links to other topic hubs where this area overlaps, with a one-sentence explanation
  of the connection.]
+
+## References
+[Complete formatted citations for every paper cited anywhere on this page, in
+ alphabetical order by first author. Derived from `references.bib`. Format:
+
+ Author A, Author B (Year). Title. *Journal* Volume(Issue): Pages. https://doi.org/...
+
+ This section is the only place in the wiki that uses formatted citation strings rather
+ than wikilinks. Its purpose is to make the published page self-contained for readers
+ who do not have access to the repo. Update it every time a new paper is cited on this
+ hub — add the entry, keep the list sorted, do not leave dangling wikilink citations
+ without a corresponding References entry.]
 ```
 
 ---
 
 ## Ingest workflow (follow in order, every time)
+
+**Before editing any file, plan all changes to that file in full. Edit each file exactly once.**
 
 1. **Convert** — run `./convert.sh` on the PDF; confirm `.md` was produced
 2. **Read** — read the converted `.md` in full before doing anything else
@@ -357,7 +371,9 @@ Followed by these sections in order:
    use `[[papers/AuthorYear_ShortTitle|AuthorYear]]` wikilink format for all citations
 9. **Update topic hubs** — for each tagged topic, add specific cited contributions to
    Key papers, update Open questions, update Review article outline coverage notes;
-   use wikilink citations throughout
+   use wikilink citations throughout. Then update the `## References` section: add a
+   formatted citation for the new paper (pulled from `references.bib`), and check that
+   every paper already cited on that hub also has an entry — fix any gaps found.
 10. **Update `lab/overview.md`** — if this is a bootstrapping paper (lab_paper or canonical),
     update the factual lab description
 11. **Handle pending** — if topics = pending, append signal to `_emerging_topics.md`

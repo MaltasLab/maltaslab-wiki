@@ -42,6 +42,8 @@ The population-genetic foundation for why the timescale of environmental fluctua
 
 - Maltas2020 showed that anticorrelated landscape pairs (the theoretical model of mutual collateral sensitivity) produce ergodic-like steady-state dynamics that broadly sample genotype space rather than converging on shared fitness maxima — providing a theoretical explanation for why the benefit of cycling mutually collaterally sensitive drugs depends on the epistatic structure of the resistance landscape [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
 
+- Barbosa2019 showed that during the first drug switch in a CS cycling protocol with *P. aeruginosa* (PIT↔STR and CAR↔GEN pairs), three evolutionary fates are possible: extinction (frequent), multidrug resistance escape (occasional), and trade-off maintenance (predominant among survivors); drug order affects which outcome predominates, operating through CS effect size, epistasis, and fitness costs — establishing that the direction and conditions of the first switch are non-interchangeable parameters for sequential therapy design [[papers/Barbosa2019_EvolutionaryStability|Barbosa2019]]
+
 ## Key concepts and methods
 
 - [[concepts/markov-decision-process|Markov decision process (MDP)]] — the formal framework used to design optimal sequential drug policies
@@ -77,3 +79,19 @@ The population-genetic foundation for why the timescale of environmental fluctua
 - [[topics/collateral-sensitivity/_hub|collateral-sensitivity]] — collateral effects are the mechanism that makes sequential protocols exploitable; drug-class clustering structure provides the empirical basis for MDP transition probabilities
 - [[topics/evolutionary-control/_hub|evolutionary-control]] — optimal sequential treatment design is the primary application of evolutionary control theory; MDP framework spans both topics
 - [[topics/evolution-in-multidrug-environments/_hub|evolution-in-multidrug-environments]] — contrast: sequential vs. simultaneous drug exposure; the boundary between these topics is sharp and definitional
+
+## References
+
+Barbosa C, Römhild R, Rosenstiel P, Schulenburg H (2019). Evolutionary stability of collateral sensitivity to antibiotics in the model pathogen *Pseudomonas aeruginosa*. *eLife* 8. [DOI VERIFY]
+
+Cvijović I, Good BH, Jerison ER, Desai MM (2015). Fate of a mutation in a fluctuating environment. *Proceedings of the National Academy of Sciences* 112. https://doi.org/10.1073/pnas.1505406112
+
+Maltas J, Wood KB (2019). Pervasive and diverse collateral sensitivity profiles inform optimal strategies to limit antibiotic resistance. *PLOS Biology* 17(10): e3000515. https://doi.org/10.1371/journal.pbio.3000515
+
+Maltas J, Krasnick B, Wood KB (2019). Using Selection by Nonantibiotic Stressors to Sensitize Bacteria to Antibiotics. *Molecular Biology and Evolution* 37(4). https://doi.org/10.1093/molbev/msz303
+
+Maltas J, McNally DM, Wood KB (2020). Evolution in paired fitness landscapes with tunable interlandscape correlations. *Evolution*. [DOI VERIFY]
+
+Maltas J, Killarney ST, Singleton KR, Strobl MAR, Washart R, Wood KC, Wood KB (2023). Drug dependence in cancer is exploitable by optimally constructed treatment holidays. *Nature Ecology & Evolution* 7. https://doi.org/10.1038/s41559-023-02255-x
+
+Maltas J, Huynh A, Wood KB (2025). Dynamic collateral sensitivity profiles highlight opportunities and challenges for optimizing antibiotic treatments. *PLOS Biology* 23(1): e3002970. https://doi.org/10.1371/journal.pbio.3002970

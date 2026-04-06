@@ -84,6 +84,10 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 
 - Imamovic2018 introduced biomarker-guided evolutionary control: *nfxB* mutations detectable from patient sputum sequencing can prospectively identify CS-exploitable subpopulations and guide individualized drug scheduling — translating the genotype-aware evolutionary control principle toward clinical implementation in chronic infections [[papers/Imamovic2018_PhenotypicConvergence|Imamovic2018]]
 
+- Barbosa2019 demonstrated that reciprocal collateral sensitivity in *P. aeruginosa* functions as an evolutionary trap under sequential drug exposure: across two-step evolution experiments with PIT↔STR and CAR↔GEN pairs, extinction was frequent (the CS constraint holds and populations die rather than escape) and trade-off maintenance predominated among surviving lineages (drug B resistance accompanied by re-sensitization to drug A) — establishing that the evolutionary constraint assumed by CS-based cycling protocols is empirically realized in practice [[papers/Barbosa2019_EvolutionaryStability|Barbosa2019]]
+
+- Barbosa2019 identified drug order as a determinant of evolutionary outcome during the first CS drug switch — affecting the distribution over extinction, escape, and trade-off maintenance via CS effect size, epistatic compatibility of resistance mutations, and fitness costs — establishing that the directionality of CS pairs is a non-interchangeable design parameter for sequential cycling therapy [[papers/Barbosa2019_EvolutionaryStability|Barbosa2019]]
+
 - Oz2014 established that selection pressure strength (dose during evolution) is a controllable parameter that shapes the resistance trajectory independently of final resistance level: strongly selected *E. coli* populations developed cross-resistance in 27% of drug pairs and CS in 10% vs. 23% and 6% for mildly selected populations; the effect is not mediated by direct resistance magnitude ($R = 0.23$) — implying that dose is an evolutionary control lever for shaping the cross-resistance landscape that operates orthogonally to drug choice and drug sequence [[papers/Oz2014_SelectionPressure|Oz2014]]
 
 ## Key concepts and methods
@@ -121,6 +125,8 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 - Given that Tandar2026 shows clinical CS is far rarer (3%) than lab-based studies suggest, does this mean CS-based MDP/d-MDP control strategies are only applicable to the small subset of clinically confirmed CS pairs — and what is the expected loss in policy performance when restricted to these pairs relative to the full lab-characterized CS profiles? [[papers/Tandar2026_ClinicalCollateralSensitivity|Tandar2026]]
 
 - Can nfxB biomarker-guided CS cycling be validated prospectively in a multi-patient CF clinical trial — and are there analogous "CS-conferring pathoadaptive" gene biomarkers in other clinically critical pathogens (*E. faecalis*, *S. aureus*, *K. pneumoniae*, *A. baumannii*) that could enable comparable personalized evolutionary control? [[papers/Imamovic2018_PhenotypicConvergence|Imamovic2018]]
+
+- When CS evolutionary stability is probabilistic — extinction and trade-off maintenance are common but escape is possible — can the MDP, d-MDP, or RL frameworks be extended to explicitly model escape probability as a function of drug pair identity and drug order, so that policy optimization accounts for the risk of generating multidrug resistance rather than just maximizing expected short-term efficacy? [[papers/Barbosa2019_EvolutionaryStability|Barbosa2019]], [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]]
 
 - Can dose be incorporated as an explicit decision variable in MDP, d-MDP, or RL frameworks — not just which drug to give but at what strength — to minimize cross-resistance generation while maintaining therapeutic effect? [[papers/Oz2014_SelectionPressure|Oz2014]] establishes that dose history shapes the CS and cross-resistance landscape; adaptive therapy modulates dose in response to population burden; but formal dose optimization for cross-resistance control has not been developed [[papers/Maltas2019a_CollateralSensitivity|Maltas2019a]], [[papers/Maltas2025_DynamicCollateralSensitivity|Maltas2025]]
 
@@ -190,3 +196,5 @@ Imamovic L, Ellabaan MMH, Machado AMD, Citterio L, Wulff T, Molin S, Johansen HK
 Oz T, Guvenek A, Yildiz S, Karaboga E, Tamer YT, Mumcuyan N, Ozan VB, Senturk GH, Cokol M, Yeh P, Toprak E (2014). Strength of Selection Pressure Is an Important Parameter Contributing to the Complexity of Antibiotic Resistance Evolution. *Molecular Biology and Evolution*. https://doi.org/10.1093/molbev/msu191
 
 Yurtsev EA, Chao HX, Datta MS, Artemova T, Gore J (2013). Bacterial cheating drives the population dynamics of cooperative antibiotic resistance plasmids. *Molecular Systems Biology* 9: 683. https://doi.org/10.1038/msb.2013.39
+
+Barbosa C, Römhild R, Rosenstiel P, Schulenburg H (2019). Evolutionary stability of collateral sensitivity to antibiotics in the model pathogen *Pseudomonas aeruginosa*. *eLife* 8. [DOI VERIFY]

@@ -8,6 +8,7 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 | Cite key | Title | Year | Topics | Relevance |
 |---|---|---|---|---|
+| [[papers/Barbosa2019_EvolutionaryStability\|Barbosa2019]] | Evolutionary stability of collateral sensitivity to antibiotics in the model pathogen *Pseudomonas aeruginosa* | 2019 | collateral-sensitivity, evolutionary-control, evolution-in-fluctuating-environments | high |
 | [[papers/Barbosa2017_AlternativeEvolutionaryPaths\|Barbosa2017]] | Alternative Evolutionary Paths to Bacterial Antibiotic Resistance Cause Distinct Collateral Effects | 2017 | collateral-sensitivity | high |
 | [[papers/Imamovic2018_PhenotypicConvergence\|Imamovic2018]] | Drug-Driven Phenotypic Convergence Supports Rational Treatment Strategies of Chronic Infections | 2018 | collateral-sensitivity, evolutionary-control | high |
 | [[papers/Oz2014_SelectionPressure\|Oz2014]] | Strength of Selection Pressure Is an Important Parameter Contributing to the Complexity of Antibiotic Resistance Evolution | 2014 | collateral-sensitivity, evolutionary-control | high |
@@ -49,6 +50,6 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 ## Stats
 
-- **Total papers:** 36
-- **Last ingest:** 2026-04-05
+- **Total papers:** 37
+- **Last ingest:** 2026-04-06
 - **Pending topic assignment:** 0
