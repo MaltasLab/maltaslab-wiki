@@ -8,6 +8,7 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 | Cite key | Title | Year | Topics | Relevance |
 |---|---|---|---|---|
+| [[papers/Hansen2020_ContainmentStrategy\|Hansen2020]] | Antibiotics can be used to contain drug-resistant bacteria by maintaining sufficiently large sensitive populations | 2020 | evolutionary-control, frequency-dependent-selection | high |
 | [[papers/Tandar2026_ClinicalCollateralSensitivity\|Tandar2026]] | Clinical prevalence of collateral sensitivity: a systematic exploration of multicentre antimicrobial surveillance data | 2026 | collateral-sensitivity, evolutionary-control | high |
 | [[papers/Mira2015_RationalAntibioticTreatment\|Mira2015]] | Rational Design of Antibiotic Treatment Plans: A Treatment Strategy for Managing Evolution and Reversing Resistance | 2015 | fitness-landscapes, evolutionary-control, genetic-epistasis | high |
 | [[papers/Kinsler2024_TwoStepEvolution\|Kinsler2024]] | A high-resolution two-step evolution experiment in yeast reveals a shift from pleiotropic to modular adaptation | 2024 | fitness-landscapes, genetic-epistasis, distribution-of-fitness-effects, dna-barcoding-lineage-tracking | high |
@@ -41,6 +42,6 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 ## Stats
 
-- **Total papers:** 28
+- **Total papers:** 29
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0

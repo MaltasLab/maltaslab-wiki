@@ -46,6 +46,8 @@ A direct empirical application of this framework to a clinically derived resista
 
 - Yurtsev2013 discovered the β-lactamase inhibitor paradox: tazobactam and sulbactam increase the equilibrium resistant fraction by raising the effective $K_M$ in the Michaelis-Menten ampicillin degradation equation, the opposite of the intended therapeutic effect; validated with $K_I = 4.6$ ng/ml within the published literature range [[papers/Yurtsev2013_BacterialCheating|Yurtsev2013]]
 
+- Hansen2020 demonstrated that density-dependent competition between sensitive and doxycycline-resistant *E. coli* in well-mixed computer-controlled bioreactors can suppress resistant population growth strongly enough to more than double escape times from a containment threshold: at high acceptable burden ($P_\text{max}$ = 0.2 OD), mixed populations (90% sensitive) were contained below threshold for >18 hours while resistant-only populations escaped in 6–9 hours; at low $P_\text{max}$ (0.1 OD), competition was negligible and escape times were indistinguishable — establishing that the competitive suppression effect is density-conditioned and providing bacterial experimental grounding for the adaptive therapy concept [[papers/Hansen2020_ContainmentStrategy|Hansen2020]]
+
 ## Key concepts and methods
 
 - **Effective evolutionary game** — the game played by an idealized two-strategy population with the same frequency dynamics as the experimental population; operationalized as a 2×2 payoff matrix read from fitness function intercepts at $p = 0$ and $p = 1$; defined as an assayable hidden variable of the population-environment system [[papers/Kaznatcheev2019_GameAssay|Kaznatcheev2019]]
@@ -92,10 +94,23 @@ A direct empirical application of this framework to a clinically derived resista
 | Competitive exclusion criteria and game inversion under drug | developing | Farrokhian2022 establishes the gain-function condition and documents drug-induced game flip; Kaznatcheev2019 documents game-type changes across four environmental conditions |
 | Implications for treatment design | developing | Farrokhian2022 shows lower doses can improve long-term tumor burden by maintaining heterogeneity |
 | Mechanisms of positive ecological interactions: public goods resistance | developing | Yurtsev2013 establishes β-lactamase as a cooperative trait with Michaelis-Menten derivation of equilibrium f_R; generalization to other resistance mechanisms and organisms needed |
+| Competition-based containment and adaptive therapy | developing | Hansen2020 provides explicit experimental demonstration of competitive suppression extending escape time in bacteria; theoretical parameter space (acceptable burden × mutation rate) characterized; clinical translation and in vivo generalization needed |
 
 ## Cross-topic connections
 
 - [[topics/distribution-of-fitness-effects/_hub|distribution-of-fitness-effects]] — the DEE introduced by [[papers/Maltas2024_FrequencyDependentPreexistence|Maltas2024]] is the ecological analogue of the DFE; both describe distributions over mutation space
-- [[topics/evolutionary-control/_hub|evolutionary-control]] — frequency-dependent interactions between sensitive and resistant sub-populations are the mechanism exploited by adaptive therapy; Maltas2024 raises the possibility of disrupting ecological rescue as a pre-treatment control strategy
+- [[topics/evolutionary-control/_hub|evolutionary-control]] — frequency-dependent interactions between sensitive and resistant sub-populations are the mechanism exploited by adaptive therapy; Maltas2024 raises the possibility of disrupting ecological rescue as a pre-treatment control strategy; Hansen2020 provides the bacterial experimental grounding for competition-based containment
 - [[topics/fitness-landscapes/_hub|fitness-landscapes]] — frequency-dependent fitness modifies the effective fitness landscape experienced by rare mutants
 - [[topics/evolution-in-multidrug-environments/_hub|evolution-in-multidrug-environments]] — sub-population interactions under combination therapy are often frequency-dependent
+
+## References
+
+Farrokhian N, Maltas J, Dinh M, Durmaz A, Ellsworth P, Hitomi M, McClure E, Marusyk A, Kaznatcheev A, Scott JG (2022). Measuring competitive exclusion in non-small cell lung cancer. *Science Advances* 8(26): eabm7212. https://doi.org/10.1126/sciadv.abm7212
+
+Hansen E, Karslake J, Woods RJ, Read AF, Wood KB (2020). Antibiotics can be used to contain drug-resistant bacteria by maintaining sufficiently large sensitive populations. *PLoS Biology* 18(5): e3000713. https://doi.org/10.1371/journal.pbio.3000713
+
+Kaznatcheev A, Peacock J, Basanta D, Marusyk A, Scott JG (2019). Fibroblasts and Alectinib switch the evolutionary games played by non-small cell lung cancer. *Nature Ecology & Evolution* 3(3): 450–456. https://doi.org/10.1038/s41559-018-0768-z
+
+Maltas J, McNally L, Stensrud MJ, Wood KB (2024). Frequency-Dependent Ecological Interactions Increase the Prevalence, and Shape the Distribution, of Preexisting Drug Resistance. *PRX Life* 2(4): 043011. https://doi.org/10.1103/PRXLife.2.043011
+
+Yurtsev EA, Chao HX, Datta MS, Artemova T, Gore J (2013). Bacterial cheating drives the population dynamics of cooperative antibiotic resistance plasmids. *Molecular Systems Biology* 9: 683. https://doi.org/10.1038/msb.2013.39
