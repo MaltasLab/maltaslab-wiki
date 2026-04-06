@@ -102,6 +102,8 @@ A distinct but complementary mechanism constraining treatment efficacy — and o
 
 - Oz2014 established that selection pressure strength (dose during evolution) is a controllable parameter that shapes the resistance trajectory independently of final resistance level: strongly selected *E. coli* populations developed cross-resistance in 27% of drug pairs and CS in 10% vs. 23% and 6% for mildly selected populations; the effect is not mediated by direct resistance magnitude ($R = 0.23$) — implying that dose is an evolutionary control lever for shaping the cross-resistance landscape that operates orthogonally to drug choice and drug sequence [[papers/Oz2014_SelectionPressure|Oz2014]]
 
+- Vega2014 articulated that collectively-resistant microbial communities are therapeutically exploitable at their cooperative links — signal interference to disrupt quorum-sensing-dependent biofilm formation, targeting the cheater–cooperator dynamics that sustain cooperative drug inactivation, and metabolic interventions (growth stimulation, persister-specific metabolites) to eliminate phenotypically tolerant persister subpopulations — establishing social-structure disruption as an evolutionary control strategy orthogonal to drug sequencing and dosing schedule optimization [[papers/Vega2014_CollectiveResistance|Vega2014]]
+
 ## Key concepts and methods
 
 - [[concepts/markov-decision-process|Markov decision process (MDP)]] — primary formal framework for policy optimization in this lab's work; introduced for antibiotic resistance by Maltas2019a
@@ -219,3 +221,5 @@ Barbosa C, Römhild R, Rosenstiel P, Schulenburg H (2019). Evolutionary stabilit
 De Jong MG, Wood KB (2018). Tuning Spatial Profiles of Selection Pressure to Modulate the Evolution of Drug Resistance. *Physical Review Letters* 120(23): 238102. https://doi.org/10.1103/PhysRevLett.120.238102
 
 Imamovic L, Sommer MOA (2013). Use of Collateral Sensitivity Networks to Design Drug Cycling Protocols That Avoid Resistance Development. *Science Translational Medicine* 5(204): 204ra132. https://doi.org/10.1126/scitranslmed.3006609
+
+Vega NM, Gore J (2014). Collective Antibiotic Resistance: Mechanisms and Implications. *Current Opinion in Microbiology* 21: 28–34. https://doi.org/10.1016/j.mib.2014.09.003
