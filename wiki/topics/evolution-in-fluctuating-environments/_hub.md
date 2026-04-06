@@ -45,6 +45,7 @@ The population-genetic foundation for why the timescale of environmental fluctua
 ## Key concepts and methods
 
 - [[concepts/markov-decision-process|Markov decision process (MDP)]] — the formal framework used to design optimal sequential drug policies
+- [[concepts/sswm|SSWM Markov chain]] — the evolutionary model underlying paired fitness landscape theory; SSWM dynamics in alternating environments determine the genotype distribution under drug cycling [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
 - **Serial-passage laboratory evolution** — 8-day (collateral sensitivity mapping) and 20-day (protocol comparison) experiments; daily dilutions with escalating drug concentrations
 - **Cumulative growth and adaptation rate** — outcome measures for comparing cycling protocols; cumulative growth sums daily OD; adaptation rate is the slope of the OD-vs-time regression
 - **Drug holiday optimal fraction** $f_\text{on} = 1/(1+\gamma)$ — analytically derived schedule for drug-dependent populations; depends only on four measurable growth rates [[papers/Maltas2023_DrugDependence|Maltas2023]]
