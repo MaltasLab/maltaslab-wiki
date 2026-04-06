@@ -62,6 +62,10 @@ A direct empirical window into how the accessible region of a fitness landscape 
 
 - Kinsler2024 identified "coherent pleiotropy" as the mechanism underlying early-step adaptive pleiotropy: signaling pathways (Ras/PKA, TOR/Sch9) are pre-wired to coherently modulate multiple downstream phenotypes, making mutations in these pathways capable of simultaneously improving performance in several fitness-relevant dimensions; once these pathway targets are exhausted at the first step, subsequent adaptation must engage performance-specific molecular modules, producing modular improvement confined to a single region of performance space [[papers/Kinsler2024_TwoStepEvolution|Kinsler2024]]
 
+- Baym2016 demonstrated that highly resistant compensatory mutants arising behind the propagating *E. coli* front on the MEGA-plate are physically blocked from contributing to further resistance evolution by spatially prior lineages; when transplanted ahead of the front, these trapped mutants grow at drug concentrations (CPR) where the front cannot — establishing that spatial position, not absolute fitness, determines which genotype leads resistance evolution in structured environments, a macroscopic demonstration of clonal interference operating in physical rather than genotypic space [[papers/Baym2016_MegaplateSpatialEvolution|Baym2016]]
+
+- Baym2016 showed that *E. coli* cannot adapt from zero drug to maximum concentration (TMP: 3000× MIC; CPR: 2000× MIC) in a single spatial step — without intermediate concentration regions, bacteria fail entirely to colonize the highest zone — but achieve 10,000-fold (TMP) and 100,000-fold (CPR) MIC increases in 10–12 days when intermediate steps are present; adaptation rate increases monotonically with number of intermediates, establishing that the drug gradient acts as a stepping-stone fitness landscape in which accessibility to intermediate resistance phenotypes is required for evolutionary access to high-level resistance [[papers/Baym2016_MegaplateSpatialEvolution|Baym2016]]
+
 ## Key concepts and methods
 
 - **Rough Mt. Fuji landscape** — additive base landscape $F(\sigma) = -cD(\sigma, \sigma^*) + \eta(\sigma)$ with i.i.d. random fitness component $\eta(\sigma)$; ruggedness governed by $\theta = c/\sqrt{\text{Var}(\eta)}$; originally introduced by Aita et al. (2000) for protein evolution; single-parameter form and comprehensive mathematical analysis by [[papers/Neidhart2014_RMFModel|Neidhart2014]]; applied to paired landscapes using Gaussian noise parameterized by $\sigma = \sqrt{\text{Var}(\eta)}$ in [[papers/Maltas2020_TunableFitnessLandscapes|Maltas2020]]
@@ -90,6 +94,8 @@ A direct empirical window into how the accessible region of a fitness landscape 
 
 - Mira2015 showed that optimal return-to-wild-type probabilities on the TEM landscape often stagnate after a limited number of treatment steps, but supplemental analysis demonstrates that stagnation is not universal — some landscape configurations allow indefinite improvement with additional steps. What structural property of a fitness landscape (e.g., the spectrum of the transition matrices, the presence of absorbing states) predicts whether the optimal return probability saturates or continues to grow with sequence length? [[papers/Mira2015_RationalAntibioticTreatment|Mira2015]]
 
+- Does spatial trapping of highly resistant mutants behind the evolutionary front — demonstrated macroscopically on the MEGA-plate — occur in clinically relevant settings (biofilm interiors, tissue-level drug gradients, organ pharmacokinetics)? If so, the most-resistant genotype may regularly fail to determine resistance outcomes in patients, with implications for which resistance genotypes to monitor and what drug profiles to impose; and does the stepping-stone principle imply that drug delivery profiles with sharp spatial discontinuities could limit the evolutionary accessibility of high-level resistance? [[papers/Baym2016_MegaplateSpatialEvolution|Baym2016]]
+
 ## Review article outline
 
 | Section | Coverage | Notes |
@@ -102,7 +108,7 @@ A direct empirical window into how the accessible region of a fitness landscape 
 | Landscapes and treatment design | developing | Maltas2020 provides theoretical framing; Maltas2019a provides empirical link to drug cycling; Weaver2024 shows RL can exploit empirical landscape topology for control |
 | Eco-evolutionary landscapes: landscape restructuring by emergent ecology | developing | Good2017 establishes spontaneous eco-evolutionary coexistence in 9/12 LTEE populations restructures effective landscape to be frequency-dependent; no theoretical framework yet for predicting when this arises or how it alters control strategies |
 | Adaptive walks and performance landscape structure | developing | Kinsler2024 provides two-step high-resolution characterization in yeast multidimensional performance space; documents pleiotropic → modular shift driven by Ras/PKA target exhaustion; introduces coherent pleiotropy concept; extension to resistance landscapes needed |
-| Spatially heterogeneous selection pressure landscapes | thin | DeJong2018 establishes phase diagram for fixation dynamics on spatial drug concentration profiles; MFPT/Moran framework extended to M=3 meta-population; predicts E. faecalis (low migration) in deceleration regime; experimental validation and extension to multi-step resistance needed |
+| Spatially heterogeneous selection pressure landscapes | developing | DeJong2018 establishes phase diagram for fixation dynamics on spatial drug concentration profiles; MFPT/Moran framework extended to M=3 meta-population; predicts E. faecalis (low migration) in deceleration regime. Baym2016 provides macroscopic empirical demonstration: spatial drug gradient steepness determines whether high-level resistance is accessible (stepping-stone principle), and spatial clonal interference traps highly resistant mutants behind the front; experimental validation in clinically relevant geometries needed |
 
 ## Cross-topic connections
 
@@ -116,6 +122,8 @@ A direct empirical window into how the accessible region of a fitness landscape 
 De Jong MG, Wood KB (2018). Tuning Spatial Profiles of Selection Pressure to Modulate the Evolution of Drug Resistance. *Physical Review Letters* 120(23): 238102. https://doi.org/10.1103/PhysRevLett.120.238102
 
 Ardell SM, Martsul A, Johnson MS, Kryazhimskiy S (2024). Environment-independent distribution of mutational effects emerges from microscopic epistasis. *Science* 386(6717): 87–92. https://doi.org/10.1126/science.adn0753
+
+Baym M, Lieberman TD, Kelsic ED, Chait R, Gross R, Yelin I, Kishony R (2016). Spatiotemporal microbial evolution on antibiotic landscapes. *Science* 353(6304): 1147–1151. https://doi.org/10.1126/science.aag0822
 
 Bakerlee CW, Nguyen Ba AN, Shulgina Y, Rojas Echenique JI, Desai MM (2022). Idiosyncratic epistasis leads to global fitness-correlated trends. *Science* 376(6593): 630–635. https://doi.org/10.1126/science.abm4774
 

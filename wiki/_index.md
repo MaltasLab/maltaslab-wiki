@@ -48,11 +48,12 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 | [[papers/Michel2008_MultidrugsResistance\|Michel2008]] | Drug interactions modulate the potential for evolution of resistance | 2008 | evolution-in-multidrug-environments, evolutionary-control, genetic-epistasis | high |
 | [[papers/Ardell2024_GlobalEpistasis\|Ardell2024]] | Environment-independent distribution of mutational effects emerges from microscopic epistasis | 2024 | genetic-epistasis, distribution-of-fitness-effects, fitness-landscapes | high |
 | [[papers/Vega2014_CollectiveResistance\|Vega2014]] | Collective Antibiotic Resistance: Mechanisms and Implications | 2014 | frequency-dependent-selection, evolutionary-control | medium |
+| [[papers/Baym2016_MegaplateSpatialEvolution\|Baym2016]] | Spatiotemporal microbial evolution on antibiotic landscapes | 2016 | fitness-landscapes, evolutionary-control | high |
 
 ---
 
 ## Stats
 
-- **Total papers:** 40
+- **Total papers:** 41
 - **Last ingest:** 2026-04-06
 - **Pending topic assignment:** 0
