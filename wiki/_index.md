@@ -9,6 +9,7 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 | Cite key | Title | Year | Topics | Relevance |
 |---|---|---|---|---|
 | [[papers/Tandar2026_ClinicalCollateralSensitivity\|Tandar2026]] | Clinical prevalence of collateral sensitivity: a systematic exploration of multicentre antimicrobial surveillance data | 2026 | collateral-sensitivity, evolutionary-control | high |
+| [[papers/Mira2015_RationalAntibioticTreatment\|Mira2015]] | Rational Design of Antibiotic Treatment Plans: A Treatment Strategy for Managing Evolution and Reversing Resistance | 2015 | fitness-landscapes, evolutionary-control, genetic-epistasis | high |
 | [[papers/Kinsler2024_TwoStepEvolution\|Kinsler2024]] | A high-resolution two-step evolution experiment in yeast reveals a shift from pleiotropic to modular adaptation | 2024 | fitness-landscapes, genetic-epistasis, distribution-of-fitness-effects, dna-barcoding-lineage-tracking | high |
 | [[papers/Neidhart2014_RMFModel\|Neidhart2014]] | Adaptation in Tunably Rugged Fitness Landscapes: The Rough Mount Fuji Model | 2014 | fitness-landscapes, genetic-epistasis | medium |
 | [[papers/NguyenBa2019_TravelingWave\|NguyenBa2019]] | High-resolution lineage tracking reveals traveling wave of adaptation in laboratory yeast | 2019 | dna-barcoding-lineage-tracking, distribution-of-fitness-effects, fitness-landscapes | high |
@@ -40,6 +41,6 @@ This is the master catalog of all ingested papers. One entry per paper, ordered 
 
 ## Stats
 
-- **Total papers:** 27
+- **Total papers:** 28
 - **Last ingest:** 2026-04-05
 - **Pending topic assignment:** 0
